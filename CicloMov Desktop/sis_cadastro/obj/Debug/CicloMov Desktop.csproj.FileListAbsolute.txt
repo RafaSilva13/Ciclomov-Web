@@ -1,0 +1,15 @@
+D:\xampp\htdocs\luizim\GITHUB\CicloMov\CicloMov Desktop\sis_cadastro\obj\Debug\CicloMov Desktop.csprojResolveAssemblyReference.cache
+D:\xampp\htdocs\luizim\GITHUB\CicloMov\CicloMov Desktop\sis_cadastro\obj\Debug\CicloMov Desktop.csproj.GenerateResource.Cache
+D:\xampp\htdocs\luizim\GITHUB\CicloMov\CicloMov Desktop\sis_cadastro\obj\Debug\CicloMov.frm_cliente.resources
+D:\xampp\htdocs\luizim\GITHUB\CicloMov\CicloMov Desktop\sis_cadastro\obj\Debug\CicloMov.frm_usuario.resources
+D:\xampp\htdocs\luizim\GITHUB\CicloMov\CicloMov Desktop\sis_cadastro\obj\Debug\CicloMov.frm_funcionarios.resources
+D:\xampp\htdocs\luizim\GITHUB\CicloMov\CicloMov Desktop\sis_cadastro\obj\Debug\CicloMov.frm_produtos.resources
+D:\xampp\htdocs\luizim\GITHUB\CicloMov\CicloMov Desktop\sis_cadastro\obj\Debug\CicloMov.frm_fornecedores.resources
+D:\xampp\htdocs\luizim\GITHUB\CicloMov\CicloMov Desktop\sis_cadastro\obj\Debug\CicloMov.frm_login.resources
+D:\xampp\htdocs\luizim\GITHUB\CicloMov\CicloMov Desktop\sis_cadastro\obj\Debug\CicloMov.frm_menu.resources
+D:\xampp\htdocs\luizim\GITHUB\CicloMov\CicloMov Desktop\sis_cadastro\obj\Debug\CicloMov.Properties.Resources.resources
+D:\xampp\htdocs\luizim\GITHUB\CicloMov\CicloMov Desktop\sis_cadastro\bin\Debug\CicloMov.exe.config
+D:\xampp\htdocs\luizim\GITHUB\CicloMov\CicloMov Desktop\sis_cadastro\bin\Debug\CicloMov.exe
+D:\xampp\htdocs\luizim\GITHUB\CicloMov\CicloMov Desktop\sis_cadastro\bin\Debug\CicloMov.pdb
+D:\xampp\htdocs\luizim\GITHUB\CicloMov\CicloMov Desktop\sis_cadastro\obj\Debug\CicloMov.exe
+D:\xampp\htdocs\luizim\GITHUB\CicloMov\CicloMov Desktop\sis_cadastro\obj\Debug\CicloMov.pdb
