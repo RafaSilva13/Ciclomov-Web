@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace CicloMov
 {
@@ -25,45 +26,33 @@ namespace CicloMov
 
         private void btn_cadastrar_Click(object sender, EventArgs e)
         {
-            if (txt_nome_cliente.Text == "" || txt_end_cliente.Text == "" || txt_cel_cliente.Text == "" || txt_cpf_cliente.Text == "")
+            MySqlConnection cnn = new MySqlConnection("server=localhost;database=bd_carrinho;uid=root;pwd=\"\";");
+            MySqlCommand comando = new MySqlCommand("SELECT * FROM clientes WHERE nome_completo = 'Pedro da silva'", cnn);
+            try
             {
-                MessageBox.Show("Preencha todos os campos para prosseguir!");
-            }
-            else
-            {
+
+                cnn.Open();
+
+                MySqlDataReader myReader;
+                myReader = comando.ExecuteReader();
                 try
                 {
-                    conexao = new SqlConnection(@"Server=LAB136-16\SQLEXPRESS; Database=bd_cadastro_clayteam; User id=sa; Password=123456;");
-                    strsql = "INSERT INTO CLIENTES (nome_cliente, end_cliente, cel_cliente, cpf_cliente) VALUES (@nome_cliente,@end_cliente,@cel_cliente,@cpf_cliente)";
-                    comando = new SqlCommand(strsql, conexao);
-                    comando.Parameters.AddWithValue("@nome_cliente",
-                    txt_nome_cliente.Text);
-                    comando.Parameters.AddWithValue("@end_cliente",
-                    txt_end_cliente.Text);
-                    comando.Parameters.AddWithValue("@cel_cliente",
-                    txt_cel_cliente.Text);
-                    comando.Parameters.AddWithValue("@cpf_cliente",
-                    txt_cpf_cliente.Text);
-                    conexao.Open();
-                    comando.ExecuteNonQuery();
-                    MessageBox.Show("CADASTRO REALIZADO COM SUCESSO!!");
-
-                    txt_cod_cliente.Text = "";
-                    txt_nome_cliente.Text = "";
-                    txt_end_cliente.Text = "";
-                    txt_cel_cliente.Text = "";
-                    txt_cpf_cliente.Text = "";
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
+                    while (myReader.Read())
+                    {
+                        //Console.WriteLine(myReader.GetString(0));
+                        MessageBox.Show(myReader.GetString(2));
+                    }
                 }
                 finally
                 {
-                    conexao.Close();
-                    conexao = null;
-                    comando = null;
+                    myReader.Close();
+                    cnn.Close();
                 }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Can not open connection ! ");
             }
         }
 
