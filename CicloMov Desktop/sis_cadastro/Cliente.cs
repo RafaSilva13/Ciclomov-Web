@@ -26,7 +26,36 @@ namespace CicloMov
 
         private void btn_cadastrar_Click(object sender, EventArgs e)
         {
-            
+            MySqlConnection cnn = new MySqlConnection("server=localhost;database=bd_carrinho;uid=root;pwd=\"\";");
+            MySqlCommand comando = new MySqlCommand("INSERT INTO clientes (nome_produto, valor_produto, estoque_produto, categoria_produto) VALUES (@nome_produto,@valor_produto,@estoque_produto,@categoria_produto)", cnn);
+            try
+            {
+
+                cnn.Open();
+
+                comando.Parameters.AddWithValue("@id_cliente", txt_pesquisar.Text);
+
+                MySqlDataReader myReader;
+                myReader = comando.ExecuteReader();
+                try
+                {
+                    while (myReader.Read())
+                    {
+                        //Console.WriteLine(myReader.GetString(0));
+                        MessageBox.Show(myReader.GetString(2));
+                    }
+                }
+                finally
+                {
+                    myReader.Close();
+                    cnn.Close();
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Can not open connection ! ");
+            }
         }
 
         private void btn_editar_Click(object sender, EventArgs e)
@@ -160,14 +189,14 @@ namespace CicloMov
             else
             {
                 MySqlConnection cnn = new MySqlConnection("server=localhost;database=bd_carrinho;uid=root;pwd=\"\";");
-                MySqlCommand comando = new MySqlCommand("SELECT * FROM clientes WHERE id_cliente = @id", cnn);
+                MySqlCommand comando = new MySqlCommand("SELECT * FROM clientes WHERE id_cliente = @id_cliente", cnn);
                 try
                 {
 
                     cnn.Open();
 
-                    comando.Parameters.AddWithValue("BUSCA", "%" + txt_pesquisar.Text + "%");
-
+                    comando.Parameters.AddWithValue("@id_cliente", txt_pesquisar.Text);
+                   
                     MySqlDataReader myReader;
                     myReader = comando.ExecuteReader();
                     try
