@@ -26,34 +26,7 @@ namespace CicloMov
 
         private void btn_cadastrar_Click(object sender, EventArgs e)
         {
-            MySqlConnection cnn = new MySqlConnection("server=localhost;database=bd_carrinho;uid=root;pwd=\"\";");
-            MySqlCommand comando = new MySqlCommand("SELECT * FROM clientes WHERE nome_completo = 'Pedro da silva'", cnn);
-            try
-            {
-
-                cnn.Open();
-
-                MySqlDataReader myReader;
-                myReader = comando.ExecuteReader();
-                try
-                {
-                    while (myReader.Read())
-                    {
-                        //Console.WriteLine(myReader.GetString(0));
-                        MessageBox.Show(myReader.GetString(2));
-                    }
-                }
-                finally
-                {
-                    myReader.Close();
-                    cnn.Close();
-                }
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Can not open connection ! ");
-            }
+            
         }
 
         private void btn_editar_Click(object sender, EventArgs e)
@@ -186,40 +159,35 @@ namespace CicloMov
             }
             else
             {
+                MySqlConnection cnn = new MySqlConnection("server=localhost;database=bd_carrinho;uid=root;pwd=\"\";");
+                MySqlCommand comando = new MySqlCommand("SELECT * FROM clientes WHERE id_cliente = @id", cnn);
                 try
                 {
-                    //A variável conexao define uma string para conexão com o BD.
-                    conexao = new SqlConnection(@"Server=LAB136-16\SQLEXPRESS; Database=bd_cadastro_clayteam; User id=sa; Password=123456;");
-                    strsql = "SELECT * FROM CLIENTES WHERE codigo_cliente = @codigo_cliente";
-                    comando = new SqlCommand(strsql, conexao);
-                    comando.Parameters.AddWithValue("@codigo_cliente",
-                    txt_pesquisar.Text);
-                    conexao.Open();
-                    dr = comando.ExecuteReader();
-                    if (dr.Read())
+
+                    cnn.Open();
+
+                    MySqlDataReader myReader;
+                    myReader = comando.ExecuteReader();
+                    try
                     {
-                        txt_cod_cliente.Text =
-                        Convert.ToString(dr["codigo_cliente"]);
-                        txt_nome_cliente.Text = (string)dr["nome_cliente"];
-                        txt_end_cliente.Text = (string)dr["end_cliente"];
-                        txt_cel_cliente.Text = (string)dr["cel_cliente"];
-                        txt_cpf_cliente.Text = (string)dr["cpf_cliente"];
+                        while (myReader.Read())
+                        {
+                            //Console.WriteLine(myReader.GetString(0));
+                            MessageBox.Show(myReader.GetString(2));
+                        }
                     }
-                    else
+                    finally
                     {
-                        MessageBox.Show("Nenhum registro encontrado!");
+                        myReader.Close();
+                        cnn.Close();
                     }
+
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message);
+                    MessageBox.Show("Can not open connection ! ");
                 }
-                finally
-                {
-                    conexao.Close();
-                    conexao = null;
-                    comando = null;
-                }
+
                 //FIM DO BLOCO DE PROGRAMAÇÃO
             }
         }
