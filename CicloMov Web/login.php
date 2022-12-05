@@ -48,11 +48,11 @@ if (isset($_GET['lE'])) {
             <div class="row" style="margin-top: 10px;">
                 <div class="col-lg-12">
                     <ul class="nav nav-tabs nav-fill">
-
+    
                         <li class="nav-item" id="login">
                             <button class="nav-link btnlogin" id="itemlogin" aria-current="page">Login</button>
                         </li>
-
+    
                         <li class="nav-item" id="cadastro">
                             <button class="nav-link btncadastro" id="itemcadastro" aria-current="page">Cadastro</button>
                         </li>
@@ -143,7 +143,7 @@ if (isset($_GET['lE'])) {
         var inicio = "<?php if (isset($_GET['t'])) {
                             echo $_GET['t'];
                         } else {
-                            echo "";
+                            echo " ";
                         } ?>";
         var erroinicio = "<?php if (isset($_GET['lE'])) {
                                 echo 'lE';
@@ -151,7 +151,7 @@ if (isset($_GET['lE'])) {
                                 echo ' ';
                             } ?>";
 
-        if (inicio === "l" || inicio === "lp" || erroinicio === "lE") {
+        if (inicio === "l" || inicio === "lp" || erroinicio === "lE" || inicio === "") {
             if ($('#login').ready(function() {
                     $(".areacadastro").hide();
                     $(".arealogin").show();
