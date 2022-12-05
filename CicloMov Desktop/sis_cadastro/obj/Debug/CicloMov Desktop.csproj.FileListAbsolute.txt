@@ -13,3 +13,20 @@ D:\xampp\htdocs\luizim\GITHUB\CicloMov\CicloMov Desktop\sis_cadastro\bin\Debug\C
 D:\xampp\htdocs\luizim\GITHUB\CicloMov\CicloMov Desktop\sis_cadastro\bin\Debug\CicloMov.pdb
 D:\xampp\htdocs\luizim\GITHUB\CicloMov\CicloMov Desktop\sis_cadastro\obj\Debug\CicloMov.exe
 D:\xampp\htdocs\luizim\GITHUB\CicloMov\CicloMov Desktop\sis_cadastro\obj\Debug\CicloMov.pdb
+C:\xampp\htdocs\GitHub\CicloMov\CicloMov Desktop\sis_cadastro\bin\Debug\CicloMov.exe.config
+C:\xampp\htdocs\GitHub\CicloMov\CicloMov Desktop\sis_cadastro\bin\Debug\CicloMov.exe
+C:\xampp\htdocs\GitHub\CicloMov\CicloMov Desktop\sis_cadastro\bin\Debug\CicloMov.pdb
+C:\xampp\htdocs\GitHub\CicloMov\CicloMov Desktop\sis_cadastro\obj\Debug\CicloMov Desktop.csproj.AssemblyReference.cache
+C:\xampp\htdocs\GitHub\CicloMov\CicloMov Desktop\sis_cadastro\obj\Debug\CicloMov Desktop.csproj.SuggestedBindingRedirects.cache
+C:\xampp\htdocs\GitHub\CicloMov\CicloMov Desktop\sis_cadastro\obj\Debug\CicloMov.frm_cliente.resources
+C:\xampp\htdocs\GitHub\CicloMov\CicloMov Desktop\sis_cadastro\obj\Debug\CicloMov.frm_usuario.resources
+C:\xampp\htdocs\GitHub\CicloMov\CicloMov Desktop\sis_cadastro\obj\Debug\CicloMov.frm_funcionarios.resources
+C:\xampp\htdocs\GitHub\CicloMov\CicloMov Desktop\sis_cadastro\obj\Debug\CicloMov.frm_produtos.resources
+C:\xampp\htdocs\GitHub\CicloMov\CicloMov Desktop\sis_cadastro\obj\Debug\CicloMov.frm_fornecedores.resources
+C:\xampp\htdocs\GitHub\CicloMov\CicloMov Desktop\sis_cadastro\obj\Debug\CicloMov.frm_login.resources
+C:\xampp\htdocs\GitHub\CicloMov\CicloMov Desktop\sis_cadastro\obj\Debug\CicloMov.frm_menu.resources
+C:\xampp\htdocs\GitHub\CicloMov\CicloMov Desktop\sis_cadastro\obj\Debug\CicloMov.Properties.Resources.resources
+C:\xampp\htdocs\GitHub\CicloMov\CicloMov Desktop\sis_cadastro\obj\Debug\CicloMov Desktop.csproj.GenerateResource.cache
+C:\xampp\htdocs\GitHub\CicloMov\CicloMov Desktop\sis_cadastro\obj\Debug\CicloMov Desktop.csproj.CoreCompileInputs.cache
+C:\xampp\htdocs\GitHub\CicloMov\CicloMov Desktop\sis_cadastro\obj\Debug\CicloMov.exe
+C:\xampp\htdocs\GitHub\CicloMov\CicloMov Desktop\sis_cadastro\obj\Debug\CicloMov.pdb
