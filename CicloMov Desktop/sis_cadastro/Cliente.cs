@@ -166,6 +166,8 @@ namespace CicloMov
 
                     cnn.Open();
 
+                    comando.Parameters.AddWithValue("BUSCA", "%" + txt_pesquisar.Text + "%");
+
                     MySqlDataReader myReader;
                     myReader = comando.ExecuteReader();
                     try
