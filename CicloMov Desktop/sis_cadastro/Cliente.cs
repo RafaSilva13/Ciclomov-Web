@@ -27,10 +27,19 @@ namespace CicloMov
         private void btn_cadastrar_Click(object sender, EventArgs e)
         {
             MySqlConnection cnn = new MySqlConnection("server=localhost;database=bd_carrinho;uid=root;pwd=\"\";");
-            MySqlCommand comando = new MySqlCommand("INSERT INTO clientes (nome_produto, valor_produto, estoque_produto, categoria_produto) VALUES (@nome_produto,@valor_produto,@estoque_produto,@categoria_produto)", cnn);
+            MySqlCommand comando = new MySqlCommand("INSERT INTO clientes (nome_completo, email, telefone, username, senha) VALUES (@nome_produto,@valor_produto,@estoque_produto,@categoria_produto)", cnn);
             try
             {
-
+                comando.Parameters.AddWithValue("@codigo_cliente",
+                txt_cod_cliente.Text);
+                comando.Parameters.AddWithValue("@nome_cliente",
+                txt_nome_cliente.Text);
+                comando.Parameters.AddWithValue("@end_cliente",
+                txt_end_cliente.Text);
+                comando.Parameters.AddWithValue("@cel_cliente",
+                txt_cel_cliente.Text);
+                comando.Parameters.AddWithValue("@cpf_cliente",
+                txt_cpf_cliente.Text);
                 cnn.Open();
 
                 comando.Parameters.AddWithValue("@id_cliente", txt_pesquisar.Text);
