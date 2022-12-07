@@ -241,5 +241,6 @@ namespace CicloMov
         {
             txt_cod_cliente.Enabled = false;
         }
+
     }
 }
