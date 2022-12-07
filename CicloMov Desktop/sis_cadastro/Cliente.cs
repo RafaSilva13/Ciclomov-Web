@@ -33,11 +33,9 @@ namespace CicloMov
                 comando.Parameters.AddWithValue("@codigo_cliente",
                 txt_cod_cliente.Text);
                 comando.Parameters.AddWithValue("@nome_cliente",
-                txt_nome_cliente.Text);
+                txt_email_cliente.Text);
                 comando.Parameters.AddWithValue("@end_cliente",
-                txt_end_cliente.Text);
-                comando.Parameters.AddWithValue("@cel_cliente",
-                txt_cel_cliente.Text);
+                txt_tempo_cliente.Text);
                 comando.Parameters.AddWithValue("@cpf_cliente",
                 txt_cpf_cliente.Text);
                 cnn.Open();
@@ -71,7 +69,7 @@ namespace CicloMov
         {
             txt_cod_cliente.Enabled = false;
             //INÍCIO DO BLOCO DE PROGRAMAÇÃO
-            if (txt_cod_cliente.Text == "" || txt_nome_cliente.Text == "" || txt_end_cliente.Text == "" || txt_cel_cliente.Text == "" || txt_cpf_cliente.Text == "")
+            if (txt_cod_cliente.Text == "" || txt_email_cliente.Text == "" || txt_tempo_cliente.Text == "" || txt_cpf_cliente.Text == "")
             {
                 MessageBox.Show("Preencha todos os campos para prosseguir!");
             }
@@ -86,11 +84,9 @@ namespace CicloMov
                     comando.Parameters.AddWithValue("@codigo_cliente",
                     txt_cod_cliente.Text);
                     comando.Parameters.AddWithValue("@nome_cliente",
-                    txt_nome_cliente.Text);
+                    txt_email_cliente.Text);
                     comando.Parameters.AddWithValue("@end_cliente",
-                    txt_end_cliente.Text);
-                    comando.Parameters.AddWithValue("@cel_cliente",
-                    txt_cel_cliente.Text);
+                    txt_tempo_cliente.Text);
                     comando.Parameters.AddWithValue("@cpf_cliente",
                     txt_cpf_cliente.Text);
                     conexao.Open();
@@ -98,9 +94,8 @@ namespace CicloMov
                     MessageBox.Show("CADASTRO ATUALIZADO COM SUCESSO!!");
 
                     txt_cod_cliente.Text = "";
-                    txt_nome_cliente.Text = "";
-                    txt_end_cliente.Text = "";
-                    txt_cel_cliente.Text = "";
+                    txt_email_cliente.Text = "";
+                    txt_tempo_cliente.Text = "";
                     txt_cpf_cliente.Text = "";
                 }
                 catch (Exception ex)
@@ -166,9 +161,8 @@ namespace CicloMov
                 }
                 //FIM DO BLOCO DE PROGRAMAÇÃO
                 txt_cod_cliente.Text = "";
-                txt_nome_cliente.Text = "";
-                txt_end_cliente.Text = "";
-                txt_cel_cliente.Text = "";
+                txt_email_cliente.Text = "";
+                txt_tempo_cliente.Text = "";
                 txt_cpf_cliente.Text = "";
                 txt_pesquisar.Text = "";
             }
@@ -178,9 +172,8 @@ namespace CicloMov
         {
             //Apaga todos os dados dos campos preenchidos.
             txt_cod_cliente.Text = "";
-            txt_nome_cliente.Text = "";
-            txt_end_cliente.Text = "";
-            txt_cel_cliente.Text = "";
+            txt_email_cliente.Text = "";
+            txt_tempo_cliente.Text = "";
             txt_cpf_cliente.Text = "";
             txt_pesquisar.Text = "";
         }
@@ -214,6 +207,9 @@ namespace CicloMov
                         {
                             //Console.WriteLine(myReader.GetString(0));
                             txt_cod_cliente.Text = myReader.GetString(0);
+                            txt_email_cliente.Text = myReader.GetString(1);
+                            txt_cpf_cliente.Text = myReader.GetString(2);
+                            txt_tempo_cliente.Text = myReader.GetString(3);
                         }
                     }
                     finally

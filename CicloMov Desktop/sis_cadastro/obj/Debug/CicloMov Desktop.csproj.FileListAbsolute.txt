@@ -87,7 +87,6 @@ D:\xampp\htdocs\rafael\GitHub\CicloMov\CicloMov Desktop\sis_cadastro\bin\Debug\n
 D:\xampp\htdocs\rafael\GitHub\CicloMov\CicloMov Desktop\sis_cadastro\bin\Debug\normnfd.nlp
 D:\xampp\htdocs\rafael\GitHub\CicloMov\CicloMov Desktop\sis_cadastro\bin\Debug\normnfkc.nlp
 D:\xampp\htdocs\rafael\GitHub\CicloMov\CicloMov Desktop\sis_cadastro\bin\Debug\normnfkd.nlp
-D:\xampp\htdocs\rafael\GitHub\CicloMov\CicloMov Desktop\sis_cadastro\obj\Debug\CicloMov Desktop.csprojResolveAssemblyReference.cache
 D:\xampp\htdocs\rafael\GitHub\CicloMov\CicloMov Desktop\sis_cadastro\obj\Debug\CicloMov.frm_cliente.resources
 D:\xampp\htdocs\rafael\GitHub\CicloMov\CicloMov Desktop\sis_cadastro\obj\Debug\CicloMov.frm_usuario.resources
 D:\xampp\htdocs\rafael\GitHub\CicloMov\CicloMov Desktop\sis_cadastro\obj\Debug\CicloMov.frm_funcionarios.resources
@@ -97,3 +96,5 @@ D:\xampp\htdocs\rafael\GitHub\CicloMov\CicloMov Desktop\sis_cadastro\obj\Debug\C
 D:\xampp\htdocs\rafael\GitHub\CicloMov\CicloMov Desktop\sis_cadastro\obj\Debug\CicloMov.frm_menu.resources
 D:\xampp\htdocs\rafael\GitHub\CicloMov\CicloMov Desktop\sis_cadastro\obj\Debug\CicloMov.Properties.Resources.resources
 D:\xampp\htdocs\rafael\GitHub\CicloMov\CicloMov Desktop\sis_cadastro\obj\Debug\CicloMov Desktop.csproj.GenerateResource.Cache
+D:\xampp\htdocs\rafael\GitHub\CicloMov\CicloMov Desktop\sis_cadastro\bin\Debug\CicloMov.exe.CodeAnalysisLog.xml
+D:\xampp\htdocs\rafael\GitHub\CicloMov\CicloMov Desktop\sis_cadastro\bin\Debug\CicloMov.exe.lastcodeanalysissucceeded
