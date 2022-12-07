@@ -197,14 +197,14 @@ namespace CicloMov
             }
             else
             {
-                MySqlConnection cnn = new MySqlConnection("server=localhost;database=bd_carrinho;uid=root;pwd=\"\";");
-                MySqlCommand comando = new MySqlCommand("SELECT * FROM clientes WHERE id_cliente = @id_cliente", cnn);
+                MySqlConnection cnn = new MySqlConnection("server=localhost;database=bd_estacionamento;uid=root;pwd=\"\";");
+                MySqlCommand comando = new MySqlCommand("SELECT * FROM clientes WHERE cod_clientes = @cod_clientes", cnn);
                 try
                 {
 
                     cnn.Open();
 
-                    comando.Parameters.AddWithValue("@id_cliente", txt_pesquisar.Text);
+                    comando.Parameters.AddWithValue("@cod_clientes", txt_pesquisar.Text);
                    
                     MySqlDataReader myReader;
                     myReader = comando.ExecuteReader();
@@ -213,7 +213,7 @@ namespace CicloMov
                         while (myReader.Read())
                         {
                             //Console.WriteLine(myReader.GetString(0));
-                            MessageBox.Show(myReader.GetString(2));
+                            txt_cod_cliente.Text = myReader.GetString(0);
                         }
                     }
                     finally
