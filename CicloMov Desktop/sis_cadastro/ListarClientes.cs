@@ -18,7 +18,7 @@ namespace CicloMov
             InitializeComponent();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dataGridView1_DefaultValuesNeeded(object sender, System.Windows.Forms.DataGridViewRowEventArgs e)
         {
             MySqlConnection cnn = new MySqlConnection("server=localhost;database=bd_estacionamento;uid=root;pwd=\"\";");
             MySqlCommand comando = new MySqlCommand("SELECT * FROM clientes", cnn);
@@ -33,11 +33,11 @@ namespace CicloMov
                 {
                     while (myReader.Read())
                     {
-                        //Console.WriteLine(myReader.GetString(0));
-                        txt_cod_cliente.Text = myReader.GetString(0);
-                        txt_email_cliente.Text = myReader.GetString(1);
-                        txt_cpf_cliente.Text = myReader.GetString(2);
-                        txt_tempo_cliente.Text = myReader.GetString(3);
+                        e.Row.Cells["col_codigo"].Value = myReader.GetString(0);
+                        e.Row.Cells["col_usuario"].Value = myReader.GetString(5);
+                        e.Row.Cells["col_email"].Value = myReader.GetString(2);
+                        e.Row.Cells["col_cpf"].Value = myReader.GetString(3);
+                        e.Row.Cells["col_tempo"].Value = myReader.GetString(4);
                     }
                 }
                 finally
