@@ -96,5 +96,4 @@ D:\xampp\htdocs\rafael\GitHub\CicloMov\CicloMov Desktop\sis_cadastro\obj\Debug\C
 D:\xampp\htdocs\rafael\GitHub\CicloMov\CicloMov Desktop\sis_cadastro\obj\Debug\CicloMov.frm_menu.resources
 D:\xampp\htdocs\rafael\GitHub\CicloMov\CicloMov Desktop\sis_cadastro\obj\Debug\CicloMov.Properties.Resources.resources
 D:\xampp\htdocs\rafael\GitHub\CicloMov\CicloMov Desktop\sis_cadastro\obj\Debug\CicloMov Desktop.csproj.GenerateResource.Cache
-D:\xampp\htdocs\rafael\GitHub\CicloMov\CicloMov Desktop\sis_cadastro\bin\Debug\CicloMov.exe.CodeAnalysisLog.xml
-D:\xampp\htdocs\rafael\GitHub\CicloMov\CicloMov Desktop\sis_cadastro\bin\Debug\CicloMov.exe.lastcodeanalysissucceeded
+D:\xampp\htdocs\rafael\GitHub\CicloMov\CicloMov Desktop\sis_cadastro\obj\Debug\CicloMov Desktop.csprojResolveAssemblyReference.cache
