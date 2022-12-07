@@ -32,11 +32,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.txt_cod_cliente = new System.Windows.Forms.MaskedTextBox();
-            this.txt_nome_cliente = new System.Windows.Forms.MaskedTextBox();
-            this.txt_end_cliente = new System.Windows.Forms.MaskedTextBox();
-            this.txt_cel_cliente = new System.Windows.Forms.MaskedTextBox();
+            this.txt_email_cliente = new System.Windows.Forms.MaskedTextBox();
+            this.txt_tempo_cliente = new System.Windows.Forms.MaskedTextBox();
             this.txt_cpf_cliente = new System.Windows.Forms.MaskedTextBox();
             this.txt_pesquisar = new System.Windows.Forms.MaskedTextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -46,12 +44,15 @@
             this.btn_editar = new System.Windows.Forms.Button();
             this.btn_cadastrar = new System.Windows.Forms.Button();
             this.btn_voltar_menu = new System.Windows.Forms.Button();
+            this.txt_usuario_cliente = new System.Windows.Forms.MaskedTextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(100, 107);
+            this.label1.Location = new System.Drawing.Point(96, 168);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(49, 13);
             this.label1.TabIndex = 5;
@@ -60,79 +61,61 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(100, 148);
+            this.label2.Location = new System.Drawing.Point(104, 232);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(39, 13);
+            this.label2.Size = new System.Drawing.Size(42, 13);
             this.label2.TabIndex = 6;
-            this.label2.Text = "NOME";
+            this.label2.Text = "E-MAIL";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(100, 192);
+            this.label3.Location = new System.Drawing.Point(120, 264);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(67, 13);
+            this.label3.Size = new System.Drawing.Size(27, 13);
             this.label3.TabIndex = 7;
-            this.label3.Text = "ENDEREÇO";
+            this.label3.Text = "CPF";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(100, 231);
+            this.label4.Location = new System.Drawing.Point(64, 296);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(56, 13);
+            this.label4.Size = new System.Drawing.Size(83, 13);
             this.label4.TabIndex = 8;
-            this.label4.Text = "CELULAR";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(100, 273);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(27, 13);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "CPF";
+            this.label4.Text = "TEMPO TOTAL";
             // 
             // txt_cod_cliente
             // 
             this.txt_cod_cliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.txt_cod_cliente.Location = new System.Drawing.Point(194, 100);
+            this.txt_cod_cliente.Location = new System.Drawing.Point(152, 160);
             this.txt_cod_cliente.Name = "txt_cod_cliente";
-            this.txt_cod_cliente.Size = new System.Drawing.Size(130, 23);
+            this.txt_cod_cliente.Size = new System.Drawing.Size(64, 23);
             this.txt_cod_cliente.TabIndex = 10;
             // 
-            // txt_nome_cliente
+            // txt_email_cliente
             // 
-            this.txt_nome_cliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.txt_nome_cliente.Location = new System.Drawing.Point(194, 141);
-            this.txt_nome_cliente.Name = "txt_nome_cliente";
-            this.txt_nome_cliente.Size = new System.Drawing.Size(332, 23);
-            this.txt_nome_cliente.TabIndex = 11;
+            this.txt_email_cliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.txt_email_cliente.Location = new System.Drawing.Point(152, 224);
+            this.txt_email_cliente.Name = "txt_email_cliente";
+            this.txt_email_cliente.Size = new System.Drawing.Size(240, 23);
+            this.txt_email_cliente.TabIndex = 11;
             // 
-            // txt_end_cliente
+            // txt_tempo_cliente
             // 
-            this.txt_end_cliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.txt_end_cliente.Location = new System.Drawing.Point(194, 185);
-            this.txt_end_cliente.Name = "txt_end_cliente";
-            this.txt_end_cliente.Size = new System.Drawing.Size(456, 23);
-            this.txt_end_cliente.TabIndex = 12;
-            // 
-            // txt_cel_cliente
-            // 
-            this.txt_cel_cliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.txt_cel_cliente.Location = new System.Drawing.Point(194, 228);
-            this.txt_cel_cliente.Mask = "(99) 99999-9999";
-            this.txt_cel_cliente.Name = "txt_cel_cliente";
-            this.txt_cel_cliente.Size = new System.Drawing.Size(168, 23);
-            this.txt_cel_cliente.TabIndex = 13;
+            this.txt_tempo_cliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.txt_tempo_cliente.Location = new System.Drawing.Point(152, 288);
+            this.txt_tempo_cliente.Name = "txt_tempo_cliente";
+            this.txt_tempo_cliente.Size = new System.Drawing.Size(72, 23);
+            this.txt_tempo_cliente.TabIndex = 12;
             // 
             // txt_cpf_cliente
             // 
             this.txt_cpf_cliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.txt_cpf_cliente.Location = new System.Drawing.Point(194, 266);
+            this.txt_cpf_cliente.Location = new System.Drawing.Point(152, 256);
             this.txt_cpf_cliente.Mask = "999.999.999-99";
             this.txt_cpf_cliente.Name = "txt_cpf_cliente";
-            this.txt_cpf_cliente.Size = new System.Drawing.Size(168, 23);
+            this.txt_cpf_cliente.Size = new System.Drawing.Size(112, 23);
             this.txt_cpf_cliente.TabIndex = 14;
             // 
             // txt_pesquisar
@@ -221,21 +204,49 @@
             this.btn_voltar_menu.UseVisualStyleBackColor = false;
             this.btn_voltar_menu.Click += new System.EventHandler(this.btn_voltar_menu_Click);
             // 
+            // txt_usuario_cliente
+            // 
+            this.txt_usuario_cliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.txt_usuario_cliente.Location = new System.Drawing.Point(152, 192);
+            this.txt_usuario_cliente.Name = "txt_usuario_cliente";
+            this.txt_usuario_cliente.Size = new System.Drawing.Size(130, 23);
+            this.txt_usuario_cliente.TabIndex = 19;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(56, 200);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(91, 13);
+            this.label5.TabIndex = 20;
+            this.label5.Text = "NOME USUARIO";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(56, 104);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(279, 32);
+            this.label7.TabIndex = 21;
+            this.label7.Text = "INFORMAÇÃO CLIENTE";
+            // 
             // frm_cliente
             // 
             this.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(790, 443);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.txt_usuario_cliente);
             this.Controls.Add(this.btn_voltar_menu);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txt_pesquisar);
             this.Controls.Add(this.txt_cpf_cliente);
-            this.Controls.Add(this.txt_cel_cliente);
-            this.Controls.Add(this.txt_end_cliente);
-            this.Controls.Add(this.txt_nome_cliente);
+            this.Controls.Add(this.txt_tempo_cliente);
+            this.Controls.Add(this.txt_email_cliente);
             this.Controls.Add(this.txt_cod_cliente);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -265,16 +276,17 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.MaskedTextBox txt_cod_cliente;
-        private System.Windows.Forms.MaskedTextBox txt_nome_cliente;
-        private System.Windows.Forms.MaskedTextBox txt_end_cliente;
-        private System.Windows.Forms.MaskedTextBox txt_cel_cliente;
+        private System.Windows.Forms.MaskedTextBox txt_email_cliente;
+        private System.Windows.Forms.MaskedTextBox txt_tempo_cliente;
         private System.Windows.Forms.MaskedTextBox txt_cpf_cliente;
         private System.Windows.Forms.MaskedTextBox txt_pesquisar;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btn_editar;
         private System.Windows.Forms.Button btn_voltar_menu;
+        private System.Windows.Forms.MaskedTextBox txt_usuario_cliente;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label7;
     }
 }
 

@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace CicloMov
 {
@@ -25,45 +26,42 @@ namespace CicloMov
 
         private void btn_cadastrar_Click(object sender, EventArgs e)
         {
-            if (txt_nome_cliente.Text == "" || txt_end_cliente.Text == "" || txt_cel_cliente.Text == "" || txt_cpf_cliente.Text == "")
+            MySqlConnection cnn = new MySqlConnection("server=localhost;database=bd_carrinho;uid=root;pwd=\"\";");
+            MySqlCommand comando = new MySqlCommand("INSERT INTO clientes (nome_completo, email, telefone, username, senha) VALUES (@nome_produto,@valor_produto,@estoque_produto,@categoria_produto)", cnn);
+            try
             {
-                MessageBox.Show("Preencha todos os campos para prosseguir!");
-            }
-            else
-            {
+                comando.Parameters.AddWithValue("@codigo_cliente",
+                txt_cod_cliente.Text);
+                comando.Parameters.AddWithValue("@nome_cliente",
+                txt_email_cliente.Text);
+                comando.Parameters.AddWithValue("@end_cliente",
+                txt_tempo_cliente.Text);
+                comando.Parameters.AddWithValue("@cpf_cliente",
+                txt_cpf_cliente.Text);
+                cnn.Open();
+
+                comando.Parameters.AddWithValue("@id_cliente", txt_pesquisar.Text);
+
+                MySqlDataReader myReader;
+                myReader = comando.ExecuteReader();
                 try
                 {
-                    conexao = new SqlConnection(@"Server=LAB136-16\SQLEXPRESS; Database=bd_cadastro_clayteam; User id=sa; Password=123456;");
-                    strsql = "INSERT INTO CLIENTES (nome_cliente, end_cliente, cel_cliente, cpf_cliente) VALUES (@nome_cliente,@end_cliente,@cel_cliente,@cpf_cliente)";
-                    comando = new SqlCommand(strsql, conexao);
-                    comando.Parameters.AddWithValue("@nome_cliente",
-                    txt_nome_cliente.Text);
-                    comando.Parameters.AddWithValue("@end_cliente",
-                    txt_end_cliente.Text);
-                    comando.Parameters.AddWithValue("@cel_cliente",
-                    txt_cel_cliente.Text);
-                    comando.Parameters.AddWithValue("@cpf_cliente",
-                    txt_cpf_cliente.Text);
-                    conexao.Open();
-                    comando.ExecuteNonQuery();
-                    MessageBox.Show("CADASTRO REALIZADO COM SUCESSO!!");
-
-                    txt_cod_cliente.Text = "";
-                    txt_nome_cliente.Text = "";
-                    txt_end_cliente.Text = "";
-                    txt_cel_cliente.Text = "";
-                    txt_cpf_cliente.Text = "";
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
+                    while (myReader.Read())
+                    {
+                        //Console.WriteLine(myReader.GetString(0));
+                        MessageBox.Show(myReader.GetString(2));
+                    }
                 }
                 finally
                 {
-                    conexao.Close();
-                    conexao = null;
-                    comando = null;
+                    myReader.Close();
+                    cnn.Close();
                 }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Can not open connection ! ");
             }
         }
 
@@ -71,7 +69,7 @@ namespace CicloMov
         {
             txt_cod_cliente.Enabled = false;
             //INÍCIO DO BLOCO DE PROGRAMAÇÃO
-            if (txt_cod_cliente.Text == "" || txt_nome_cliente.Text == "" || txt_end_cliente.Text == "" || txt_cel_cliente.Text == "" || txt_cpf_cliente.Text == "")
+            if (txt_cod_cliente.Text == "" || txt_email_cliente.Text == "" || txt_tempo_cliente.Text == "" || txt_cpf_cliente.Text == "")
             {
                 MessageBox.Show("Preencha todos os campos para prosseguir!");
             }
@@ -86,11 +84,9 @@ namespace CicloMov
                     comando.Parameters.AddWithValue("@codigo_cliente",
                     txt_cod_cliente.Text);
                     comando.Parameters.AddWithValue("@nome_cliente",
-                    txt_nome_cliente.Text);
+                    txt_email_cliente.Text);
                     comando.Parameters.AddWithValue("@end_cliente",
-                    txt_end_cliente.Text);
-                    comando.Parameters.AddWithValue("@cel_cliente",
-                    txt_cel_cliente.Text);
+                    txt_tempo_cliente.Text);
                     comando.Parameters.AddWithValue("@cpf_cliente",
                     txt_cpf_cliente.Text);
                     conexao.Open();
@@ -98,9 +94,8 @@ namespace CicloMov
                     MessageBox.Show("CADASTRO ATUALIZADO COM SUCESSO!!");
 
                     txt_cod_cliente.Text = "";
-                    txt_nome_cliente.Text = "";
-                    txt_end_cliente.Text = "";
-                    txt_cel_cliente.Text = "";
+                    txt_email_cliente.Text = "";
+                    txt_tempo_cliente.Text = "";
                     txt_cpf_cliente.Text = "";
                 }
                 catch (Exception ex)
@@ -166,9 +161,8 @@ namespace CicloMov
                 }
                 //FIM DO BLOCO DE PROGRAMAÇÃO
                 txt_cod_cliente.Text = "";
-                txt_nome_cliente.Text = "";
-                txt_end_cliente.Text = "";
-                txt_cel_cliente.Text = "";
+                txt_email_cliente.Text = "";
+                txt_tempo_cliente.Text = "";
                 txt_cpf_cliente.Text = "";
                 txt_pesquisar.Text = "";
             }
@@ -178,9 +172,8 @@ namespace CicloMov
         {
             //Apaga todos os dados dos campos preenchidos.
             txt_cod_cliente.Text = "";
-            txt_nome_cliente.Text = "";
-            txt_end_cliente.Text = "";
-            txt_cel_cliente.Text = "";
+            txt_email_cliente.Text = "";
+            txt_tempo_cliente.Text = "";
             txt_cpf_cliente.Text = "";
             txt_pesquisar.Text = "";
         }
@@ -197,40 +190,40 @@ namespace CicloMov
             }
             else
             {
+                MySqlConnection cnn = new MySqlConnection("server=localhost;database=bd_estacionamento;uid=root;pwd=\"\";");
+                MySqlCommand comando = new MySqlCommand("SELECT * FROM clientes WHERE cod_clientes = @cod_clientes", cnn);
                 try
                 {
-                    //A variável conexao define uma string para conexão com o BD.
-                    conexao = new SqlConnection(@"Server=LAB136-16\SQLEXPRESS; Database=bd_cadastro_clayteam; User id=sa; Password=123456;");
-                    strsql = "SELECT * FROM CLIENTES WHERE codigo_cliente = @codigo_cliente";
-                    comando = new SqlCommand(strsql, conexao);
-                    comando.Parameters.AddWithValue("@codigo_cliente",
-                    txt_pesquisar.Text);
-                    conexao.Open();
-                    dr = comando.ExecuteReader();
-                    if (dr.Read())
+
+                    cnn.Open();
+
+                    comando.Parameters.AddWithValue("@cod_clientes", txt_pesquisar.Text);
+                   
+                    MySqlDataReader myReader;
+                    myReader = comando.ExecuteReader();
+                    try
                     {
-                        txt_cod_cliente.Text =
-                        Convert.ToString(dr["codigo_cliente"]);
-                        txt_nome_cliente.Text = (string)dr["nome_cliente"];
-                        txt_end_cliente.Text = (string)dr["end_cliente"];
-                        txt_cel_cliente.Text = (string)dr["cel_cliente"];
-                        txt_cpf_cliente.Text = (string)dr["cpf_cliente"];
+                        while (myReader.Read())
+                        {
+                            //Console.WriteLine(myReader.GetString(0));
+                            txt_cod_cliente.Text = myReader.GetString(0);
+                            txt_email_cliente.Text = myReader.GetString(1);
+                            txt_cpf_cliente.Text = myReader.GetString(2);
+                            txt_tempo_cliente.Text = myReader.GetString(3);
+                        }
                     }
-                    else
+                    finally
                     {
-                        MessageBox.Show("Nenhum registro encontrado!");
+                        myReader.Close();
+                        cnn.Close();
                     }
+
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message);
+                    MessageBox.Show("Can not open connection ! ");
                 }
-                finally
-                {
-                    conexao.Close();
-                    conexao = null;
-                    comando = null;
-                }
+
                 //FIM DO BLOCO DE PROGRAMAÇÃO
             }
         }
@@ -248,5 +241,6 @@ namespace CicloMov
         {
             txt_cod_cliente.Enabled = false;
         }
+
     }
 }
