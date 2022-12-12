@@ -29,6 +29,7 @@ namespace CicloMov
         private void btn_cadastrar_Click(object sender, EventArgs e)
         {
 
+
             //var cliente = new Clientes()
             //{
             //    Email = ""
