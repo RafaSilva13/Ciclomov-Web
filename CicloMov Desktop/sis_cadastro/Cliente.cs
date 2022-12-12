@@ -29,12 +29,13 @@ namespace CicloMov
         private void btn_cadastrar_Click(object sender, EventArgs e)
         {
 
-            var cliente = new Clientes()
-            {
-                Email = ""
-            };
+            //var cliente = new Clientes()
+            //{
+            //    Email = ""
+            //};
+            //var sucesso = _clientesRepository.Insert(cliente);
 
-            var sucesso = _clientesRepository.Insert(cliente);
+
             //MySqlConnection cnn = new MySqlConnection("server=localhost;database=bd_carrinho;uid=root;pwd=\"\";");
             //MySqlCommand comando = new MySqlCommand("INSERT INTO clientes (nome_completo, email, telefone, username, senha) VALUES (@nome_produto,@valor_produto,@estoque_produto,@categoria_produto)", cnn);
             //try
