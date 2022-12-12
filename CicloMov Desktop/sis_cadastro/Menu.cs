@@ -21,9 +21,9 @@ namespace CicloMov
         {
             this.Hide();
 
-            frm_cliente area_cliente = new frm_cliente();
+            //frm_cliente area_cliente = new frm_cliente();
 
-            area_cliente.Show();
+            //area_cliente.Show();
         }
 
         private void btn_area_fornecedores_Click(object sender, EventArgs e)
