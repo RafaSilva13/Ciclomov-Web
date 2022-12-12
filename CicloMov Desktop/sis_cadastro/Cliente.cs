@@ -14,6 +14,7 @@ namespace CicloMov
         SqlDataAdapter da;
         SqlDataReader dr;
         String strsql;
+        private object dataGrid1;
         private readonly IClientesRepository _clientesRepository;
 
         public frm_cliente(IClientesRepository clientesRepository)
@@ -28,7 +29,16 @@ namespace CicloMov
 
         private void btn_cadastrar_Click(object sender, EventArgs e)
         {
+            DataGridTableStyle ts1 = new DataGridTableStyle();
+            ts1.MappingName = "Customers";
 
+            DataGridBoolColumn myDataCol = new DataGridBoolColumn();
+            myDataCol.HeaderText = "My New Column";
+            myDataCol.MappingName = "Current";
+
+            ts1.GridColumnStyles.Add(myDataCol);
+
+            //dataGridView1.ColumnAdded(ts1);
 
             //var cliente = new Clientes()
             //{
@@ -37,43 +47,7 @@ namespace CicloMov
             //var sucesso = _clientesRepository.Insert(cliente);
 
 
-            //MySqlConnection cnn = new MySqlConnection("server=localhost;database=bd_carrinho;uid=root;pwd=\"\";");
-            //MySqlCommand comando = new MySqlCommand("INSERT INTO clientes (nome_completo, email, telefone, username, senha) VALUES (@nome_produto,@valor_produto,@estoque_produto,@categoria_produto)", cnn);
-            //try
-            //{
-            //    comando.Parameters.AddWithValue("@codigo_cliente",
-            //    txt_cod_cliente.Text);
-            //    comando.Parameters.AddWithValue("@nome_cliente",
-            //    txt_email_cliente.Text);
-            //    comando.Parameters.AddWithValue("@end_cliente",
-            //    txt_tempo_cliente.Text);
-            //    comando.Parameters.AddWithValue("@cpf_cliente",
-            //    txt_cpf_cliente.Text);
-            //    cnn.Open();
-
-            //    comando.Parameters.AddWithValue("@id_cliente", txt_pesquisar.Text);
-
-            //    MySqlDataReader myReader;
-            //    myReader = comando.ExecuteReader();
-            //    try
-            //    {
-            //        while (myReader.Read())
-            //        {
-            //            //Console.WriteLine(myReader.GetString(0));
-            //            MessageBox.Show(myReader.GetString(2));
-            //        }
-            //    }
-            //    finally
-            //    {
-            //        myReader.Close();
-            //        cnn.Close();
-            //    }
-
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show("Can not open connection ! ");
-            //}
+   
         }
 
         private void btn_editar_Click(object sender, EventArgs e)
