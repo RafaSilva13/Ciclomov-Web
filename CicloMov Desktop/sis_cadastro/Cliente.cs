@@ -33,11 +33,9 @@ namespace CicloMov
                 comando.Parameters.AddWithValue("@codigo_cliente",
                 txt_cod_cliente.Text);
                 comando.Parameters.AddWithValue("@nome_cliente",
-                txt_nome_cliente.Text);
+                txt_email_cliente.Text);
                 comando.Parameters.AddWithValue("@end_cliente",
-                txt_end_cliente.Text);
-                comando.Parameters.AddWithValue("@cel_cliente",
-                txt_cel_cliente.Text);
+                txt_tempo_cliente.Text);
                 comando.Parameters.AddWithValue("@cpf_cliente",
                 txt_cpf_cliente.Text);
                 cnn.Open();
@@ -71,7 +69,7 @@ namespace CicloMov
         {
             txt_cod_cliente.Enabled = false;
             //INÍCIO DO BLOCO DE PROGRAMAÇÃO
-            if (txt_cod_cliente.Text == "" || txt_nome_cliente.Text == "" || txt_end_cliente.Text == "" || txt_cel_cliente.Text == "" || txt_cpf_cliente.Text == "")
+            if (txt_cod_cliente.Text == "" || txt_email_cliente.Text == "" || txt_tempo_cliente.Text == "" || txt_cpf_cliente.Text == "")
             {
                 MessageBox.Show("Preencha todos os campos para prosseguir!");
             }
@@ -86,11 +84,9 @@ namespace CicloMov
                     comando.Parameters.AddWithValue("@codigo_cliente",
                     txt_cod_cliente.Text);
                     comando.Parameters.AddWithValue("@nome_cliente",
-                    txt_nome_cliente.Text);
+                    txt_email_cliente.Text);
                     comando.Parameters.AddWithValue("@end_cliente",
-                    txt_end_cliente.Text);
-                    comando.Parameters.AddWithValue("@cel_cliente",
-                    txt_cel_cliente.Text);
+                    txt_tempo_cliente.Text);
                     comando.Parameters.AddWithValue("@cpf_cliente",
                     txt_cpf_cliente.Text);
                     conexao.Open();
@@ -98,9 +94,8 @@ namespace CicloMov
                     MessageBox.Show("CADASTRO ATUALIZADO COM SUCESSO!!");
 
                     txt_cod_cliente.Text = "";
-                    txt_nome_cliente.Text = "";
-                    txt_end_cliente.Text = "";
-                    txt_cel_cliente.Text = "";
+                    txt_email_cliente.Text = "";
+                    txt_tempo_cliente.Text = "";
                     txt_cpf_cliente.Text = "";
                 }
                 catch (Exception ex)
@@ -166,9 +161,8 @@ namespace CicloMov
                 }
                 //FIM DO BLOCO DE PROGRAMAÇÃO
                 txt_cod_cliente.Text = "";
-                txt_nome_cliente.Text = "";
-                txt_end_cliente.Text = "";
-                txt_cel_cliente.Text = "";
+                txt_email_cliente.Text = "";
+                txt_tempo_cliente.Text = "";
                 txt_cpf_cliente.Text = "";
                 txt_pesquisar.Text = "";
             }
@@ -178,9 +172,8 @@ namespace CicloMov
         {
             //Apaga todos os dados dos campos preenchidos.
             txt_cod_cliente.Text = "";
-            txt_nome_cliente.Text = "";
-            txt_end_cliente.Text = "";
-            txt_cel_cliente.Text = "";
+            txt_email_cliente.Text = "";
+            txt_tempo_cliente.Text = "";
             txt_cpf_cliente.Text = "";
             txt_pesquisar.Text = "";
         }
@@ -197,14 +190,14 @@ namespace CicloMov
             }
             else
             {
-                MySqlConnection cnn = new MySqlConnection("server=localhost;database=bd_carrinho;uid=root;pwd=\"\";");
-                MySqlCommand comando = new MySqlCommand("SELECT * FROM clientes WHERE id_cliente = @id_cliente", cnn);
+                MySqlConnection cnn = new MySqlConnection("server=localhost;database=bd_estacionamento;uid=root;pwd=\"\";");
+                MySqlCommand comando = new MySqlCommand("SELECT * FROM clientes WHERE cod_clientes = @cod_clientes", cnn);
                 try
                 {
 
                     cnn.Open();
 
-                    comando.Parameters.AddWithValue("@id_cliente", txt_pesquisar.Text);
+                    comando.Parameters.AddWithValue("@cod_clientes", txt_pesquisar.Text);
                    
                     MySqlDataReader myReader;
                     myReader = comando.ExecuteReader();
@@ -213,7 +206,10 @@ namespace CicloMov
                         while (myReader.Read())
                         {
                             //Console.WriteLine(myReader.GetString(0));
-                            MessageBox.Show(myReader.GetString(2));
+                            txt_cod_cliente.Text = myReader.GetString(0);
+                            txt_email_cliente.Text = myReader.GetString(1);
+                            txt_cpf_cliente.Text = myReader.GetString(2);
+                            txt_tempo_cliente.Text = myReader.GetString(3);
                         }
                     }
                     finally
@@ -245,5 +241,6 @@ namespace CicloMov
         {
             txt_cod_cliente.Enabled = false;
         }
+
     }
 }
