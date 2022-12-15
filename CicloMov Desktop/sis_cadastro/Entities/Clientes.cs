@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace CicloMov.Entities
@@ -7,6 +8,7 @@ namespace CicloMov.Entities
     public class Clientes
     {
         [Key, Column("id_cliente")]
+        [Browsable(false)]
         public int IdCliente { get; set; }
 
         [Column("nome_completo")]
@@ -22,6 +24,7 @@ namespace CicloMov.Entities
         public string Username { get; set; }
 
         [Column("senha")]
+        [Browsable(false)]
         public string Senha { get; set; }
     }
 }

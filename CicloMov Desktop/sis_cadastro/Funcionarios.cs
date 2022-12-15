@@ -27,43 +27,39 @@ namespace CicloMov
 
         private void btn_cadastrar_Click(object sender, EventArgs e)
         {
-            MySqlConnection cnn = new MySqlConnection("server=localhost;database=bd_carrinho;uid=root;pwd=\"\";");
-            MySqlCommand comando = new MySqlCommand("INSERT INTO clientes (nome_completo, email, telefone, username, senha) VALUES (@nome_produto,@valor_produto,@estoque_produto,@categoria_produto)", cnn);
-            try
-            {
-                comando.Parameters.AddWithValue("@codigo_cliente",
-                txt_cod_cliente.Text);
-                comando.Parameters.AddWithValue("@nome_cliente",
-                txt_email_cliente.Text);
-                comando.Parameters.AddWithValue("@end_cliente",
-                txt_tempo_cliente.Text);
-                comando.Parameters.AddWithValue("@cpf_cliente",
-                txt_cpf_cliente.Text);
-                cnn.Open();
+            //MySqlConnection cnn = new MySqlConnection("server=localhost;database=bd_estacionamento;uid=root;pwd=\"\";");
+            //MySqlCommand comando = new MySqlCommand("SELECT * FROM clientes WHERE cod_clientes = @cod_clientes", cnn);
+            //try
+            //{
 
-                comando.Parameters.AddWithValue("@id_cliente", txt_pesquisar.Text);
+            //    cnn.Open();
 
-                MySqlDataReader myReader;
-                myReader = comando.ExecuteReader();
-                try
-                {
-                    while (myReader.Read())
-                    {
-                        //Console.WriteLine(myReader.GetString(0));
-                        MessageBox.Show(myReader.GetString(2));
-                    }
-                }
-                finally
-                {
-                    myReader.Close();
-                    cnn.Close();
-                }
+            //    comando.Parameters.AddWithValue("@cod_clientes", txt_pesquisar.Text);
 
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Can not open connection ! ");
-            }
+            //    MySqlDataReader myReader;
+            //    myReader = comando.ExecuteReader();
+            //    try
+            //    {
+            //        while (myReader.Read())
+            //        {
+            //            //Console.WriteLine(myReader.GetString(0));
+            //            txt_cod_cliente.Text = myReader.GetString(0);
+            //            txt_email_cliente.Text = myReader.GetString(1);
+            //            txt_cpf_cliente.Text = myReader.GetString(2);
+            //            txt_tempo_cliente.Text = myReader.GetString(3);
+            //        }
+            //    }
+            //    finally
+            //    {
+            //        myReader.Close();
+            //        cnn.Close();
+            //    }
+
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show("Can not open connection ! ");
+            //}
 
         }
 
@@ -242,7 +238,7 @@ namespace CicloMov
 
         private void btn_voltar_menu_Click(object sender, EventArgs e)
         {
-            this.Hide();
+             this.Close();
 
             frm_menu voltar_menu = new frm_menu();
 

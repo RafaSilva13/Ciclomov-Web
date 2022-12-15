@@ -1,9 +1,15 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
 using System.Data.SqlClient;
+using System.Linq;
+using System.Reflection;
 using System.Windows.Forms;
 using CicloMov.Entities;
 using CicloMov.IRepositories;
 using Microsoft.Extensions.DependencyInjection;
+using Xamarin.Forms.Internals;
 
 namespace CicloMov
 {
@@ -15,30 +21,24 @@ namespace CicloMov
         SqlDataReader dr;
         String strsql;
         private object dataGrid1;
+
         private readonly IClientesRepository _clientesRepository;
 
         public frm_cliente(IClientesRepository clientesRepository)
         {
-            //var form2 = Program.ServiceProvider.GetRequiredService<frm_cliente>();
-            //form2.ShowDialog();
-
-            _clientesRepository = clientesRepository; 
-
             InitializeComponent();
+            _clientesRepository = clientesRepository;
+            PreencherTabela();
+        }
+
+        private void PreencherTabela()
+        {
+            dataGridView1.DataSource = _clientesRepository.GetAll();
         }
 
         private void btn_cadastrar_Click(object sender, EventArgs e)
         {
-            DataGridTableStyle ts1 = new DataGridTableStyle();
-            ts1.MappingName = "Customers";
 
-            DataGridBoolColumn myDataCol = new DataGridBoolColumn();
-            myDataCol.HeaderText = "My New Column";
-            myDataCol.MappingName = "Current";
-
-            ts1.GridColumnStyles.Add(myDataCol);
-
-            //dataGridView1.ColumnAdded(ts1);
 
             //var cliente = new Clientes()
             //{
@@ -47,7 +47,7 @@ namespace CicloMov
             //var sucesso = _clientesRepository.Insert(cliente);
 
 
-   
+
         }
 
         private void btn_editar_Click(object sender, EventArgs e)
@@ -183,7 +183,7 @@ namespace CicloMov
                 //    cnn.Open();
 
                 //    comando.Parameters.AddWithValue("@cod_clientes", txt_pesquisar.Text);
-                   
+
                 //    MySqlDataReader myReader;
                 //    myReader = comando.ExecuteReader();
                 //    try
@@ -215,11 +215,14 @@ namespace CicloMov
 
         private void btn_voltar_menu_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            //var form2 = Program.ServiceProvider.GetRequiredService<frm_cliente>();
+            //form2.ShowDialog();
 
+            this.Hide();
             frm_menu voltar_menu = new frm_menu();
 
             voltar_menu.Show();
+
         }
 
         private void frm_clientes_Load(object sender, EventArgs e)
@@ -227,5 +230,9 @@ namespace CicloMov
             txt_cod_cliente.Enabled = false;
         }
 
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

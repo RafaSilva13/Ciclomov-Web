@@ -232,7 +232,7 @@ namespace CicloMov
 
         private void btn_voltar_menu_Click(object sender, EventArgs e)
         {
-            this.Hide();
+             this.Close();
 
             frm_menu voltar_menu = new frm_menu();
 

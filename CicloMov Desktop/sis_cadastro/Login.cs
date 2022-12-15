@@ -46,7 +46,7 @@ namespace CicloMov
 
                     if (dr.Read())
                     {
-                        this.Hide();
+                         this.Close();
 
                         frm_menu menu = new frm_menu();
 
