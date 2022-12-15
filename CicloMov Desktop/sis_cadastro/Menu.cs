@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Extensions.DependencyInjection;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,16 +20,17 @@ namespace CicloMov
 
         private void btn_area_cliente_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
 
-            //frm_cliente area_cliente = new frm_cliente();
+            var form2 = Program.ServiceProvider.GetRequiredService<frm_cliente>();
 
-            //area_cliente.Show();
+            form2.ShowDialog();
+
         }
 
         private void btn_area_fornecedores_Click(object sender, EventArgs e)
         {
-            this.Hide();
+             this.Close();
 
             frm_fornecedores area_fonecedores = new frm_fornecedores();
 
@@ -37,7 +39,7 @@ namespace CicloMov
 
         private void btn_area_produtos_Click(object sender, EventArgs e)
         {
-            this.Hide();
+             this.Close();
 
             frm_produtos area_produtos = new frm_produtos();
 
@@ -46,7 +48,7 @@ namespace CicloMov
 
         private void btn_area_funcionarios_Click(object sender, EventArgs e)
         {
-            this.Hide();
+             this.Close();
 
             frm_funcionarios area_funcionarios = new frm_funcionarios();
 
@@ -55,7 +57,7 @@ namespace CicloMov
 
         private void btn_usuario_Click(object sender, EventArgs e)
         {
-            this.Hide();
+             this.Close();
 
             frm_usuario area_usuario = new frm_usuario();
 

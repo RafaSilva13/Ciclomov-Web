@@ -8,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
+
 
 namespace CicloMov
 {
@@ -25,47 +27,40 @@ namespace CicloMov
 
         private void btn_cadastrar_Click(object sender, EventArgs e)
         {
-            if (txt_nome_funcionarios.Text == "" || txt_end_funcionarios.Text == "" || txt_cel_funcionarios.Text == "" || txt_cpf_funcionarios.Text == "")
-            {
-                MessageBox.Show("Preencha todos os campos para prosseguir!");
-            }
-            else
-            {
-                try
-                {
-                    conexao = new SqlConnection(@"Server=LAB136-16\SQLEXPRESS; Database=bd_cadastro_clayteam; User id=sa; Password=123456;");
-                    strsql = "INSERT INTO funcionarios (nome_funcionario, end_funcionario, cel_funcionario, cpf_funcionario) VALUES (@nome_funcionario,@end_funcionario,@cel_funcionario,@cpf_funcionario)";
-                    comando = new SqlCommand(strsql, conexao);
-                    comando.Parameters.AddWithValue("@nome_funcionario",
-                    txt_nome_funcionarios.Text);
-                    comando.Parameters.AddWithValue("@end_funcionario",
-                    txt_end_funcionarios.Text);
-                    comando.Parameters.AddWithValue("@cel_funcionario",
-                    txt_cel_funcionarios.Text);
-                    comando.Parameters.AddWithValue("@cpf_funcionario",
-                    txt_cpf_funcionarios.Text);
-                    conexao.Open();
-                    comando.ExecuteNonQuery();
-                    MessageBox.Show("CADASTRO REALIZADO COM SUCESSO!!");
+            //MySqlConnection cnn = new MySqlConnection("server=localhost;database=bd_estacionamento;uid=root;pwd=\"\";");
+            //MySqlCommand comando = new MySqlCommand("SELECT * FROM clientes WHERE cod_clientes = @cod_clientes", cnn);
+            //try
+            //{
 
-                    txt_cod_funcionarios.Text = "";
-                    txt_nome_funcionarios.Text = "";
-                    txt_end_funcionarios.Text = "";
-                    txt_cel_funcionarios.Text = "";
-                    txt_cpf_funcionarios.Text = "";
-                    txt_pesquisar_funcionarios.Text = "";
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-                finally
-                {
-                    conexao.Close();
-                    conexao = null;
-                    comando = null;
-                }
-            }
+            //    cnn.Open();
+
+            //    comando.Parameters.AddWithValue("@cod_clientes", txt_pesquisar.Text);
+
+            //    MySqlDataReader myReader;
+            //    myReader = comando.ExecuteReader();
+            //    try
+            //    {
+            //        while (myReader.Read())
+            //        {
+            //            //Console.WriteLine(myReader.GetString(0));
+            //            txt_cod_cliente.Text = myReader.GetString(0);
+            //            txt_email_cliente.Text = myReader.GetString(1);
+            //            txt_cpf_cliente.Text = myReader.GetString(2);
+            //            txt_tempo_cliente.Text = myReader.GetString(3);
+            //        }
+            //    }
+            //    finally
+            //    {
+            //        myReader.Close();
+            //        cnn.Close();
+            //    }
+
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show("Can not open connection ! ");
+            //}
+
         }
 
         private void btn_editar_funcionarios_Click(object sender, EventArgs e)
@@ -243,7 +238,7 @@ namespace CicloMov
 
         private void btn_voltar_menu_Click(object sender, EventArgs e)
         {
-            this.Hide();
+             this.Close();
 
             frm_menu voltar_menu = new frm_menu();
 
