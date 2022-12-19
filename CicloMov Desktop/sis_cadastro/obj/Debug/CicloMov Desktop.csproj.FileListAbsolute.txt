@@ -329,3 +329,4 @@ C:\xampp\htdocs\GitHub\CicloMov\CicloMov Desktop\sis_cadastro\bin\Debug\Avalonia
 C:\xampp\htdocs\GitHub\CicloMov\CicloMov Desktop\sis_cadastro\bin\Debug\Avalonia.Visuals.xml
 C:\xampp\htdocs\GitHub\CicloMov\CicloMov Desktop\sis_cadastro\bin\Debug\JetBrains.Annotations.xml
 C:\xampp\htdocs\GitHub\CicloMov\CicloMov Desktop\sis_cadastro\bin\Debug\System.Reactive.xml
+C:\xampp\htdocs\GitHub\CicloMov\CicloMov Desktop\sis_cadastro\obj\Debug\CicloMov.frm_listar.resources

@@ -22,19 +22,19 @@ namespace CicloMov
         {
             this.Close();
 
-            var form2 = Program.ServiceProvider.GetRequiredService<frm_cliente>();
+            var form1 = Program.ServiceProvider.GetRequiredService<frm_cliente>();
 
-            form2.ShowDialog();
+            form1.ShowDialog();
 
         }
 
         private void btn_area_fornecedores_Click(object sender, EventArgs e)
         {
-             this.Close();
+            this.Close();
 
-            frm_fornecedores area_fonecedores = new frm_fornecedores();
+            var form2 = Program.ServiceProvider.GetRequiredService<frm_listar>();
 
-            area_fonecedores.Show();
+            form2.ShowDialog();
         }
 
         private void btn_area_produtos_Click(object sender, EventArgs e)
