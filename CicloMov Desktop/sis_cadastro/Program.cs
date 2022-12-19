@@ -45,6 +45,7 @@ namespace CicloMov
 
                     //Forms
                     services.AddTransient<frm_cliente>();
+                    services.AddTransient<frm_listar>();
                 });
         }
     }

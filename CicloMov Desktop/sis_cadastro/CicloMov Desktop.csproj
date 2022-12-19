@@ -375,6 +375,12 @@
     <Compile Include="Configuration\Context.cs" />
     <Compile Include="Entities\Clientes.cs" />
     <Compile Include="IRepositories\IClientesRepository.cs" />
+    <Compile Include="Listar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Listar.Designer.cs">
+      <DependentUpon>Listar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Repositories\Base\RepositoryBase.cs" />
     <Compile Include="Repositories\ClientesRepository.cs" />
     <Compile Include="Settings.cs" />
@@ -418,6 +424,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Cliente.resx">
       <DependentUpon>Cliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Listar.resx">
+      <DependentUpon>Listar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Usuario.resx">
       <DependentUpon>Usuario.cs</DependentUpon>
