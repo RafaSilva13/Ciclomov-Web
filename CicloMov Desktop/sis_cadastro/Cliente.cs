@@ -215,8 +215,8 @@ namespace CicloMov
 
         private void btn_voltar_menu_Click(object sender, EventArgs e)
         {
-            //var form2 = Program.ServiceProvider.GetRequiredService<frm_cliente>();
-            //form2.ShowDialog();
+            var form2 = Program.ServiceProvider.GetRequiredService<frm_cliente>();
+            form2.ShowDialog();
 
             this.Hide();
             frm_menu voltar_menu = new frm_menu();
