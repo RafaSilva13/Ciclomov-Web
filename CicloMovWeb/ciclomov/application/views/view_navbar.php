@@ -4,11 +4,11 @@
         <div class="container-fluid">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item active">
-                    <a class="nav-link" href="http://localhost\rafael\a\CicloMov\CicloMov%20Web\ciclomov/index.php/geral"><b>Home</b></a>
+                    <a class="nav-link" href="http://localhost\CicloMov\CicloMovWeb\ciclomov/index.php/geral"><b>Home</b></a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="http://localhost\rafael\a\CicloMov\CicloMov%20Web\ciclomov/index.php/geral/pontos"><b>Pontos</b></a>
+                    <a class="nav-link" href="http://localhost\CicloMov\CicloMovWeb\ciclomov/index.php/geral/pontos"><b>Pontos</b></a>
                 </li>
 
             </ul>
