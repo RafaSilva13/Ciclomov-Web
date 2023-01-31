@@ -1,6 +1,6 @@
 
     <!-- Background image -->
-    <div id="intro-example" class="p-5 text-center bg-image" style="background-image: url('<?=base_url('assets/images/fundo_pagina_n.jpg');?>');">
+    <div id="intro-example" class="p-5 text-center bg-image" style="background-image: url('<?=base_url('assets/images/fundo_pagina_n.jpg');?>'); box-shadow: 31px 31px 62px #c7c7c7,-31px -31px 62px #ffffff;">
         
         <div class="mask" style="background-color: rgba(0, 0, 0, 0.7);">
 
@@ -8,9 +8,10 @@
 
                 <div class="text-white">
 
-                    <h1 class="mb-3" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Viva o movimento</h1>
-                    <h4 class="mb-3" style="font-family: 'Kanit', sans-serif;">Conecte-se</h4>
-                    <a class="btn btn-outline-light btn-lg" data-mdb-ripple-color="dark" href="#!" role="button">Login</a>
+                    <h1 class="mb-3" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Viva agora o movimento</h1>
+                    <br>
+                    <h4 class="mb-3" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Conecte-se</h4>
+                    <a class="btn btn-outline-light btn-lg btnHome" data-mdb-ripple-color="dark" href="#!" role="button">Login</a>
 
                 </div>
 
