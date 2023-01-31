@@ -20,4 +20,13 @@ class Geral extends CI_Controller {
 		$this->load->view('view_pontos');
 		$this->load->view('view_footer');
 	}
+
+	public function login()
+	{
+		$this->load->helper('url');
+		$this->load->view('view_header');
+		$this->load->view('view_navbar');
+		$this->load->view('view_login');
+		$this->load->view('view_footer');
+	}
 }

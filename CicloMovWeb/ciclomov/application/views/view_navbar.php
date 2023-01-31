@@ -19,7 +19,7 @@
 
             </ul>
             <form class="d-flex gap-5">
-                <a type="button" class="btn btn-secondary btnlogin text-dark" href="">Login</a>
+                <a type="button" class="btn btn-secondary btnlogin text-dark" href="<?php echo site_url("geral/login") ?>">Login</a>
             </form>
         </div>
     </nav>

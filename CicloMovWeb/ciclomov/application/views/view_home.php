@@ -9,9 +9,12 @@
                 <div class="text-white">
 
                     <h1 class="mb-3" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Viva agora o movimento</h1>
+                    
                     <br>
+
                     <h4 class="mb-3" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Conecte-se</h4>
-                    <a class="btn btn-outline-light btn-lg btnHome" data-mdb-ripple-color="dark" href="#!" role="button">Login</a>
+
+                    <a class="btn btn-outline-light btn-lg btnHome" data-mdb-ripple-color="dark" href="<?php echo site_url("geral/login") ?>" role="button">Login</a>
 
                 </div>
 

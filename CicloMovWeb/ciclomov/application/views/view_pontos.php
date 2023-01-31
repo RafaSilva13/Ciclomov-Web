@@ -44,7 +44,7 @@
                     <a href="ponto.php?id=<?php echo $row['cod_ponto']; ?>">
 
                         <div class="card-body">
-                            <h6 class="card-text" style="font-size: 18px; color: rgb(62, 122, 122); text-align: center;"><?php echo $row['descricao']; ?></h6>
+                            <h6 class="card-text" style="margin-top: -5px; height: 0.9rem; font-size: 18px; color: rgb(62, 122, 122); text-align: center;"><?php echo $row['descricao']; ?></h6>
                         </div>
 
                     </a>
