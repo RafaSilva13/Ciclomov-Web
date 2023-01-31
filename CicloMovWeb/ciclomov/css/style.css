@@ -14,5 +14,9 @@
     138px 118px 200px rgba(0, 0, 0, 0.14);
 
     background-color: rgb(30, 170, 170);
-    color: white;
 }
+
+.nav-link.item {
+    color: rgb(255, 255, 255);
+}
+
