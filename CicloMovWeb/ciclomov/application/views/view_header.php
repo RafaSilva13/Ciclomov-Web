@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Ciclo Mov</title>
     
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+
     <!-- CSS -->
     <link href="<?=base_url('assets/css/style.css');?>" rel="stylesheet">
     

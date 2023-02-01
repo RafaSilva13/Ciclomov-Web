@@ -14,7 +14,7 @@
 
                     <h4 class="mb-3" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Conecte-se</h4>
 
-                    <a class="btn btn-outline-light btn-lg btnHome" data-mdb-ripple-color="dark" href="<?php echo site_url("geral/login") ?>" role="button">Login</a>
+                    <a class="btn btn-outline-light btn-lg btnHome" data-mdb-ripple-color="dark" data-mdb-toggle="modal" data-mdb-target="#exampleCentralModal3" role="button">Login</a>
 
                 </div>
 
@@ -58,15 +58,19 @@
 
             <button class="carousel-control-prev" type="button" data-mdb-target="#carouselExampleCrossfade" data-mdb-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
+                <span class="visually-hidden">Anterior</span>
             </button>
 
             <button class="carousel-control-next" type="button" data-mdb-target="#carouselExampleCrossfade" data-mdb-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
+                <span class="visually-hidden">Próximo</span>
             </button>
         </div>    
 
     </div>
+
+    <center>
+        <a style="margin-bottom: 250px;" type="button" class="btn btn-primary btn-lg" href="<?php echo site_url("geral/pontos") ?>">VEJA NOSSOS PONTOS</a>
+    </center>
     
 </section>

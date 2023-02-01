@@ -1,6 +1,6 @@
 
     <!-- Link script -->
-    <link href="<?=base_url('assets/javascript/script.js');?>" rel="stylesheet">
+    <script src="<?=base_url('assets/javascript/script.js');?>"></script>
 
     <!-- MDB -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.1.0/mdb.min.js"></script>
