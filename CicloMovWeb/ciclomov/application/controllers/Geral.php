@@ -23,4 +23,7 @@ class Geral extends CI_Controller {
 		$this->load->view('view_footer');
 	}
 
+	public function login() {
+		
+	}
 }

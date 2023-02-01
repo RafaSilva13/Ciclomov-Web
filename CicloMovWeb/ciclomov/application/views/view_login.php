@@ -41,7 +41,7 @@
 
                     <div class="tab-pane fade show active" id="pills-login" role="tabpanel" aria-labelledby="mdb-tab-login">
             
-                        <form>
+                        <form action="http://[::1]/rafael/GitHub/CicloMov/CicloMovWeb/ciclomov/index.php/geral/login" method="post">
 
                             <div class="text-center mb-3">
                                 <p>Entre com</p>
