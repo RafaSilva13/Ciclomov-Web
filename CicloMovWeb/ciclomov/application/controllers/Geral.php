@@ -23,7 +23,12 @@ class Geral extends CI_Controller {
 		$this->load->view('view_footer');
 	}
 
-	public function login() {
-		
+	public function login() 
+	{
+		$usuario = $this->input->post('usuario');
+		$senha = $this->input->post('senha');
+
+		echo $usuario;
+		echo $senha;
 	}
 }

@@ -41,7 +41,7 @@
 
                     <div class="tab-pane fade show active" id="pills-login" role="tabpanel" aria-labelledby="mdb-tab-login">
             
-                        <form action="http://[::1]/rafael/GitHub/CicloMov/CicloMovWeb/ciclomov/index.php/geral/login" method="post">
+                        <form action="<?php echo site_url("geral/login") ?>" method="post">
 
                             <div class="text-center mb-3">
                                 <p>Entre com</p>
@@ -61,7 +61,7 @@
                             <!-- Email input -->
                             <div class="form-outline mb-4">
 
-                                <input type="email" id="loginName" class="form-control">
+                                <input type="email" id="loginName" name="usuario" class="form-control">
 
                                 <label class="form-label" for="loginName" style="margin-left: 0px;">Email</label>
 
@@ -80,7 +80,7 @@
                             <!-- Password input -->
                             <div class="form-outline mb-4">
 
-                                <input type="password" id="senha" class="form-control">
+                                <input type="password" id="senha" name="senha" class="form-control">
 
                                 <label class="form-label" for="senha" style="margin-left: 0px;">Senha</label>
 
