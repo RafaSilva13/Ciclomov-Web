@@ -62,7 +62,7 @@ namespace CicloMov
         {
             this.Hide();
 
-            frmListarServiços area_servicos = new frmListarServiços();
+            frmListarServicos area_servicos = new frmListarServicos();
 
             area_servicos.Show();
         }

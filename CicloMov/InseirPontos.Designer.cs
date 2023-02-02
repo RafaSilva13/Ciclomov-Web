@@ -221,6 +221,8 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.barraClientes);
             this.Controls.Add(this.txtVagasTotais);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmInseirPontos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inseir";

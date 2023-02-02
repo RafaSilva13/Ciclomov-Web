@@ -1,6 +1,6 @@
 ﻿namespace CicloMov
 {
-    partial class frmListarServiços
+    partial class frmListarServicos
     {
         /// <summary>
         /// Required designer variable.
@@ -28,16 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmListarServicos));
+            this.dataGridView5 = new System.Windows.Forms.DataGridView();
+            this.barraClientes = new System.Windows.Forms.BindingNavigator(this.components);
+            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtPesquisarClientes = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtPesquisarServicos = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.barraClientes)).BeginInit();
+            this.barraClientes.SuspendLayout();
             this.SuspendLayout();
             // 
-<<<<<<< Updated upstream
-            // frmListarServiços
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(520, 337);
-            this.Name = "frmListarServiços";
-=======
             // dataGridView5
             // 
             this.dataGridView5.AllowUserToAddRows = false;
@@ -76,7 +88,7 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridView5.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView5.RowHeadersVisible = false;
-            this.dataGridView5.Size = new System.Drawing.Size(460, 291);
+            this.dataGridView5.Size = new System.Drawing.Size(537, 288);
             this.dataGridView5.TabIndex = 10;
             this.dataGridView5.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -102,7 +114,7 @@
             this.barraClientes.Name = "barraClientes";
             this.barraClientes.Padding = new System.Windows.Forms.Padding(0, 1, 1, 0);
             this.barraClientes.PositionItem = null;
-            this.barraClientes.Size = new System.Drawing.Size(460, 25);
+            this.barraClientes.Size = new System.Drawing.Size(537, 25);
             this.barraClientes.TabIndex = 9;
             this.barraClientes.Text = "bindingNavigator1";
             // 
@@ -182,7 +194,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(325, 6);
+            this.label2.Location = new System.Drawing.Point(404, 6);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(43, 13);
             this.label2.TabIndex = 14;
@@ -190,7 +202,7 @@
             // 
             // txtPesquisarServicos
             // 
-            this.txtPesquisarServicos.Location = new System.Drawing.Point(372, 3);
+            this.txtPesquisarServicos.Location = new System.Drawing.Point(451, 3);
             this.txtPesquisarServicos.Name = "txtPesquisarServicos";
             this.txtPesquisarServicos.Size = new System.Drawing.Size(53, 20);
             this.txtPesquisarServicos.TabIndex = 13;
@@ -200,7 +212,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(460, 316);
+            this.ClientSize = new System.Drawing.Size(537, 313);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtPesquisarServicos);
             this.Controls.Add(this.dataGridView5);
@@ -211,13 +223,30 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmListarServicos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
->>>>>>> Stashed changes
             this.Text = "Serviços";
             this.Load += new System.EventHandler(this.ListarServiços_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.barraClientes)).EndInit();
+            this.barraClientes.ResumeLayout(false);
+            this.barraClientes.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
+
+        private System.Windows.Forms.DataGridView dataGridView5;
+        public System.Windows.Forms.BindingNavigator barraClientes;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel1;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripButton toolStripButton2;
+        private System.Windows.Forms.ToolStripButton toolStripButton5;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
+        private System.Windows.Forms.ToolStripButton toolStripButton6;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtPesquisarClientes;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtPesquisarServicos;
     }
 }

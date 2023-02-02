@@ -48,6 +48,7 @@
             this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
             this.txtPesquisarEstados = new System.Windows.Forms.TextBox();
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.barraEstados)).BeginInit();
             this.barraEstados.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
@@ -108,6 +109,7 @@
             this.toolStripButton3.Name = "toolStripButton3";
             this.toolStripButton3.Size = new System.Drawing.Size(23, 21);
             this.toolStripButton3.Text = "Adicionar";
+            this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
             // 
             // toolStripSeparator3
             // 
@@ -123,6 +125,7 @@
             this.toolStripButton4.Name = "toolStripButton4";
             this.toolStripButton4.Size = new System.Drawing.Size(23, 21);
             this.toolStripButton4.Text = "Deletar";
+            this.toolStripButton4.Click += new System.EventHandler(this.toolStripButton4_Click);
             // 
             // toolStripSeparator2
             // 
@@ -138,6 +141,7 @@
             this.toolStripButton1.Name = "toolStripButton1";
             this.toolStripButton1.Size = new System.Drawing.Size(23, 21);
             this.toolStripButton1.Text = "Editar";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
             // bindingNavigatorSeparator1
             // 
@@ -153,6 +157,7 @@
             this.toolStripButton2.Name = "toolStripButton2";
             this.toolStripButton2.Size = new System.Drawing.Size(23, 21);
             this.toolStripButton2.Text = "Recarregar";
+            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
             // 
             // toolStripButton5
             // 
@@ -166,6 +171,7 @@
             this.toolStripButton5.Name = "toolStripButton5";
             this.toolStripButton5.Size = new System.Drawing.Size(23, 21);
             this.toolStripButton5.Text = "toolStripButton5";
+            this.toolStripButton5.Click += new System.EventHandler(this.toolStripButton5_Click);
             // 
             // toolStripSeparator4
             // 
@@ -185,10 +191,11 @@
             // 
             // txtPesquisarEstados
             // 
-            this.txtPesquisarEstados.Location = new System.Drawing.Point(253, 3);
+            this.txtPesquisarEstados.Location = new System.Drawing.Point(282, 3);
             this.txtPesquisarEstados.Name = "txtPesquisarEstados";
-            this.txtPesquisarEstados.Size = new System.Drawing.Size(80, 20);
+            this.txtPesquisarEstados.Size = new System.Drawing.Size(51, 20);
             this.txtPesquisarEstados.TabIndex = 6;
+            this.txtPesquisarEstados.TextChanged += new System.EventHandler(this.txtPesquisarEstados_TextChanged);
             // 
             // dataGridView4
             // 
@@ -232,16 +239,29 @@
             this.dataGridView4.Size = new System.Drawing.Size(366, 262);
             this.dataGridView4.TabIndex = 7;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.White;
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label1.Location = new System.Drawing.Point(246, 7);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(33, 13);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Sigla:";
+            // 
             // frmListarEstados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MediumTurquoise;
             this.ClientSize = new System.Drawing.Size(366, 287);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView4);
             this.Controls.Add(this.txtPesquisarEstados);
             this.Controls.Add(this.barraEstados);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmListarEstados";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Estados";
@@ -271,5 +291,6 @@
         private System.Windows.Forms.ToolStripButton toolStripButton6;
         private System.Windows.Forms.TextBox txtPesquisarEstados;
         private System.Windows.Forms.DataGridView dataGridView4;
+        private System.Windows.Forms.Label label1;
     }
 }

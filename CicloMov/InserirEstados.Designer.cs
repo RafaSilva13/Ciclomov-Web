@@ -1,6 +1,6 @@
 ﻿namespace CicloMov
 {
-    partial class frmDeletarPonto
+    partial class frmInserirEstados
     {
         /// <summary>
         /// Required designer variable.
@@ -29,37 +29,20 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDeletarPonto));
-            this.txtCodigoDeletarPonto = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInserirEstados));
             this.barraClientes = new System.Windows.Forms.BindingNavigator(this.components);
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.ckbConfirmacaoPonto = new System.Windows.Forms.CheckBox();
+            this.txtNomeEstado = new System.Windows.Forms.TextBox();
+            this.txtSiglaEstado = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.barraClientes)).BeginInit();
             this.barraClientes.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // txtCodigoDeletarPonto
-            // 
-            this.txtCodigoDeletarPonto.Location = new System.Drawing.Point(47, 59);
-            this.txtCodigoDeletarPonto.Name = "txtCodigoDeletarPonto";
-            this.txtCodigoDeletarPonto.Size = new System.Drawing.Size(100, 20);
-            this.txtCodigoDeletarPonto.TabIndex = 0;
-            this.txtCodigoDeletarPonto.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtCodigoDeletarPonto.TextChanged += new System.EventHandler(this.txtCodigoDeletarPonto_TextChanged);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(25, 43);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(149, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Digite o Código a ser deletado";
             // 
             // barraClientes
             // 
@@ -82,8 +65,8 @@
             this.barraClientes.Name = "barraClientes";
             this.barraClientes.Padding = new System.Windows.Forms.Padding(0, 1, 1, 0);
             this.barraClientes.PositionItem = null;
-            this.barraClientes.Size = new System.Drawing.Size(196, 25);
-            this.barraClientes.TabIndex = 17;
+            this.barraClientes.Size = new System.Drawing.Size(233, 25);
+            this.barraClientes.TabIndex = 27;
             this.barraClientes.Text = "bindingNavigator1";
             // 
             // toolStripButton1
@@ -107,8 +90,8 @@
             this.toolStripLabel1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStripLabel1.Margin = new System.Windows.Forms.Padding(5, 1, 0, 2);
             this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(100, 21);
-            this.toolStripLabel1.Text = "Deletar Pontos";
+            this.toolStripLabel1.Size = new System.Drawing.Size(98, 21);
+            this.toolStripLabel1.Text = "Inserir Estados";
             // 
             // toolStripButton2
             // 
@@ -129,29 +112,53 @@
             this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
             this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 24);
             // 
-            // ckbConfirmacaoPonto
+            // txtNomeEstado
             // 
-            this.ckbConfirmacaoPonto.AutoSize = true;
-            this.ckbConfirmacaoPonto.Location = new System.Drawing.Point(13, 85);
-            this.ckbConfirmacaoPonto.Name = "ckbConfirmacaoPonto";
-            this.ckbConfirmacaoPonto.Size = new System.Drawing.Size(170, 17);
-            this.ckbConfirmacaoPonto.TabIndex = 18;
-            this.ckbConfirmacaoPonto.Text = "Sim, desejo deletar esse ponto";
-            this.ckbConfirmacaoPonto.UseVisualStyleBackColor = true;
+            this.txtNomeEstado.Location = new System.Drawing.Point(67, 63);
+            this.txtNomeEstado.Name = "txtNomeEstado";
+            this.txtNomeEstado.Size = new System.Drawing.Size(100, 20);
+            this.txtNomeEstado.TabIndex = 26;
             // 
-            // frmDeletarPonto
+            // txtSiglaEstado
+            // 
+            this.txtSiglaEstado.Location = new System.Drawing.Point(67, 109);
+            this.txtSiglaEstado.Name = "txtSiglaEstado";
+            this.txtSiglaEstado.Size = new System.Drawing.Size(47, 20);
+            this.txtSiglaEstado.TabIndex = 35;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(64, 93);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(30, 13);
+            this.label5.TabIndex = 34;
+            this.label5.Text = "Sigla";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(64, 47);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(71, 13);
+            this.label3.TabIndex = 30;
+            this.label3.Text = "Nome Estado";
+            // 
+            // frmInserirEstados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(196, 135);
-            this.Controls.Add(this.ckbConfirmacaoPonto);
+            this.ClientSize = new System.Drawing.Size(233, 171);
             this.Controls.Add(this.barraClientes);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtCodigoDeletarPonto);
+            this.Controls.Add(this.txtNomeEstado);
+            this.Controls.Add(this.txtSiglaEstado);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-            this.Name = "frmDeletarPonto";
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "frmInserirEstados";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Deletar";
+            this.Text = "Inserir";
             ((System.ComponentModel.ISupportInitialize)(this.barraClientes)).EndInit();
             this.barraClientes.ResumeLayout(false);
             this.barraClientes.PerformLayout();
@@ -162,14 +169,15 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox txtCodigoDeletarPonto;
-        private System.Windows.Forms.Label label1;
         public System.Windows.Forms.BindingNavigator barraClientes;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
         private System.Windows.Forms.ToolStripButton toolStripButton2;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator1;
-        private System.Windows.Forms.CheckBox ckbConfirmacaoPonto;
+        private System.Windows.Forms.TextBox txtNomeEstado;
+        private System.Windows.Forms.TextBox txtSiglaEstado;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label3;
     }
 }

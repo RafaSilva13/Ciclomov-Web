@@ -2,26 +2,29 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data;
+using MySql.Data.MySqlClient;
 
 namespace CicloMov
 {
-    public partial class frmListarServiços : Form
+    public partial class frmListarServicos : Form
     {
-        public frmListarServiços()
+        DataTable Tbl5;
+        public frmListarServicos()
         {
             InitializeComponent();
         }
 
         private void ListarServiços_Load(object sender, EventArgs e)
         {
+            Tbl5 = new DataTable();
 
-<<<<<<< Updated upstream
-=======
             Tbl5.Columns.Add("N°", typeof(int));
             Tbl5.Columns.Add("Código", typeof(int));
             Tbl5.Columns.Add("Clientes", typeof(string));
@@ -242,7 +245,6 @@ namespace CicloMov
             frmMenu area_menu = new frmMenu();
 
             area_menu.Show();
->>>>>>> Stashed changes
         }
     }
 }

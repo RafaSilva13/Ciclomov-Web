@@ -108,6 +108,7 @@
             this.toolStripButton3.Name = "toolStripButton3";
             this.toolStripButton3.Size = new System.Drawing.Size(23, 21);
             this.toolStripButton3.Text = "Adicionar";
+            this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
             // 
             // toolStripSeparator3
             // 
@@ -123,6 +124,7 @@
             this.toolStripButton4.Name = "toolStripButton4";
             this.toolStripButton4.Size = new System.Drawing.Size(23, 21);
             this.toolStripButton4.Text = "Deletar";
+            this.toolStripButton4.Click += new System.EventHandler(this.toolStripButton4_Click);
             // 
             // toolStripSeparator2
             // 
@@ -138,6 +140,7 @@
             this.toolStripButton1.Name = "toolStripButton1";
             this.toolStripButton1.Size = new System.Drawing.Size(23, 21);
             this.toolStripButton1.Text = "Editar";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
             // bindingNavigatorSeparator1
             // 
@@ -153,6 +156,7 @@
             this.toolStripButton2.Name = "toolStripButton2";
             this.toolStripButton2.Size = new System.Drawing.Size(23, 21);
             this.toolStripButton2.Text = "Recarregar";
+            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
             // 
             // toolStripButton5
             // 
@@ -166,6 +170,7 @@
             this.toolStripButton5.Name = "toolStripButton5";
             this.toolStripButton5.Size = new System.Drawing.Size(23, 21);
             this.toolStripButton5.Text = "toolStripButton5";
+            this.toolStripButton5.Click += new System.EventHandler(this.toolStripButton5_Click);
             // 
             // toolStripSeparator4
             // 
@@ -189,6 +194,7 @@
             this.txtPesquisarCidades.Name = "txtPesquisarCidades";
             this.txtPesquisarCidades.Size = new System.Drawing.Size(77, 20);
             this.txtPesquisarCidades.TabIndex = 6;
+            this.txtPesquisarCidades.TextChanged += new System.EventHandler(this.txtPesquisarCidades_TextChanged);
             // 
             // dataGridView3
             // 
@@ -244,6 +250,7 @@
             this.Controls.Add(this.txtPesquisarCidades);
             this.Controls.Add(this.bindingNavigator1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmListarCidades";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cidades";

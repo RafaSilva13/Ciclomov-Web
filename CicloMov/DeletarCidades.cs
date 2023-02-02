@@ -1,62 +1,51 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Data.SqlClient;
 using System.Drawing;
-using System.Dynamic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Xml;
-using Google.Protobuf.WellKnownTypes;
-using MySql.Data;
-using MySql.Data.MySqlClient;
-using MySqlX.XDevAPI.Relational;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace CicloMov
 {
-    public partial class frmDeletarPonto : Form
+    public partial class frmDeletarCidades : Form
     {
-        int verificarPonto;
-        public frmDeletarPonto()
+        int verificarCidade;
+        public frmDeletarCidades()
         {
             InitializeComponent();
         }
 
-        private void toolStripButton1_Click(object sender, EventArgs e)
+        private void frmDeletarCidades_Load(object sender, EventArgs e)
         {
-            this.Hide();
 
-            frmListarPontos area_pontos = new frmListarPontos();
-
-            area_pontos.Show();
         }
 
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
-            if (ckbConfirmacaoPonto.Checked)
+            if (ckbConfirmacaoCidade.Checked)
             {
                 MySqlConnection cnn = new MySqlConnection("datasource=127.0.0.1;port=3306;username=root;database=bd_estacionamento");
-                MySqlCommand comando2 = new MySqlCommand("SELECT * FROM pontos WHERE cod_ponto = @Id", cnn);
-                MySqlCommand comando = new MySqlCommand("DELETE FROM pontos WHERE cod_ponto = @Id", cnn);
+                MySqlCommand comando2 = new MySqlCommand("SELECT * FROM cidades WHERE cod_cidade = @Id", cnn);
+                MySqlCommand comando = new MySqlCommand("DELETE FROM cidades WHERE cod_cidade = @Id", cnn);
                 try
                 {
                     cnn.Open();
 
-                    comando2.Parameters.AddWithValue("@Id", txtCodigoDeletarPonto.Text);
-                    comando.Parameters.AddWithValue("@Id", txtCodigoDeletarPonto.Text);
-                    
+                    comando2.Parameters.AddWithValue("@Id", txtCodigoDeletarCidade.Text);
+                    comando.Parameters.AddWithValue("@Id", txtCodigoDeletarCidade.Text);
+
                     MySqlDataReader myReader;
 
                     myReader = comando2.ExecuteReader();
                     try
                     {
-                        if(myReader.Read())
+                        if (myReader.Read())
                         {
-                            verificarPonto = 1;
+                            verificarCidade = 1;
                         }
                     }
                     finally
@@ -64,15 +53,16 @@ namespace CicloMov
                         myReader.Close();
                     }
 
-                    if(verificarPonto == 1)
+                    if (verificarCidade == 1)
                     {
                         myReader = comando.ExecuteReader();
 
                         try
                         {
                             MessageBox.Show("Item deletado!");
-                            txtCodigoDeletarPonto.Text = "";
-                            verificarPonto = 0;
+                            txtCodigoDeletarCidade.Text = "";
+                            ckbConfirmacaoCidade.Checked = false;
+                            verificarCidade = 0;
                         }
                         finally
                         {
@@ -82,13 +72,13 @@ namespace CicloMov
                     }
                     else
                     {
-                        MessageBox.Show("Ponto não encontrado!");
+                        MessageBox.Show("Cidade não encontrado!");
                     }
 
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Ponto não encontrado!");
+                    MessageBox.Show("Cidade não encontrado!");
                 }
             }
             else
@@ -97,9 +87,13 @@ namespace CicloMov
             }
         }
 
-        private void txtCodigoDeletarPonto_TextChanged(object sender, EventArgs e)
+        private void toolStripButton1_Click(object sender, EventArgs e)
         {
+            this.Hide();
 
+            frmListarCidades area_cidades = new frmListarCidades();
+
+            area_cidades.Show();
         }
     }
 }
