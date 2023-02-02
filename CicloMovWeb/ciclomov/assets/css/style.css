@@ -66,3 +66,16 @@
 .btnHome {
     margin-top: 0.2rem;
 }
+
+.areaSobre {
+    margin-top: 6rem;
+}
+
+.title {
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+}
+
+.sobre {
+    text-align: justify;
+}

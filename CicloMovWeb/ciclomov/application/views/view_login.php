@@ -150,7 +150,7 @@
                             <!-- Name input -->
                             <div class="form-outline mb-4">
                                 
-                                <input type="text" id="registerName" class="form-control">
+                                <input type="text" id="registerName" name="nome" class="form-control">
                                 
                                 <label class="form-label" for="registerName" style="margin-left: 0px;">Nome Completo</label>
                                 
@@ -169,7 +169,7 @@
                             <!-- Username input -->
                             <div class="form-outline mb-4">
                                 
-                                <input type="text" id="registerUsername" class="form-control">
+                                <input type="text" id="registerUsername" name="usuario2" class="form-control">
                                     
                                 <label class="form-label" for="registerUsername" style="margin-left: 0px;">Usuário</label>
                                 
@@ -188,7 +188,7 @@
                             <!-- Email input -->
                             <div class="form-outline mb-4">
                                 
-                                <input type="email" id="email" class="form-control">
+                                <input type="email" id="email" name="email" class="form-control">
                                 
                                 <label class="form-label" for="email" style="margin-left: 0px;">Email</label>
                                 

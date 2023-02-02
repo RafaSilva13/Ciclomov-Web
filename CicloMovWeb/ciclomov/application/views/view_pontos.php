@@ -46,18 +46,19 @@
 
                     </div>
 
-                    <a class="btn AreaSelecaoPonto" style="padding-left: auto; padding-right: auto;" id="" href="ponto.php?id=<?php echo $row['cod_ponto']; ?>">
+                    <buttom class="btn AreaSelecaoPonto" style="padding-left: auto; padding-right: auto;" id="" data-mdb-toggle="modal" data-mdb-target="#exampleCentralModal4">
 
                         <div class="card-body">
                             
                             <h6 class="card-text" style="margin-top: -15px; height: 0.9rem; font-size: 17px; color: rgb(62, 122, 122); text-align: center;"><?php echo $row['descricao']; ?>
                                 
                                 <i class="fas fa-lock trava" style="margin-left: 5px;"></i>
-                            
+
                             </h6>
+                            
                         </div>
 
-                    </a>
+            </buttom>
 
                 </div>
 
