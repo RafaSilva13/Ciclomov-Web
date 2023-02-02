@@ -45,4 +45,31 @@ C:\Users\Raffa Silva\source\repos\CicloMov\bin\Debug\DataGridViewAutoFilter.dll
 C:\Users\Raffa Silva\source\repos\CicloMov\obj\Debug\CicloMov.frmDeletarPonto.resources
 C:\Users\Raffa Silva\source\repos\CicloMov\obj\Debug\CicloMov.frmEditarPonto.resources
 C:\Users\Raffa Silva\source\repos\CicloMov\obj\Debug\CicloMov.frmDeletarClientes.resources
+<<<<<<< Updated upstream
 C:\Users\Raffa Silva\source\repos\CicloMov\obj\Debug\CicloMov.frmListarServiços.resources
+=======
+C:\Users\Raffa Silva\source\repos\CicloMov\obj\Debug\CicloMov.frmDeletarCidades.resources
+C:\Users\Raffa Silva\source\repos\CicloMov\obj\Debug\CicloMov.frmEditarCidades.resources
+C:\Users\Raffa Silva\source\repos\CicloMov\obj\Debug\CicloMov.frmInserirCidades.resources
+C:\Users\Raffa Silva\source\repos\CicloMov\obj\Debug\CicloMov.frmDeletarEstados.resources
+C:\Users\Raffa Silva\source\repos\CicloMov\obj\Debug\CicloMov.frmEditarEstados.resources
+C:\Users\Raffa Silva\source\repos\CicloMov\obj\Debug\CicloMov.frmInserirEstados.resources
+C:\Users\Raffa Silva\source\repos\CicloMov\obj\Debug\CicloMov.frmListarServicos.resources
+C:\Users\Raffa Silva\source\repos\CicloMov\obj\Debug\CicloMov.frmLogin.resources
+C:\xampp\htdocs\GitHub\CicloMov\CicloMov\obj\Debug\CicloMov.csproj.AssemblyReference.cache
+C:\xampp\htdocs\GitHub\CicloMov\CicloMov\obj\Debug\CicloMov.csproj.SuggestedBindingRedirects.cache
+C:\xampp\htdocs\GitHub\CicloMov\CicloMov\obj\Debug\CicloMov.exe
+C:\xampp\htdocs\GitHub\CicloMov\CicloMov\obj\Debug\CicloMov.pdb
+C:\xampp\htdocs\GitHub\CicloMov\CicloMov\obj\Debug\CicloMov.frmDeletarClientes.resources
+C:\xampp\htdocs\GitHub\CicloMov\CicloMov\obj\Debug\CicloMov.frmEditarPonto.resources
+C:\xampp\htdocs\GitHub\CicloMov\CicloMov\obj\Debug\CicloMov.frmInseirPontos.resources
+C:\xampp\htdocs\GitHub\CicloMov\CicloMov\obj\Debug\CicloMov.frmListarCidades.resources
+C:\xampp\htdocs\GitHub\CicloMov\CicloMov\obj\Debug\CicloMov.frmListarClientes.resources
+C:\xampp\htdocs\GitHub\CicloMov\CicloMov\obj\Debug\CicloMov.frmListarEstados.resources
+C:\xampp\htdocs\GitHub\CicloMov\CicloMov\obj\Debug\CicloMov.frmListarPontos.resources
+C:\xampp\htdocs\GitHub\CicloMov\CicloMov\obj\Debug\CicloMov.frmListarServicos.resources
+C:\xampp\htdocs\GitHub\CicloMov\CicloMov\obj\Debug\CicloMov.frmMenu.resources
+C:\xampp\htdocs\GitHub\CicloMov\CicloMov\obj\Debug\CicloMov.Properties.Resources.resources
+C:\xampp\htdocs\GitHub\CicloMov\CicloMov\obj\Debug\CicloMov.csproj.GenerateResource.cache
+C:\xampp\htdocs\GitHub\CicloMov\CicloMov\obj\Debug\CicloMov.csproj.CoreCompileInputs.cache
+>>>>>>> Stashed changes

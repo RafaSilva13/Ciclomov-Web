@@ -97,12 +97,15 @@
     <Compile Include="DeletarClientes.Designer.cs">
       <DependentUpon>DeletarClientes.cs</DependentUpon>
     </Compile>
+<<<<<<< Updated upstream
     <Compile Include="DeletarPonto.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="DeletarPonto.Designer.cs">
       <DependentUpon>DeletarPonto.cs</DependentUpon>
     </Compile>
+=======
+>>>>>>> Stashed changes
     <Compile Include="EditarPonto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -158,9 +161,12 @@
     <EmbeddedResource Include="DeletarClientes.resx">
       <DependentUpon>DeletarClientes.cs</DependentUpon>
     </EmbeddedResource>
+<<<<<<< Updated upstream
     <EmbeddedResource Include="DeletarPonto.resx">
       <DependentUpon>DeletarPonto.cs</DependentUpon>
     </EmbeddedResource>
+=======
+>>>>>>> Stashed changes
     <EmbeddedResource Include="EditarPonto.resx">
       <DependentUpon>EditarPonto.cs</DependentUpon>
     </EmbeddedResource>
