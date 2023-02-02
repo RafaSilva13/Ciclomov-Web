@@ -28,10 +28,11 @@ $(function() {
 
     $('.trava').hide();
     $('.msgAviso').hide();
-    $('#btnTempo').hide();
-    $('#textoTempo').hide();
-    
     // $(".AreaSelecaoPonto").addClass("disabled");
-    // $('.btnlogin').hide();
+    
+    // $('#btnTempo').hide();
+    // $('#textoTempo').hide();
+    
+    $('.btnlogin').hide();
 
 });
