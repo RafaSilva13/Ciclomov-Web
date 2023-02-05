@@ -2,15 +2,16 @@
 
 class Model_login extends CI_Model {
 
-    // Campos da tabela produtos no database loja
-    public $id;
-    public $email;
-    public $senha;
-
     public function verificarLogin()
     {
-        $query = $this->db->get('produtos');
-        return $query->result();
+
+        print_r($data);
+
+        // $sql = 'SELECT * FROM some_table WHERE id IN ? AND status = ? AND author = ?';
+        // $db->query($sql, [[3, 6], 'live', 'Rick']);
+
+        // $query = $this->db->get('produtos');
+        // return $query->result();
     }
 }
 
