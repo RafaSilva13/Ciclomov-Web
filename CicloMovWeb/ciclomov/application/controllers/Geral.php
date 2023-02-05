@@ -15,12 +15,28 @@ class Geral extends CI_Controller {
 
 	public function pontos()
 	{
+		$this->load->model('Model_pontos');
+		$pontos = $this->Model_pontos->selectPonto();
+		
+        foreach ($pontos as $n => $row) 
+        { 
+            $ponto[$n] = [
+                'cod' => $row->cod_ponto,
+                'vagasLivres' => $row->vagas_livres_ponto,
+                'vagasTotais' => $row->vagas_totais_ponto,
+                'descricao' => $row->descricao,
+                'mapa' => $row->mapa
+			];
+        }
+
+		$dados['pontos'] = $ponto;
+
 		$this->load->helper('url');
 		$this->load->view('view_header');
 		$this->load->view('view_navbar');
 		$this->load->view('view_login');
 		$this->load->view('view_servico');
-		$this->load->view('view_pontos');
+		$this->load->view('view_pontos', $dados);
 		$this->load->view('view_footer');
 	}
 	
@@ -34,14 +50,17 @@ class Geral extends CI_Controller {
 		$this->load->view('view_footer');
 	}
 
-	// public function login() 
-	// {
-	// 	$usuario = $this->input->post('usuario');
-	// 	$senha = $this->input->post('senha');
+	public function login() 
+	{
+		$usuario = $this->input->post('usuario');
+		$senha = $this->input->post('senha');
 
-	// 	echo $usuario;
-	// 	echo $senha;
-	// }
+		echo $usuario;
+		echo $senha;
+
+		$this->load->model('Model_login');
+		$confirmacao = $this->Model_login->verificarLogin();
+	}
 
 	//public function cadastrar() 
 	// {
