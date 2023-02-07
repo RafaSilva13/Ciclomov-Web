@@ -11,8 +11,7 @@ class Model_pontos extends CI_Model {
 
     public function selectPonto()
     {
-        $query = $this->db->query("SELECT * FROM pontos");
-        
+        $query = $this->db->get('pontos');
         return $query->result();
     }
 }
