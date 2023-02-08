@@ -26,13 +26,13 @@ $(function() {
 
     });
 
-    $('.trava').hide();
-    $('.msgAviso').hide();
+    // $('.trava').hide();
+    // $('.msgAviso').hide();
     // $(".AreaSelecaoPonto").addClass("disabled");
     
-    // $('#btnTempo').hide();
-    // $('#textoTempo').hide();
-    
-    $('.btnlogin').hide();
+    $('#btnTempo').hide();
+    $('#textoTempo').hide();
+
+    $('.lserroToast').toast('show');
 
 });

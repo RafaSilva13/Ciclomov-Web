@@ -47,3 +47,21 @@
     
     </nav>
 
+    <script>
+        $(function() {
+            var erros = <?php if(isset($erro)) { echo $erro; } else { echo '0 erros';} ?>; 
+
+            if(erros == 1)
+            {
+                $('.lserroToast').toast('show');
+            }
+            
+            if(erros == 0) 
+            {
+                $('.btnlogin').hide();
+                $(".AreaSelecaoPonto").removeClass("disabled");
+                $('.trava').hide();
+                $('.msgAviso').hide();
+            }
+        });
+    </script>

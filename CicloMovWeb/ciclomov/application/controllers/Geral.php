@@ -1,6 +1,9 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
+// Inicia sessão
+session_start();
+
 class Geral extends CI_Controller {
 
 	public function index()
@@ -9,6 +12,7 @@ class Geral extends CI_Controller {
 		$this->load->view('view_header');
 		$this->load->view('view_navbar');
 		$this->load->view('view_login');
+		$this->load->view('view_toast');
 		$this->load->view('view_home');
 		$this->load->view('view_footer');
 	}
@@ -35,6 +39,7 @@ class Geral extends CI_Controller {
 		$this->load->view('view_header');
 		$this->load->view('view_navbar');
 		$this->load->view('view_login');
+		$this->load->view('view_toast');
 		$this->load->view('view_servico');
 		$this->load->view('view_pontos', $dados);
 		$this->load->view('view_footer');
@@ -46,6 +51,7 @@ class Geral extends CI_Controller {
 		$this->load->view('view_header');
 		$this->load->view('view_navbar');
 		$this->load->view('view_login');
+		$this->load->view('view_toast');
 		$this->load->view('view_sobre');
 		$this->load->view('view_footer');
 	}
@@ -58,9 +64,23 @@ class Geral extends CI_Controller {
 		$this->load->model('Model_login');
 		$confirmacao = $this->Model_login->verificarLogin($usuario, $senha);
 
-		print_r($confirmacao);
-
-		// $confirmacao = $this->Model_login->verificarLogin();
+		if($confirmacao != 'erro') 
+		{
+			$SESSION['login'] = $confirmacao;
+			$dados['erro'] = 0;
+		}		
+		else
+		{
+			$dados['erro'] = 1;
+		}
+		
+		$this->load->helper('url');
+		$this->load->view('view_header');
+		$this->load->view('view_navbar', $dados);
+		$this->load->view('view_toast');
+		$this->load->view('view_login');
+		$this->load->view('view_home', $dados);
+		$this->load->view('view_footer', $dados);
 	}
 
 	//public function cadastrar() 
