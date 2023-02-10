@@ -41,7 +41,7 @@
 
                     <div class="tab-pane fade show active" id="pills-login" role="tabpanel" aria-labelledby="mdb-tab-login">
             
-                        <form action="<?php echo site_url("geral/login") ?>" method="post">
+                        <form>
 
                             <div class="text-center mb-3">
                                 <p>Entre com</p>
@@ -113,9 +113,9 @@
                                 </div>
 
                             </div>
-
+                            
                             <!-- Submit button -->
-                            <button type="submit" class="btn btn-primary btn-block mb-4">Entrar</button>
+                            <button type="button" class="btn btn-primary btn-block mb-4" id="btnEntrarLogin">Entrar</button>
 
                             <!-- Register buttons -->
                             <div class="text-center">

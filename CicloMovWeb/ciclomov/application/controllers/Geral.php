@@ -66,21 +66,14 @@ class Geral extends CI_Controller {
 
 		if($confirmacao != 'erro') 
 		{
-			$SESSION['login'] = $confirmacao;
-			$dados['erro'] = 0;
+			// $SESSION['login'] = $confirmacao;
+
+			return 0;
 		}		
 		else
 		{
-			$dados['erro'] = 1;
+			return 1;
 		}
-		
-		$this->load->helper('url');
-		$this->load->view('view_header');
-		$this->load->view('view_navbar', $dados);
-		$this->load->view('view_toast');
-		$this->load->view('view_login');
-		$this->load->view('view_home', $dados);
-		$this->load->view('view_footer', $dados);
 	}
 
 	//public function cadastrar() 
