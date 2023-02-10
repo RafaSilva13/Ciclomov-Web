@@ -58,8 +58,8 @@ class Geral extends CI_Controller {
 
 	public function login() 
 	{
-		$usuario = $this->input->post('usuario');
-		$senha = $this->input->post('senha');
+		$usuario = $this->input->get('usuario');
+		$senha = $this->input->get('senha');
 		
 		$this->load->model('Model_login');
 		$confirmacao = $this->Model_login->verificarLogin($usuario, $senha);

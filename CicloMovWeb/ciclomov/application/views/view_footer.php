@@ -2,7 +2,7 @@
         $(function() {
             $("#btnEntrarLogin").click(function(){
 
-                $.post("<?php echo site_url("Geral/login")?>",{usuario: $("#loginName").val(), senha: $("#senha").val()}, 
+                $.get("<?php echo site_url("Geral/login")?>",{usuario: $("#loginName").val(), senha: $("#senha").val()}, 
                 function(data){
                     if(data == 1)
                     {
