@@ -47,6 +47,4 @@ $(function() {
     $('#btnTempo').hide();
     $('#textoTempo').hide();
 
-    $('.lserroToast').toast('show');
-
 });

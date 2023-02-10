@@ -1,24 +1,25 @@
     <script>
         $(function() {
+
             $("#btnEntrarLogin").click(function(){
 
                 $.get("<?php echo site_url("Geral/login")?>",{usuario: $("#loginName").val(), senha: $("#senha").val()}, 
                 function(data){
-                    if(data == 1)
-                    {
-                        console.log('Erro');
-                        // $('.lserroToast').toast('show');
-                    }
 
-                    if(data == 0) 
+                    if(data == 'SenhaIn')
                     {
-                        console.log('Login efeituado');
-                        // $('.btnlogin').hide();
-                        // $(".AreaSelecaoPonto").removeClass("disabled");
-                        // $('.trava').hide();
-                        // $('.msgAviso').hide();
+                        $('#textSenhaIncorreta').text('Email ou senha incorretos!');
                     }
+                    else
+                    {
+                        $('.btnlogin').hide();
+                        $(".AreaSelecaoPonto").removeClass("disabled");
+                        $('.trava').hide();
+                        $('.msgAviso').hide();
 
+                        $("#modalLoginCadastro").hide();
+                        // $("#modalLoginCadastro").hidden.bs.toast();
+                    }
                 });
             }); 
         });

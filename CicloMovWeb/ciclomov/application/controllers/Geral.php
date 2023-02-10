@@ -64,15 +64,13 @@ class Geral extends CI_Controller {
 		$this->load->model('Model_login');
 		$confirmacao = $this->Model_login->verificarLogin($usuario, $senha);
 
-		if($confirmacao != 'erro') 
+		if($confirmacao == "#erro")
 		{
-			// $SESSION['login'] = $confirmacao;
-
-			return 0;
-		}		
+			echo "SenhaIn";
+		}
 		else
 		{
-			return 1;
+			echo $confirmacao;
 		}
 	}
 

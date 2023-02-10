@@ -27,7 +27,7 @@
 
             <form class="d-flex gap-5" id="btnlogin">
             
-                <button type="button" class="btn btn-secondary btnlogin text-dark" data-mdb-toggle="modal" data-mdb-target="#exampleCentralModal3">Login</button>
+                <button type="button" class="btn btn-secondary btnlogin text-dark" data-mdb-toggle="modal" data-mdb-target="#modalLoginCadastro">Login</button>
 
             </form>
 

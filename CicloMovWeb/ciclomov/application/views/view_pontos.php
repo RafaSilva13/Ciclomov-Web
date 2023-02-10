@@ -32,7 +32,7 @@
 
                 </div>
 
-                <buttom class="btn AreaSelecaoPonto" style="padding-left: auto; padding-right: auto;" id="" data-mdb-toggle="modal" data-mdb-target="#exampleCentralModal4">
+                <buttom class="btn AreaSelecaoPonto disabled" style="padding-left: auto; padding-right: auto;" id="" data-mdb-toggle="modal" data-mdb-target="#exampleCentralModal4">
 
                     <div class="card-body">
                         

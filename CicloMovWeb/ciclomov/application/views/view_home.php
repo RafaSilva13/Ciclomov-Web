@@ -14,7 +14,7 @@
 
                     <h4 class="mb-3" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Conecte-se</h4>
 
-                    <a class="btn btn-outline-light btn-lg btnHome" data-mdb-ripple-color="dark" data-mdb-toggle="modal" data-mdb-target="#exampleCentralModal3" role="button">Login</a>
+                    <a class="btn btn-outline-light btn-lg btnHome" data-mdb-ripple-color="dark" data-mdb-toggle="modal" data-mdb-target="#modalLoginCadastro" role="button">Login</a>
 
                 </div>
 

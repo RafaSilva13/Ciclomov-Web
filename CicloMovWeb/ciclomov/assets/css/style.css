@@ -79,3 +79,7 @@
 .sobre {
     text-align: justify;
 }
+
+.divToast {
+    position: relative;
+}

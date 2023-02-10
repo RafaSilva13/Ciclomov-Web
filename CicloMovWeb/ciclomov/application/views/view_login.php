@@ -1,4 +1,4 @@
-<div class="modal fade" id="exampleCentralModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="modalLoginCadastro" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     
     <div class="modal-dialog">
 
@@ -113,6 +113,12 @@
                                 </div>
 
                             </div>
+
+                            <center>
+                                <p style="color: red; margin-top: -1rem; margin-bottom: 1rem; font-weight: 500;">
+                                    <span id="textSenhaIncorreta"></span>
+                                </p>
+                            </center>
                             
                             <!-- Submit button -->
                             <button type="button" class="btn btn-primary btn-block mb-4" id="btnEntrarLogin">Entrar</button>
