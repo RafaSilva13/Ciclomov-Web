@@ -16,8 +16,8 @@
                         $(".AreaSelecaoPonto").removeClass("disabled");
                         $('.trava').hide();
                         $('.msgAviso').hide();
-
                         $("#modalLoginCadastro").hide();
+
                         // $("#modalLoginCadastro").hidden.bs.toast();
                     }
                 });
