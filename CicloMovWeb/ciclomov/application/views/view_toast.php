@@ -1,12 +1,23 @@
-<!-- Senha incorreta
-<div class="toast align-items-center text-bg-danger border-0 divToast lserroToast" role="alert" aria-live="assertive" aria-atomic="true">
+<!-- Senha incorreta -->
+<!-- <div aria-live="polite" aria-atomic="true" class="d-flex justify-content-center align-items-center w-100">
+    <div class="toast align-items-center text-bg-danger border-0 divToast erroToast" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="d-flex">
+            <div class="toast-body">
+                <b>Senha ou usuário incorretos!</b>
+            </div>
+            <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+    </div>
+</div> -->
+
+<div class="toast show align-items-center text-bg-primary border-0 erroToast" style="z-index: 1;" role="alert" aria-live="assertive" aria-atomic="true">
     <div class="d-flex">
         <div class="toast-body">
-            <b>Senha ou usuário incorretos!</b>
+        Hello, world! This is a toast message.
         </div>
         <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
     </div>
-</div> -->
+</div>
 
 <!-- Campos vazios -->
 <div aria-live="polite" aria-atomic="true" class="d-flex justify-content-center align-items-center w-100">

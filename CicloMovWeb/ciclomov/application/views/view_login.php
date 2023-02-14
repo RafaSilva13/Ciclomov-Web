@@ -41,7 +41,7 @@
 
                     <div class="tab-pane fade show active" id="pills-login" role="tabpanel" aria-labelledby="mdb-tab-login">
             
-                        <form>
+                        <form id="formLogin">
 
                             <div class="text-center mb-3">
                                 <p>Entre com</p>
@@ -121,7 +121,7 @@
                             </center>
                             
                             <!-- Submit button -->
-                            <button type="button" class="btn btn-primary btn-block mb-4" id="btnEntrarLogin">Entrar</button>
+                            <button type="submit" class="btn btn-primary btn-block mb-4" id="btnEntrarLogin">Entrar</button>
 
                             <!-- Register buttons -->
                             <div class="text-center">

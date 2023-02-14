@@ -1,32 +1,41 @@
     <script>
         $(function() {
 
-            $("#btnEntrarLogin").click(function(){
+            $("#formLogin").submit(function(e){
+                e.preventDefault();
 
-                $.get("<?php echo site_url("Geral/login")?>",{usuario: $("#loginName").val(), senha: $("#senha").val()}, 
-                function(data){
+                var formData = new FormData(this);
 
-                    if(data == 'SenhaIn')
-                    {
-                        $('#textSenhaIncorreta').text('Email ou senha incorretos!');
-                    }
-                    else
-                    {
-                        $('.btnlogin').hide();
-                        $(".AreaSelecaoPonto").removeClass("disabled");
-                        $('.trava').hide();
-                        $('.msgAviso').hide();
-                        $("#modalLoginCadastro").hide();
+                $.ajax({
+                    url: "<?php echo site_url("Geral/login")?>",
+                    type: 'POST',
+                    data: formData,
+                    success:  function(data){
+                        if(data == 'SenhaUserIn')
+                        {
+                            $('#textSenhaIncorreta').text('Email ou senha incorretos!');
+                            $("#erroToast").toast('show');
+                        }
+                        else
+                        {
+                            $('.btnlogin').hide();
+                            $(".AreaSelecaoPonto").removeClass("disabled");
+                            $('.trava').hide();
+                            $('.msgAviso').hide();
 
-                        // $("#modalLoginCadastro").hidden.bs.toast();
-                    }
-                });
-            }); 
+                            // $("#modalLoginCadastro").hidden.bs.toast();
+                        }
+                    },
+                    cache: false,
+                    contentType: false,
+                    processData: false
+                }); 
+            });
         });
     </script>
 
     <!-- Link script -->
-    <script src="<?=base_url('assets/javascript/script.js');?>"></script>
+    <script src="<?=base_url('assets/js/script.js');?>"></script>
 
     <!-- MDB -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.1.0/mdb.min.js"></script>
