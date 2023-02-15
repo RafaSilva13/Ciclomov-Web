@@ -81,9 +81,7 @@
     text-align: justify;
 }
 
-
 .divToast {
-    position: relative;
-    margin-top: 100px;
-    z-index:2;
+    z-index: 1;
+    margin-top: 6rem;
 }

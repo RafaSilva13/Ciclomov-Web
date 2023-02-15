@@ -1,5 +1,5 @@
 <!-- Senha incorreta -->
-<div aria-live="polite" aria-atomic="true" class="d-flex justify-content-center align-items-center w-100" style="margin-top: 6rem;">
+<div aria-live="polite" aria-atomic="true" class="d-flex justify-content-center align-items-center w-100">
 
     <div class="toast show align-items-center text-bg-danger border-0 divToast erroToast" role="alert" aria-live="assertive" aria-atomic="true">
         <div class="d-flex">
