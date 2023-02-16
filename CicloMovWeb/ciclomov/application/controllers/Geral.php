@@ -75,6 +75,7 @@ class Geral extends CI_Controller {
 			echo $confirmacao;
 		}
 	}
+	
 
 	public function cadastro() 
 	{
