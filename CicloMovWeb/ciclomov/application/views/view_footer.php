@@ -1,3 +1,7 @@
+    <button type="button" class="btn btn-info btn-lg btn-floating" style="width: 4rem; height: 4rem; position: fixed; right: 1rem; bottom: 2rem;" data-mdb-container="body" data-mdb-toggle="popover" data-mdb-placement="left" data-mdb-content="Função indisponível no momento">
+        <i class="fas fa-headset fa-2x"></i>
+    </button>
+
     <script>
         $(function() {
 
@@ -22,6 +26,9 @@
                             $(".AreaSelecaoPonto").removeClass("disabled");
                             $('.trava').hide();
                             $('.msgAviso').hide();
+                            $('#textoHome').hide();
+                            $('#btnPrincHome').hide();
+                            $('#btnSegundHome').show();
                             $('#btnsaida').show();
 
                             // $("#modalLoginCadastro").hidden.bs.toast();
@@ -57,6 +64,9 @@
                 $('.trava').hide();
                 $('.msgAviso').hide();
                 $('#btnsaida').show();
+                $('#textoHome').hide();
+                $('#btnPrincHome').hide();
+                $('#btnSegundHome').show();
 
                 // $("#modalLoginCadastro").hidden.bs.toast();
             <?php } ?>
@@ -65,6 +75,9 @@
                 $('#btnTempo').hide();
                 $('#textoTempo').hide();
                 $('#btnsaida').hide();
+                $('#textoHome').show();
+                $('#btnPrincHome').show();
+                $('#btnSegundHome').hide();
 
             <?php } ?>
             
