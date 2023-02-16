@@ -63,6 +63,7 @@ class Geral extends CI_Controller {
 		$senha = $this->input->post('senha');
 		
 		$this->load->model('Model_login');
+		
 		$confirmacao = $this->Model_login->verificarLogin($usuario, $senha);
 
 		if($confirmacao == "#erro")
@@ -88,5 +89,9 @@ class Geral extends CI_Controller {
 		$confirmacao2 = $this->Model_cadastro->cadastrarUsuario($cadNome, $cadCpf, $cadUsuario, $cadEmail, $cadTelefone, $cadSenha);
 		
 		echo $confirmacao2;
+	}
+
+	public function servico($id_cliente, $id_ponto, $tempo, $tipo){
+
 	}
 }
