@@ -38,13 +38,13 @@ $(function() {
             
         }
 
+        $('#btnsaida').hide();
     });
 
     // $('.trava').hide();
     // $('.msgAviso').hide();
     // $(".AreaSelecaoPonto").addClass("disabled");
-    
+
     $('#btnTempo').hide();
     $('#textoTempo').hide();
-
 });

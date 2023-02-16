@@ -22,6 +22,7 @@
                             $(".AreaSelecaoPonto").removeClass("disabled");
                             $('.trava').hide();
                             $('.msgAviso').hide();
+                            $('#btnsaida').show();
 
                             // $("#modalLoginCadastro").hidden.bs.toast();
                         }
@@ -43,6 +44,38 @@
                     data: formData,
                     success:  function(data){
                         console.log(data);
+                    },
+                    cache: false,
+                    contentType: false,
+                    processData: false
+                }); 
+            });
+
+            <?php if(isset($_SESSION['user'])) { ?>
+                $('.btnlogin').hide();
+                $(".AreaSelecaoPonto").removeClass("disabled");
+                $('.trava').hide();
+                $('.msgAviso').hide();
+                $('#btnsaida').show();
+
+                // $("#modalLoginCadastro").hidden.bs.toast();
+            <?php } ?>
+            <?php if(!isset($_SESSION['user'])) { ?>
+
+                $('#btnTempo').hide();
+                $('#textoTempo').hide();
+                $('#btnsaida').hide();
+
+            <?php } ?>
+            
+            $('#btnSair').click(function(){
+
+                $.ajax({
+                    url: "<?php echo site_url("Geral/sair")?>",
+                    type: 'GET',
+                    success: function(){
+                        console.log('Saida efetuada!');
+                        location.reload(true);
                     },
                     cache: false,
                     contentType: false,

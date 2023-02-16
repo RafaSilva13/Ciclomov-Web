@@ -1,9 +1,6 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-// Inicia sessão
-session_start();
-
 class Geral extends CI_Controller {
 
 	public function index()
@@ -38,6 +35,7 @@ class Geral extends CI_Controller {
 		$this->load->helper('url');
 		$this->load->view('view_header');
 		$this->load->view('view_navbar');
+		$this->load->view('view_modal');
 		$this->load->view('view_login');
 		$this->load->view('view_toast');
 		$this->load->view('view_servico');
@@ -50,6 +48,7 @@ class Geral extends CI_Controller {
 		$this->load->helper('url');
 		$this->load->view('view_header');
 		$this->load->view('view_navbar');
+		$this->load->view('view_modal');
 		$this->load->view('view_login');
 		$this->load->view('view_toast');
 		$this->load->view('view_sobre');
@@ -71,6 +70,8 @@ class Geral extends CI_Controller {
 		}
 		else
 		{
+			$this->session->set_userdata('user', $confirmacao);
+
 			echo $confirmacao;
 		}
 	}
@@ -88,5 +89,10 @@ class Geral extends CI_Controller {
 		$confirmacao2 = $this->Model_cadastro->cadastrarUsuario($cadNome, $cadCpf, $cadUsuario, $cadEmail, $cadTelefone, $cadSenha);
 		
 		echo $confirmacao2;
+	}
+
+	public function sair() 
+	{
+		$this->session->unset_userdata('user');
 	}
 }
