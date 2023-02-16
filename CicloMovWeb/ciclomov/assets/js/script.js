@@ -48,6 +48,8 @@ $(function() {
 
         $('#time').html(tempo);	
         $('#service').html(tipo);	
+        $('#point').html(id_ponto);	
+
 
         header('location: http://localhost/rafael/github/CicloMov/CicloMovWeb/ciclomov/index.php/geral/servico/' + id_ponto + '/' + id_cliente + '/' + tempo + '/' + tipo)	
 
@@ -61,7 +63,9 @@ $(function() {
     $('#textoTempo').hide();
 });
 
-function get_id(id_p, id_c) {	
+function get_id(id_p, id_c) {
+    console.log(id_p);
+    
     id_ponto = id_p	
     id_cliente = id_c	
 }

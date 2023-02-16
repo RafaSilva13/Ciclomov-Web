@@ -101,7 +101,7 @@
             <ul class="list-group">
                 
                 <li class="list-group-item">
-                    <b>Ponto:</b> Jardim Norte    
+                    <b>Ponto:</b> <span id="point"></span>  
                 </li>
                 
                 <li class="list-group-item">
