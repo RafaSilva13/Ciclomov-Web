@@ -41,6 +41,8 @@
                     <b>08:30</b>
                 </button>
 
+                <button type="button" class="btn btn-danger btnsaida" id="btnsaida"  data-mdb-toggle="modal" data-mdb-target="#exampleCentralModal1">Sair</button>
+
             </form>
 
         </div>
