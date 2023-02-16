@@ -91,13 +91,17 @@ class Geral extends CI_Controller {
 		
 		echo $confirmacao2;
 	}
-
+	
 	public function sair() 
 	{
 		$this->session->unset_userdata('user');
 	}
+	
+	public function servico($id_ponto, $tempo, $tipo){		
+		$this->load->model('Model_servico');
+		$this->Model_servico->cadastrarServico($id_ponto, $tempo, $tipo);
 
-	public function servico($id_cliente, $id_ponto, $tempo, $tipo){		
+		header('Location:'.base_url('index.php/Geral/pontos'));
 		
 	}
 }

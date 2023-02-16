@@ -120,7 +120,7 @@
 
                 <button type="button" class="btn btn-secondary" data-mdb-target="#exampleCentralModal4" data-mdb-toggle="modal">Voltar</button>
                 
-                <button class="btn btn-primary"  data-mdb-dismiss="modal">Confirmar serviço</button>
+                <button id="confirmaServico" class="btn btn-primary"  data-mdb-dismiss="modal">Confirmar serviço</button>
 
             </div>
             
