@@ -31,6 +31,24 @@
                     processData: false
                 }); 
             });
+
+            $("#formCadastro").submit(function(e){
+                e.preventDefault();
+
+                var formData = new FormData(this);
+
+                $.ajax({
+                    url: "<?php echo site_url("Geral/cadastro")?>",
+                    type: 'POST',
+                    data: formData,
+                    success:  function(data){
+                        console.log(data);
+                    },
+                    cache: false,
+                    contentType: false,
+                    processData: false
+                }); 
+            });
         });
     </script>
 

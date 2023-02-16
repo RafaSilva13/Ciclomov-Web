@@ -75,14 +75,18 @@ class Geral extends CI_Controller {
 		}
 	}
 
-	//public function cadastrar() 
-	// {
+	public function cadastro() 
+	{
+		$cadNome = $this->input->post('cad_nome_completo');
+		$cadCpf = $this->input->post('cad_cpf');
+		$cadUsuario = $this->input->post('cad_usuario');
+		$cadEmail = $this->input->post('cad_email');
+		$cadTelefone = $this->input->post('cad_telefone');
+		$cadSenha = $this->input->post('cad_senha');
 
-	// 	$nome = $this->input->post('nome');
-	// 	$usuario2 = $this->input->post('usuario');
-	// 	$email = $this->input->post('email');
-	// 	$senha2 = $this->input->post('senha');
-
-	// 	
-	// }
+		$this->load->model('Model_cadastro');
+		$confirmacao2 = $this->Model_cadastro->cadastrarUsuario($cadNome, $cadCpf, $cadUsuario, $cadEmail, $cadTelefone, $cadSenha);
+		
+		echo $confirmacao2;
+	}
 }

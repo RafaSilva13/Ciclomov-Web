@@ -61,7 +61,7 @@
                             <!-- Email input -->
                             <div class="form-outline mb-4">
 
-                                <input type="email" id="loginName" name="usuario" class="form-control">
+                                <input type="email" id="loginName" name="usuario" class="form-control" required>
 
                                 <label class="form-label" for="loginName" style="margin-left: 0px;">Email</label>
 
@@ -80,7 +80,7 @@
                             <!-- Password input -->
                             <div class="form-outline mb-4">
 
-                                <input type="password" id="senha" name="senha" class="form-control">
+                                <input type="password" id="senha" name="senha" class="form-control" required>
 
                                 <label class="form-label" for="senha" style="margin-left: 0px;">Senha</label>
 
@@ -136,7 +136,7 @@
 
                     <div style="margin-top: 1rem;" class="tab-pane fade" id="pills-register" role="tabpanel" aria-labelledby="mdb-tab-register">
 
-                        <form>
+                        <form id="formCadastro">
                             
                             <div class="text-center mb-3">
                                 <p>Cadastre-se com</p>
@@ -156,7 +156,7 @@
                             <!-- Name input -->
                             <div class="form-outline mb-4">
                                 
-                                <input type="text" id="registerName" name="nome" class="form-control">
+                                <input type="text" id="registerName" name="cad_nome_completo" class="form-control" required>
                                 
                                 <label class="form-label" for="registerName" style="margin-left: 0px;">Nome Completo</label>
                                 
@@ -172,10 +172,58 @@
 
                             </div>
 
+                            <div class="row g-3">
+                                    
+                                <div class="col">
+
+                                    <div class="form-outline mb-4">
+
+                                        <input type="text" id="cpf" name="cad_cpf" class="form-control" required>
+                                        
+                                        <label class="form-label" for="cpf" style="margin-left: 0px;">CPF</label>
+                                        
+                                        <div class="form-notch">
+
+                                            <div class="form-notch-leading" style="width: 9px;"></div>
+
+                                            <div class="form-notch-middle" style="width: 8px;"></div>
+
+                                            <div class="form-notch-trailing"></div>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="col">
+
+                                    <div class="form-outline mb-4">
+
+                                        <input type="text" id="telefone" name="cad_telefone" class="form-control" required>
+                                        
+                                        <label class="form-label" for="telefone" style="margin-left: 0px;">Telefone</label>
+                                    
+                                        <div class="form-notch">
+
+                                            <div class="form-notch-leading" style="width: 9px;"></div>
+
+                                            <div class="form-notch-middle" style="width: 8px;"></div>
+                                            
+                                            <div class="form-notch-trailing"></div>
+                                            
+                                        </div>
+                                        
+                                    </div>
+                                
+                                </div>
+
+                            </div>
+                            
                             <!-- Username input -->
                             <div class="form-outline mb-4">
                                 
-                                <input type="text" id="registerUsername" name="usuario2" class="form-control">
+                                <input type="text" id="registerUsername" name="cad_usuario" class="form-control" required>
                                     
                                 <label class="form-label" for="registerUsername" style="margin-left: 0px;">Usuário</label>
                                 
@@ -194,7 +242,7 @@
                             <!-- Email input -->
                             <div class="form-outline mb-4">
                                 
-                                <input type="email" id="email" name="email" class="form-control">
+                                <input type="email" id="email" name="cad_email" class="form-control" required>
                                 
                                 <label class="form-label" for="email" style="margin-left: 0px;">Email</label>
                                 
@@ -210,40 +258,49 @@
 
                             </div>
 
-                            <!-- Password input -->
-                            <div class="form-outline mb-4">
-                               
-                                <input type="password" id="senha2" class="form-control">
-                               
-                                <label class="form-label" for="senha2" style="margin-left: 0px;">Senha</label>
-                                
-                                <div class="form-notch">
-                                   
-                                    <div class="form-notch-leading" style="width: 9px;"></div>
-                                   
-                                    <div class="form-notch-middle" style="width: 8px;"></div>
+                            <div class="row g-3">
                                     
-                                    <div class="form-notch-trailing"></div>
-                                
+                                <div class="col">
+
+                                    <div class="form-outline mb-4">
+                                    
+                                        <input type="password" id="senha2" name="cad_senha" class="form-control" required>
+                                    
+                                        <label class="form-label" for="senha2" style="margin-left: 0px;">Senha</label>
+                                        
+                                        <div class="form-notch">
+                                        
+                                            <div class="form-notch-leading" style="width: 9px;"></div>
+                                        
+                                            <div class="form-notch-middle" style="width: 8px;"></div>
+                                            
+                                            <div class="form-notch-trailing"></div>
+                                        
+                                        </div>
+
+                                    </div>
                                 </div>
 
-                            </div>
+                                <div class="col">
 
-                            <!-- Repeat Password input -->
-                            <div class="form-outline mb-4">
+                                    <div class="form-outline mb-4">
 
-                                <input type="password" id="senha3" class="form-control">
-                                
-                                <label class="form-label" for="senha3" style="margin-left: 0px;">Repita a senha</label>
-                                
-                                <div class="form-notch">
+                                        <input type="password" id="senha3" class="form-control" required>
+                                        
+                                        <label class="form-label" for="senha3" style="margin-left: 0px;">Repita a senha</label>
+                                        
+                                        <div class="form-notch">
 
-                                    <div class="form-notch-leading" style="width: 9px;"></div>
+                                            <div class="form-notch-leading" style="width: 9px;"></div>
+                                            
+                                            <div class="form-notch-middle" style="width: 8px;"></div>
+                                            
+                                            <div class="form-notch-trailing"></div>
+
+                                        </div>
+
+                                    </div>
                                     
-                                    <div class="form-notch-middle" style="width: 8px;"></div>
-                                    
-                                    <div class="form-notch-trailing"></div>
-
                                 </div>
 
                             </div>

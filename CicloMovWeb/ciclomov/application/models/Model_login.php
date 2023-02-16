@@ -9,7 +9,7 @@ class Model_login extends CI_Model {
         if ($query->result()) 
         {            
             foreach ($query->result() as $row)
-            {                 
+            {
                 return $row->cod_clientes;
             }
         } 

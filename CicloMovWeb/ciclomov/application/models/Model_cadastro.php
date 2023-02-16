@@ -2,15 +2,19 @@
 
 class Model_cadastro extends CI_Model {
 
-    // Campos da tabela produtos no database loja
-    public $id;
-    public $email;
-    public $senha;
-
-    public function get_produtos()
+    public function cadastrarUsuario($cadNome, $cadCpf, $cadUsuario, $cadEmail, $cadTelefone, $cadSenha)
     {
-        $query = $this->db->get('produtos');
-        return $query->result();
+        $dados = array(
+            "email_clientes" => $cadEmail,
+            "cpf_clientes" => $cadCpf,
+            "tempo_geral_clientes" => '00:00:00',
+            "usuario_clientes" => $cadUsuario,
+            "senha_clientes" => $cadSenha
+            "nome_clientes" => $cadNome,
+            "telefone_clientes" => $cadTelefone
+        );
+
+        $this->db->insert('clientes', $dados);
     }
 }
 
