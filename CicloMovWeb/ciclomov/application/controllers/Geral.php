@@ -95,4 +95,8 @@ class Geral extends CI_Controller {
 	{
 		$this->session->unset_userdata('user');
 	}
+
+	public function servico($id_cliente, $id_ponto, $tempo, $tipo){		
+		
+	}
 }
