@@ -17,50 +17,52 @@
                 
                 <div class="container">
 
-                    <div class="row">
-
+        <div class="row">
+            
                         <div class='col-sm-6'>
 
                             <label for="selectServiço">Tempo</label>
                             
                             <div class="form-group">
-
+                                
                                 <div class='input-group date' id='datetimepicker3'>
-
+                                    
                                     <input class="form-select" type="time" id="appt" name="appt">
 
                                     <span class="input-group-addon">
-
+                                        
                                         <span class="glyphicon glyphicon-time"></span>
-
+                                        
                                     </span>
                                     
                                 </div>
                                 
                             </div>
-
+                            
                         </div>
-
+                        
                         <div class='col-sm-6'>
-
-                            <label for="selectServiço">Serviço Prestado</label>
-
-                            <select class="form-select" aria-label="select" id="selectServiço">
-
+                            
+                            <label for="selectServico">Serviço Prestado</label>
+                            
+                            <select class="form-select" aria-label="select" id="selectServico">
+                                
                                 <option selected></option>
-
-                                <option value="1">One</option>
-
-                                <option value="2">Two</option>
-
-                                <option value="3">Three</option>
-
+                                
+                                <option value="Estacionamento">Estacionamento</option>
+                                
+                                <option value="Manutenção">Manutenção</option>
+                                
+                                <option value="Limpeza">Limpeza</option>
+                                
+                                <option value="Manutenção e Limpeza">Manutenção e Limpeza</option>
+                                
                             </select>
-
+                            
                         </div>
-                    
+                        
                     </div>
-
+                    
                 </div>    
 
             </div>
@@ -69,7 +71,7 @@
 
                 <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">Voltar</button>
 
-                <button type="button" class="btn btn-primary" data-mdb-target="#exampleModalToggle22" data-mdb-toggle="modal" data-mdb-dismiss="modal">Próximo</button>
+                <button type="button" class="btn btn-primary" data-mdb-target="#exampleModalToggle22" data-mdb-toggle="modal" data-mdb-dismiss="modal" id="btnProximo">Próximo</button>
             
             </div>
 
@@ -103,11 +105,11 @@
                 </li>
                 
                 <li class="list-group-item">
-                    <b>Tempo:</b> 10 minutos
+                    <b>Tempo:</b> <span id="time"></span>
                 </li>
 
                 <li class="list-group-item">
-                    <b>Serviço:</b> Estacionamento e Manutenção
+                    <b>Serviço:</b>  <span id="service"></span>
                 </li>
 
             </ul>
