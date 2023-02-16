@@ -12,10 +12,12 @@
                     
                     <br>
 
-                    <h4 class="mb-3" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Conecte-se</h4>
+                    <h4 class="mb-3" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;" id="textoHome">Conecte-se</h4>
 
-                    <a class="btn btn-outline-light btn-lg btnHome" data-mdb-ripple-color="dark" data-mdb-toggle="modal" data-mdb-target="#modalLoginCadastro" role="button">Login</a>
-
+                    <a class="btn btn-outline-light btn-lg btnHome" data-mdb-ripple-color="dark" id="btnPrincHome" data-mdb-toggle="modal" data-mdb-target="#modalLoginCadastro" role="button">Login</a>
+                    
+                    <a class="btn btn-outline-light btn-lg btnHome" href="<?php echo site_url("geral/pontos") ?>" data-mdb-ripple-color="dark" id="btnSegundHome" role="button">Ir para Pontos</a>
+                    
                 </div>
 
             </div>
