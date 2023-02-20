@@ -17,8 +17,7 @@
                     success:  function(data){
                         if(data == 'SenhaUserIn')
                         {
-                            $('#textSenhaIncorreta').text('Email ou senha incorretos!');
-                            $("#erroToast").toast('show');
+                            $(".erroToast").toast('show');
                         }
                         else
                         {
@@ -30,6 +29,7 @@
                             $('#btnPrincHome').hide();
                             $('#btnSegundHome').show();
                             $('#btnsaida').show();
+                            $('#areaMenu').show();
 
                             // $("#modalLoginCadastro").hidden.bs.toast();
                         }
@@ -64,6 +64,7 @@
                 $('.trava').hide();
                 $('.msgAviso').hide();
                 $('#btnsaida').show();
+                $('#areaMenu').show();
                 $('#textoHome').hide();
                 $('#btnPrincHome').hide();
                 $('#btnSegundHome').show();
@@ -75,6 +76,7 @@
                 $('#btnTempo').hide();
                 $('#textoTempo').hide();
                 $('#btnsaida').hide();
+                $('#areaMenu').hide();
                 $('#textoHome').show();
                 $('#btnPrincHome').show();
                 $('#btnSegundHome').hide();

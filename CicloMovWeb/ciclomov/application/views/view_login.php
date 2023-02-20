@@ -6,7 +6,7 @@
 
             <div class="modal-header">
 
-                <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+                <button type="button" class="btn-close" id="btnFecharModalLogin" data-mdb-dismiss="modal" aria-label="Close"></button>
 
             </div>
 
@@ -59,7 +59,7 @@
                             <p class="text-center">Ou</p>
                             
                             <!-- Email input -->
-                            <div class="form-outline mb-4">
+                            <div class="form-outline mb-3">
 
                                 <input type="email" id="loginName" name="usuario" class="form-control" required>
 
@@ -154,7 +154,7 @@
                             <p class="text-center">Ou</p>
 
                             <!-- Name input -->
-                            <div class="form-outline mb-4">
+                            <div class="form-outline mb-3">
                                 
                                 <input type="text" id="registerName" name="cad_nome_completo" class="form-control" required>
                                 
@@ -176,7 +176,7 @@
                                     
                                 <div class="col">
 
-                                    <div class="form-outline mb-4">
+                                    <div class="form-outline mb-3">
 
                                         <input type="text" id="cpf" name="cad_cpf" class="form-control" required>
                                         
@@ -198,7 +198,7 @@
 
                                 <div class="col">
 
-                                    <div class="form-outline mb-4">
+                                    <div class="form-outline mb-3">
 
                                         <input type="text" id="telefone" name="cad_telefone" class="form-control" required>
                                         
@@ -221,7 +221,7 @@
                             </div>
                             
                             <!-- Username input -->
-                            <div class="form-outline mb-4">
+                            <div class="form-outline mb-3">
                                 
                                 <input type="text" id="registerUsername" name="cad_usuario" class="form-control" required>
                                     
@@ -240,7 +240,7 @@
                             </div>
 
                             <!-- Email input -->
-                            <div class="form-outline mb-4">
+                            <div class="form-outline mb-3">
                                 
                                 <input type="email" id="email" name="cad_email" class="form-control" required>
                                 
@@ -262,7 +262,7 @@
                                     
                                 <div class="col">
 
-                                    <div class="form-outline mb-4">
+                                    <div class="form-outline mb-3">
                                     
                                         <input type="password" id="senha2" name="cad_senha" class="form-control" required>
                                     
@@ -283,7 +283,7 @@
 
                                 <div class="col">
 
-                                    <div class="form-outline mb-4">
+                                    <div class="form-outline mb-3">
 
                                         <input type="password" id="senha3" class="form-control" required>
                                         
@@ -306,7 +306,7 @@
                             </div>
 
                             <!-- Checkbox -->
-                            <div class="form-check d-flex justify-content mb-4">
+                            <div class="form-check d-flex justify-content mb-3">
                                 
                                 <input type="checkbox" class="form-check-input" id="loginCheck2">
                                 

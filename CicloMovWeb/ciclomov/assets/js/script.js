@@ -36,6 +36,7 @@ $(function() {
 
 
         $('#btnsaida').hide();
+        $('#areaMenu').hide();
     });
 
     $('#btnProximo').click(function() {
@@ -46,19 +47,15 @@ $(function() {
         $('#service').html(tipo);
         $('#point').html(id_ponto);
 
-
-
     });
 
     $('#confirmaServico').click(function() {
-        // header("location: http://localhost/luizim/github/CicloMov/CicloMovWeb/ciclomov/index.php/geral/servico/" + id_ponto + "/" + tempo + "/" + tipo)
         window.location.href = "http://localhost/luizim/github/CicloMov/CicloMovWeb/ciclomov/index.php/geral/servico/" + id_ponto + "/" + tempo + "/" + tipo;
     })
 
-
-    // $('.trava').hide();
-    // $('.msgAviso').hide();
-    // $(".AreaSelecaoPonto").addClass("disabled");
+    $("#btnFecharModalLogin").click(function(){
+        $(".erroToast").toast('hide');
+    });
 
     $('#btnTempo').hide();
     $('#textoTempo').hide();
