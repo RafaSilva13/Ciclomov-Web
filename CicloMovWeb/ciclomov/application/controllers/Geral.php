@@ -60,7 +60,7 @@ class Geral extends CI_Controller {
 	{
 
 		$usuario = $this->input->post('usuario');
-		$senha = $this->input->post('senha');
+		$senha = md5($this->input->post('senha'));
 		
 		$this->load->model('Model_login');
 		$confirmacao = $this->Model_login->verificarLogin($usuario, $senha);
@@ -85,7 +85,7 @@ class Geral extends CI_Controller {
 		$cadUsuario = $this->input->post('cad_usuario');
 		$cadEmail = $this->input->post('cad_email');
 		$cadTelefone = $this->input->post('cad_telefone');
-		$cadSenha = $this->input->post('cad_senha');
+		$cadSenha = md5($this->input->post('cad_senha'));
 
 		$this->load->model('Model_cadastro');
 		$confirmacao2 = $this->Model_cadastro->cadastrarUsuario($cadNome, $cadCpf, $cadUsuario, $cadEmail, $cadTelefone, $cadSenha);
