@@ -60,6 +60,20 @@ $(function() {
     $('#btnTempo').hide();
     $('#textoTempo').hide();
 
+    $('#scroll').animate({
+        scrollTop: $(this).height() // aqui introduz o numero de px que quer no scroll, neste caso é a altura da propria div, o que faz com que venha para o fim
+    }, 280);
+
+    $("#btnSuporte").click(function(){
+        $("#btnSuporte").fadeOut();
+        $("#exampleSideModal3").fadeIn();
+    });
+    
+    $("#btnFecharChat").click(function(){
+        $("#btnSuporte").fadeIn();
+        $("#exampleSideModal3").fadeOut();
+    });
+
 });
 
 function mudarValorTempo(tempo) {

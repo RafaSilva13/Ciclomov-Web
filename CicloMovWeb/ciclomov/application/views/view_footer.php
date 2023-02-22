@@ -1,4 +1,4 @@
-    <button type="button" class="btn btn-info btn-lg btn-floating" data-mdb-toggle="modal" data-mdb-target="#exampleSideModal3" style="width: 4rem; height: 4rem; position: fixed; right: 1rem; bottom: 2rem;">
+    <button type="button" id="btnSuporte" class="btn btn-info btn-lg btn-floating" data-mdb-toggle="modal" data-mdb-target="#exampleSideModal3" style="width: 4rem; height: 4rem; position: fixed; right: 1rem; bottom: 2rem;">
         <i class="fas fa-headset fa-2x"></i>
     </button>
 
@@ -105,7 +105,7 @@
 
     <!-- MDB -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.1.0/mdb.min.js"></script>
-
+    
     <!-- Flowbite -->
     <script src="https://unpkg.com/flowbite@1.5.4/dist/flowbite.js"></script>
 
