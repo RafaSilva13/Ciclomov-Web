@@ -20,94 +20,80 @@
                 </li>
                 
                 <li class="nav-item">
-                    <a class="nav-link item" href="<?php echo site_url("geral/sobre") ?>"><b>Sobre</b></a>
+                    <a class="nav-link item" href="<?php echo site_url("geral/sobre") ?>"><b>Sobre nós</b></a>
                 </li>
 
             </ul>
-
-            <form class="d-flex gap-5" id="btnlogin">
             
+            <form class="d-flex gap-5">
                 
-                </form>
-                
-                <form class="d-flex gap-5">
-                    
-                    <button type="button" class="btn btn-secondary btnlogin text-dark" data-mdb-toggle="modal" data-mdb-target="#modalLoginCadastro">Login</button>
+                <button type="button" class="btn btn-secondary btnlogin text-dark" data-mdb-toggle="modal" data-mdb-target="#modalLoginCadastro">Login</button>
 
-                    <div class="dropdown areaMenu" style="margin: 0;" id="areaMenu">
+                <div class="dropdown areaMenu" style="margin: 0;" id="areaMenu">
 
-                        <button class="btn btn-secondary btn-lg btn-floating rounded-full" type="button" id="dropdownMenuButton" data-mdb-toggle="dropdown" aria-expanded="false">
+                    <button class="btn btn-secondary btn-lg btn-floating rounded-full" type="button" id="dropdownMenuButton" data-mdb-toggle="dropdown" aria-expanded="false" style="filter: drop-shadow(0px 0px 2px 3a3939);">
 
-                            <img src="https://flowbite.com/docs/images/people/profile-picture-5.jpg" class="w-100 rounded-full"/>
-                            
-                        </button>
+                        <img src="https://flowbite.com/docs/images/people/profile-picture-5.jpg" class="w-100 rounded-full"/>
                         
-                        <ul class="dropdown-menu">
+                    </button>
+                    
+                    <ul class="dropdown-menu">
 
-                            <li class="dropdown-item">
+                        <li class="dropdown-item">
 
-                                <center>
+                            <center>
 
-                                    <button class="btn btn-secondary btn-lg btn-floating bg-image hover-overlay ripple shadow-1-strong rounded-full areaImgUser" type="button" style="width: 3.5rem; height: 3.5rem;" data-mdb-toggle="modal" data-mdb-target="#modalAreaImgUser">
-                                                                                
-                                        <img src="https://flowbite.com/docs/images/people/profile-picture-5.jpg" class="w-100 rounded-full"/>
-                                                                               
-                                        <div class="mask" style="background-color: hsla(0, 0%, 0%, 0.6);">
-                                            
-                                            <i class="fas fa-camera fa-lg" style="color: white;  margin-top: 0.3rem;"></i>
+                                <button class="btn btn-secondary btn-lg btn-floating bg-image hover-overlay ripple shadow-1-strong rounded-full areaImgUser" type="button" style="width: 3.5rem; height: 3.5rem;" data-mdb-toggle="modal" data-mdb-target="#modalAreaImgUser">
+                                                                            
+                                    <img src="https://flowbite.com/docs/images/people/profile-picture-5.jpg" class="w-100 rounded-full"/>
+                                                                            
+                                    <div class="mask" style="background-color: hsla(0, 0%, 0%, 0.6);">
                                         
-                                        </div>
+                                        <i class="fas fa-camera fa-lg" style="color: white;  margin-top: 0.3rem;"></i>
+                                    
+                                    </div>
 
-                                    </button>
-    
-                                    <p style="margin-bottom: 0.1rem;">
-                                        <span>
-                                            <b>Usuario</b>
-                                        </span>
-                                    </p>
-
-                                </center>
-
-                            </li>
-
-                            <li>
-                               
-                                <button class="dropdown-item">
-                                    Histórico
                                 </button>
-                       
-                            </li>
 
-                            <li>
+                                <p style="margin-bottom: 0.1rem;">
+                                    <span>
+                                        <b>Usuario</b>
+                                    </span>
+                                </p>
 
-                                <button class="dropdown-item">
-                                    Configurações da Conta
-                                </button>
-                                
-                            </li>    
-                                            
-                            <li class="botoesMenu">
+                            </center>
 
-                                <center>
+                        </li>
 
-                                    <button type="button" class="btn btn-danger btnsaida btn-rounded" id="btnsaida"  data-mdb-toggle="modal" data-mdb-target="#exampleCentralModal1">Sair</button>
-                                
-                                </center>
-                                
-                            </li>
+                        <li>
+                            
+                            <button class="dropdown-item">
+                                Histórico
+                            </button>
+                    
+                        </li>
 
-                        </ul>
+                        <li>
 
-                    </div>
+                            <button class="dropdown-item">
+                                Configurações da Conta
+                            </button>
+                            
+                        </li>    
+                                        
+                        <li class="botoesMenu">
 
-                <!-- <b style="color: white; margin-top: 0.4rem; margin-right: -2rem;" id="textoTempo">
-                    Tempo restante:
-                </b>
+                            <center>
 
-                <button type="button" class="btn btn-secondary  btn-rounded text-black" style="font-size: 14px;" id="btnTempo">
-                    <b>08:30</b>
-                </button> -->
+                                <button type="button" class="btn btn-danger btnsaida btn-rounded" id="btnsaida"  data-mdb-toggle="modal" data-mdb-target="#exampleCentralModal1">Sair</button>
+                            
+                            </center>
+                            
+                        </li>
 
+                    </ul>
+
+                </div>
 
             </form>
 

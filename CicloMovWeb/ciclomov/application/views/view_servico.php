@@ -20,44 +20,130 @@
                     <div class="row">
             
                         <div class='col-sm-6'>
-
-                            <label for="selectServiço">Tempo</label>
                             
-                            <div class="form-group">
-                                
-                                <div class='input-group date' id='datetimepicker3'>
-                                    
-                                    <input class="form-select" type="time" id="appt" name="appt">
+                            <label for="datetimepicker3">
 
-                                    <span class="input-group-addon">
-                                        
-                                        <span class="glyphicon glyphicon-time"></span>
-                                        
-                                    </span>
+                                <b>
+
+                                    Tempo
+
+                                </b>
+
+                            </label>
+
+                            <div class="btn-group">
+
+                                <input type="text" class="form-control" data-mdb-toggle="dropdown" id="inputValor" readonly>
+
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                            
+                                    <li>
+                                        <option class="dropdown-item" value="15:00" onclick="mudarValorTempo(this.value)">
+                                            <button onclick="mudarValorTempo(this.value)">
+                                                15 minutos
+                                            </button>
+                                        </option>
+                                    </li>
                                     
-                                </div>
+                                    <li>
+                                        <option class="dropdown-item" value="30:00" onclick="mudarValorTempo(this.value)">
+                                            <button onclick="mudarValorTempo(this.value)">
+                                                30 minutos
+                                            </button>
+                                        </option>   
+                                    </li>
+                                    
+                                    <li>
+                                        <option class="dropdown-item" value="45:00" onclick="mudarValorTempo(this.value)">
+                                            <button onclick="mudarValorTempo(this.value)">
+                                                45 minutos
+                                            </button>    
+                                        </option>
+                                    </li>
+                                    
+                                    <li>
+                                        <option class="dropdown-item" value="60:00" onclick="mudarValorTempo(this.value)">
+                                            <button onclick="mudarValorTempo(this.value)">
+                                                60 minutos
+                                            </button>
+                                        </option>
+                                    </li>
+
+                                    <li>
+                                        <option class="dropdown-item" value="80:00" onclick="mudarValorTempo(this.value)">
+                                            <button onclick="mudarValorTempo(this.value)">
+                                                80 minutos
+                                            </button>
+                                        </option>
+                                    </li>
+                                
+                                </ul>
                                 
                             </div>
-                            
+
                         </div>
                         
                         <div class='col-sm-6'>
                             
-                            <label for="selectServico">Serviço Prestado</label>
-                            
-                            <select class="form-select" aria-label="select" id="selectServico">
+                            <label for="selectServico">
+
+                                <b>
+
+                                    Serviço Prestado
+
+                                </b>
+
+                            </label>
+
+                            <div class="btn-group">
+
+                                <input type="text" class="form-control" data-mdb-toggle="dropdown" id="selectServico" readonly>
+
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                            
+                                    <li>
+                                        <option class="dropdown-item" value="Estacionamento" onclick="mudarTipoServico(this.value)">
+                                            <button onclick="mudarTipoServico(this.value)">
+                                                Estacionamento
+                                            </button>
+                                        </option>
+                                    </li>
+                                    
+                                    <li>
+                                        <option class="dropdown-item" value="Aluguel" onclick="mudarTipoServico(this.value)">
+                                            <button onclick="mudarTipoServico(this.value)">
+                                                Aluguel
+                                            </button>
+                                        </option>
+                                    </li>
+
+                                    <li>
+                                        <option class="dropdown-item" value="Manutenção" onclick="mudarTipoServico(this.value)">
+                                            <button onclick="mudarTipoServico(this.value)">
+                                                Manutenção
+                                            </button>
+                                        </option>   
+                                    </li>
+                                    
+                                    <li>
+                                        <option class="dropdown-item" value="Limpeza" onclick="mudarTipoServico(this.value)">
+                                            <button onclick="mudarTipoServico(this.value)">
+                                                Limpeza
+                                            </button>    
+                                        </option>
+                                    </li>
+                                    
+                                    <li>
+                                        <option class="dropdown-item" value="Manutenção e Limpeza" onclick="mudarTipoServico(this.value)">
+                                            <button onclick="mudarTipoServico(this.value)">
+                                                Manutenção e Limpeza
+                                            </button>
+                                        </option>
+                                    </li>
                                 
-                                <option selected></option>
+                                </ul>
                                 
-                                <option value="Estacionamento">Estacionamento</option>
-                                
-                                <option value="Manutenção">Manutenção</option>
-                                
-                                <option value="Limpeza">Limpeza</option>
-                                
-                                <option value="Manutenção e Limpeza">Manutenção e Limpeza</option>
-                                
-                            </select>
+                            </div>
                             
                         </div>
                         
@@ -109,7 +195,7 @@
                 </li>
 
                 <li class="list-group-item">
-                    <b>Serviço:</b>  <span id="service"></span>
+                    <b>Serviço:</b> <span id="service"></span>
                 </li>
 
             </ul>

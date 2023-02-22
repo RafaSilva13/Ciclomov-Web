@@ -1,4 +1,4 @@
-    <button type="button" class="btn btn-info btn-lg btn-floating" style="width: 4rem; height: 4rem; position: fixed; right: 1rem; bottom: 2rem;" data-mdb-container="body" data-mdb-toggle="popover" data-mdb-placement="left" data-mdb-content="Função indisponível no momento">
+    <button type="button" class="btn btn-info btn-lg btn-floating" data-mdb-toggle="modal" data-mdb-target="#exampleSideModal3" style="width: 4rem; height: 4rem; position: fixed; right: 1rem; bottom: 2rem;">
         <i class="fas fa-headset fa-2x"></i>
     </button>
 
@@ -7,9 +7,9 @@
 
             $("#formLogin").submit(function(e){
                 e.preventDefault();
-
+                                    
                 var formData = new FormData(this);
-
+                
                 $.ajax({
                     url: "<?php echo site_url("Geral/login")?>",
                     type: 'POST',
@@ -30,8 +30,8 @@
                             $('#btnSegundHome').show();
                             $('#btnsaida').show();
                             $('#areaMenu').show();
+                            location.reload(true);
 
-                            // $("#modalLoginCadastro").hidden.bs.toast();
                         }
                     },
                     cache: false,
@@ -39,7 +39,7 @@
                     processData: false
                 }); 
             });
-
+            
             $("#formCadastro").submit(function(e){
                 e.preventDefault();
 

@@ -65,6 +65,8 @@
 
                                 <label class="form-label" for="loginName" style="margin-left: 0px;">Email</label>
 
+                                <div class="invalid-feedback">Campo vazio!</div>
+
                                 <div class="form-notch">
 
                                     <div class="form-notch-leading" style="width: 9px;"></div>
@@ -83,6 +85,8 @@
                                 <input type="password" id="senha" name="senha" class="form-control" required>
 
                                 <label class="form-label" for="senha" style="margin-left: 0px;">Senha</label>
+
+                                <div class="invalid-feedback">Campo vazio!</div>
 
                                 <div class="form-notch">
 

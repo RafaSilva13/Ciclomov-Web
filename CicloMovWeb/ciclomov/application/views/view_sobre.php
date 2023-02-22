@@ -1,27 +1,94 @@
-<div class="container areaSobre">
+<section style="background-color: #eee;">
 
-    <h2 class="title"> Conheça um pouco mais sobre a CicloMov</h2>
+    <div class="container py-5">
 
-    <p class="sobre"> Seu início foi em Juiz de fora, em 2022, em Minas Gerais, mas logo consolidou-se ao ingressar no Rio de Janeiro. Especializou-se nos mais variados segmentos de estacionamentos privados. <br> <br>
+        <div class="row d-flex justify-content-center">
 
-        Para cada perfil de empreendimento no setor de estacionamentos, a CicloMov desenvolve práticas customizadas, voltadas para o atendimento ao cliente com qualidade e eficiência, forte marca de sua atuação. <br> <br>
+            <div class="col-md-8 col-lg-6 col-xl-4">
 
-        O pioneirismo, a tradição, a qualidade e a credibilidade são os principais pontos fortes da empresa, que hoje investe cada vez mais em Tecnologia de Informação (TI), incentivando a utilização de equipamentos automatizados nos estacionamentos.
-        Tudo isso garante serviços de qualidade para os nossos parceiros e clientes e melhores resultados para os empreendimentos. </p>
+                <div class="card" id="chat1" style="border-radius: 15px;">
 
-    <h3 class="title">Nossos Valores</h3>
+                    <div class="card-header d-flex justify-content-between align-items-center p-3 bg-info text-white border-bottom-0" style="border-top-left-radius: 15px; border-top-right-radius: 15px;">
+                    
+                        <i class="fas fa-angle-left"></i>
+                        <p class="mb-0 fw-bold">Suporte</p>
+                        <i class="fas fa-times"></i>
+                    
+                    </div>
 
-    <p class="sobre" style="margin-bottom: 6rem;">
-        <b> Nossa Visão: </b>
-        Ampliar e consolidar a liderança em estacionamento e expandir a atuação em mobilidade urbana, com uma oferta consistente de soluções e presença relevante nas principais cidades. <br> <br>
+                    <div class="card-body">
 
-        <b> Nossa Missão: </b>
-        Desenvolver, implantar e administrar estacionamentos e soluções que facilitam a mobilidade urbana, melhorando a qualidade de vida da sociedade e gerando retorno superior para seus clientes e acionistas. <br> <br>
+                        <div class="d-flex flex-row justify-content-start mb-4">
 
-        <b> Nossos Valores: </b>
-        Inovação, meritocracia, qualidade de atendimento, transparência, valorização da equipe e sustentabilidade. <br> <br>
+                            <img src="https://flowbite.com/docs/images/people/profile-picture-5.jpg" alt="avatar 1" style="width: 45px; height: 100%;">
+                            
+                            <div class="p-3 ms-3" style="border-radius: 15px; background-color: rgba(57, 192, 237,.2);">
 
-        <b> Nosso Propósito: </b>
-        Simplificar e conectar a vida de uma sociedade em movimento. </p>
+                                <p class="small mb-0">Hello and thank you for visiting MDBootstrap. Please click the video below.</p>
+                            
+                            </div>
 
-</div>
+                        </div>
+
+                        <div class="d-flex flex-row justify-content-end mb-4">
+                            
+                            <div class="p-3 me-3 border" style="border-radius: 15px; background-color: #fbfbfb;">
+                            
+                                <p class="small mb-0">Thank you, I really like your product.</p>
+                            
+                            </div>
+
+                            <img src="https://flowbite.com/docs/images/people/profile-picture-5.jpg" alt="avatar 1" style="width: 45px; height: 100%;">
+                        
+                        </div>
+
+                        <div class="d-flex flex-row justify-content-start mb-4">
+
+                            <img src="https://flowbite.com/docs/images/people/profile-picture-5.jpg" alt="avatar 1" style="width: 45px; height: 100%;">
+                            
+                            <div class="ms-3" style="border-radius: 15px;">
+                                
+                                <div class="bg-image">
+                                    
+                                    <img src="https://flowbite.com/docs/images/people/profile-picture-5.jpg" style="border-radius: 15px;" alt="video">
+                                    
+                                    <a href="#!">
+                                        <div class="mask"></div>
+                                    </a>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="d-flex flex-row justify-content-start mb-4">
+    
+                            <img src="https://flowbite.com/docs/images/people/profile-picture-5.jpg" alt="avatar 1" style="width: 45px; height: 100%;">
+                            
+                            <div class="p-3 ms-3" style="border-radius: 15px; background-color: rgba(57, 192, 237,.2);">
+                        
+                                <p class="small mb-0">...</p>
+                        
+                            </div>
+                        
+                        </div>
+
+                        <div class="form-outline">
+                        
+                            <textarea class="form-control" id="textAreaExample" rows="4"></textarea>
+                            <label class="form-label" for="textAreaExample">Type your message</label>
+                        
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>

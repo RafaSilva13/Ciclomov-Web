@@ -40,8 +40,8 @@ $(function() {
     });
 
     $('#btnProximo').click(function() {
-        tipo = $('#selectServico :selected').text();
-        tempo = $('#appt').val();
+        tipo = $('#selectServico').val();
+        tempo = $('#inputValor').val();
 
         $('#time').html(tempo);
         $('#service').html(tipo);
@@ -59,7 +59,16 @@ $(function() {
 
     $('#btnTempo').hide();
     $('#textoTempo').hide();
+
 });
+
+function mudarValorTempo(tempo) {
+    $("#inputValor").val(tempo);
+}
+
+function mudarTipoServico(tempo) {
+    $("#selectServico").val(tempo);
+}
 
 function get_id(id_p, id_c) {
     id_ponto = id_p
