@@ -57,8 +57,8 @@ $(function() {
         $(".erroToast").toast('hide');
     });
 
-    $('#btnTempo').hide();
-    $('#textoTempo').hide();
+    // $('#btnTempo').hide();
+    // $('#textoTempo').hide();
 
     $('#scroll').animate({
         scrollTop: $(this).height() // aqui introduz o numero de px que quer no scroll, neste caso é a altura da propria div, o que faz com que venha para o fim
@@ -88,3 +88,45 @@ function get_id(id_p, id_c) {
     id_ponto = id_p;
     id_cliente = id_c;
 }
+
+
+function readURL(input) {
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+
+        reader.onload = function(e) {
+            $(".image-upload-wrap").hide();
+
+            $(".file-upload-image").attr("src", e.target.result);
+            $(".file-upload-content").show();
+
+            $(".image-title").html(input.files[0].name);
+        };
+
+        reader.readAsDataURL(input.files[0]);
+    } else {
+        removeUpload();
+    }
+}
+
+function removeUpload() {
+    $(".file-upload-input").replaceWith($(".file-upload-input").clone());
+    $(".file-upload-content").hide();
+    $(".image-upload-wrap").show();
+}
+$(".image-upload-wrap").bind("dragover", function() {
+    $(".image-upload-wrap").addClass("image-dropping");
+
+    // CLASSES JÁ CRIADAS DO NOSSO PROJETO 
+    // $(".image-upload-wrap").addClass("figure-img");
+    // $(".image-upload-wrap").addClass("img-fluid");
+    
+});
+$(".image-upload-wrap").bind("dragleave", function() {
+    $(".image-upload-wrap").removeClass("image-dropping");
+
+    // CLASSES JÁ CRIADAS DO NOSSO PROJETO 
+    // $(".image-upload-wrap").removeClass("figure-img");
+    // $(".image-upload-wrap").removeClass("img-fluid");
+    
+});
