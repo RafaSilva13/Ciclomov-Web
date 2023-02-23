@@ -42,12 +42,17 @@
 
                 <center>
 
-                    <figure class="figure">
+                    <div class="bg-image">
+                        
+                        <img src="https://flowbite.com/docs/images/people/profile-picture-5.jpg" class="figure-img img-fluid" style="width: 280px; height: 280px; border-radius: 10px;">
 
-                        <img src="..." class="figure-img img-fluid rounded" alt="...">
-                        <figcaption class="figure-caption text-end">A caption for the above image.</figcaption>
+                    </div>
+
+                    <div class="form-outline mb-4 btn btn-primary" style="border-radius: 20px; width: 300px; padding-top: 0; padding-bottom: 0; padding-left: 0; margin-top: 1rem;">
+
+                        <input type="file" style="border-radius: 20px;"/>    
                     
-                    </figure>
+                    </div>
 
                 </center>
 
@@ -55,8 +60,8 @@
             
             <div class="modal-footer">
 
-                <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
+                <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">Fechar</button>
+                <button type="button" class="btn btn-primary">Salvar imagem</button>
                 
             </div>
 
@@ -96,12 +101,12 @@
                                 
                                 <div class="d-flex flex-row justify-content-start mb-4">
 
-                                    <img src="https://flowbite.com/docs/images/people/profile-picture-5.jpg" class="rounded-full" alt="avatar 1" style="width: 2.813rem; height: 100%; margin-top: 0.313rem;"">
+                                    <img src="<?=base_url('assets/images/suporte.png');?>" class="rounded-full" alt="avatar 1" style="width: 2.813rem; height: 100%; margin-top: 0.313rem;"">
                                     
                                     <div class="p-3 ms-2 border" style="border-radius: 15px; background-color: #fbfbfb; margin-right: 0.313rem;">
 
                                         <p class="small mb-0" style="font-size: 14px;">
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
                                         </p>
                                     
                                     </div>
@@ -145,3 +150,85 @@
     </div>
 
 </div>
+
+<!-- Modal -->
+<div class="modal fade" id="modalHistorico" tabindex="-1" aria-labelledby="modalHistoricoLabel" aria-hidden="true">
+    
+    <div class="modal-dialog">
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+
+                <h5 class="modal-title" id="modalHistoricoLabel">Historico de Serviços</h5>
+                <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+                
+            </div>
+
+            <div class="modal-body" style="padding: 0;">
+
+               <table class="table align-middle mb-0 bg-white">
+
+                    <thead class="bg-light">
+
+                        <tr>
+
+                            <th>Ponto</th>
+                            <th>Tipo</th>
+                            <th>Tempo</th>
+                            <th>Status</th>
+                            
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="tabela">
+
+                    </tbody>
+
+                </table>
+
+            </div>
+            
+            <div class="modal-footer">
+
+                <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">Fechar</button>
+                
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+    $(function(){
+
+        $("#btnModalHistorico").click(function(){
+            
+            $("#tabela tr").remove();
+
+            $.ajax({
+                url: '<?php echo site_url('Geral/listarServ'); ?>',
+                type: 'GET',
+                success:function(dados){
+
+                    variavelphp = JSON.parse(dados); 
+
+                    variavelphp.forEach(function(value, key) {
+    
+                        $('#tabela').append("<tr><td><div class='d-flex align-items-center'><div class='ms-1'><p class='fw-bold mb-1'>"+value.descricaoPonto+"</p></div></div></td><td><p class='fw-normal mb-1' id='tipoServico"+value.codServ+"'>"+value.tipoServ+"</p></td><td><span class='badge badge-"+value.tipoMsg+" rounded-pill d-inline'"+value.codServ+"'>"+value.statusServ+"</span></td><td>"+value.tempoPerma+"</td></tr>");
+                        
+                    });
+                    
+                },
+                cache: false,
+                contentType: false,
+                processData: false
+            }); 
+
+        });
+
+    });
+</script>

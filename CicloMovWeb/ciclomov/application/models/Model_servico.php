@@ -30,7 +30,17 @@ class Model_servico extends CI_Model {
         {
             return '#erro';
         }
+
     }
+
+    public function listarServicos($user)
+    {
+        $query = $this->db->query('SELECT cod_servico, descricao, tipo, tempo_permanencia, status  FROM servicos A INNER JOIN clientes B INNER JOIN pontos C ON A.id_clientes = B.cod_clientes AND A.id_ponto = C.cod_ponto WHERE id_clientes = ?', array($user));
+        
+        return $query->result();
+
+    }
+
 }
 
 ?>

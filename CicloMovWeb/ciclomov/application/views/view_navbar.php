@@ -26,6 +26,25 @@
             </ul>
             
             <form class="d-flex gap-5">
+
+                <form class="d-flex gap-5">
+
+                    <b style="color: white; margin-top: 0.4rem; margin-right: -2.5rem;" id="textoTempo">
+                        Tempo restante:
+                    </b>
+                    
+                    <button type="button" class="btn btn-secondary  btn-rounded text-black" style="font-size: 14px; margin-right: 0.5rem;" id="btnTempo">
+                    
+                        <b>
+                        
+                            <span id="timer">00:00</span>
+                            
+                        </b>
+                    
+                    </button>
+
+
+                </form>
                 
                 <button type="button" class="btn btn-secondary btnlogin text-dark" data-mdb-toggle="modal" data-mdb-target="#modalLoginCadastro">Login</button>
 
@@ -67,7 +86,7 @@
 
                         <li>
                             
-                            <button class="dropdown-item">
+                            <button id="btnModalHistorico" class="dropdown-item" type="button" data-mdb-toggle="modal" data-mdb-target="#modalHistorico">
                                 Histórico
                             </button>
                     
@@ -75,9 +94,9 @@
 
                         <li>
 
-                            <button class="dropdown-item">
+                            <!-- <button class="dropdown-item">
                                 Configurações da Conta
-                            </button>
+                            </button> -->
                             
                         </li>    
                                         

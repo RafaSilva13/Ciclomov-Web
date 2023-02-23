@@ -105,4 +105,38 @@ class Geral extends CI_Controller {
 		header('Location:'.base_url('index.php/Geral/pontos'));
 		
 	}
+
+	public function listarServ()
+	{
+		$usuario = $_SESSION['user'];
+
+		$this->load->model('Model_servico');
+		
+		$servicos = $this->Model_servico->listarServicos($usuario);
+		
+        foreach ($servicos as $n => $row)
+        { 
+			if($row->status == 1) {
+				$status = 'Ativo';
+				$tipoMsg = 'success';
+			}
+			else {
+				$status = 'Finalizado';
+				$tipoMsg = 'danger';
+			}
+
+            $servicoHistorico[$n] = [
+                'codServ' => $row->cod_servico,
+                'descricaoPonto' => $row->descricao,
+                'tipoServ' => $row->tipo,
+                'tempoPerma' => $row->tempo_permanencia,
+                'statusServ' => $status,
+				'tipoMsg' => $tipoMsg
+			];
+        }
+
+		$jsonData = json_encode($servicoHistorico);
+
+		echo $jsonData;
+	}
 }

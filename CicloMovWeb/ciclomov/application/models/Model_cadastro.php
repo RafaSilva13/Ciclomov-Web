@@ -9,12 +9,12 @@ class Model_cadastro extends CI_Model {
             "cpf_clientes" => $cadCpf,
             "tempo_geral_clientes" => '00:00:00',
             "usuario_clientes" => $cadUsuario,
-            "senha_clientes" => $cadSenha
+            "senha_clientes" => $cadSenha,
             "nome_clientes" => $cadNome,
             "telefone_clientes" => $cadTelefone
         );
 
-        $this->db->insert('clientes', $dados);
+        return $this->db->insert('clientes', $dados);
     }
 }
 

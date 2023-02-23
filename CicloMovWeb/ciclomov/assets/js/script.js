@@ -50,7 +50,7 @@ $(function() {
     });
 
     $('#confirmaServico').click(function() {
-        window.location.href = "http://localhost/luizim/github/CicloMov/CicloMovWeb/ciclomov/index.php/geral/servico/" + id_ponto + "/" + tempo + "/" + tipo;
+        window.location.href = "http://localhost/GitHub/CicloMov/CicloMovWeb/ciclomov/index.php/geral/servico/" + id_ponto + "/" + tempo + "/" + tipo;
     })
 
     $("#btnFecharModalLogin").click(function(){
@@ -85,6 +85,6 @@ function mudarTipoServico(tempo) {
 }
 
 function get_id(id_p, id_c) {
-    id_ponto = id_p
-    id_cliente = id_c
+    id_ponto = id_p;
+    id_cliente = id_c;
 }
