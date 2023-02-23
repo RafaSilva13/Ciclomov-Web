@@ -5,6 +5,8 @@
     <script>
         $(function() {
 
+            var temp;
+            
             $("#formLogin").submit(function(e){
                 e.preventDefault();
                                     
@@ -72,8 +74,15 @@
                     processData: false
                 }); 
             });
+            
+            function alterarValor(a)
+            {
+                temp = a;
 
-            <?php if(isset($_SESSION['user'])) { ?>
+                return temp;
+            }
+
+            <?php if(isset($_SESSION['user'])) { ?>                
                 $('.btnlogin').hide();
                 $(".AreaSelecaoPonto").removeClass("disabled");
                 $('.trava').hide();
@@ -83,6 +92,24 @@
                 $('#textoHome').hide();
                 $('#btnPrincHome').hide();
                 $('#btnSegundHome').show();
+
+                $.get("<?php echo site_url("Geral/verificarStatusServicos");?>", function(data){
+                        
+                    alterarValor('Oi');
+
+                    console.log(data);
+
+                    if(data == '0')
+                    {
+                        $('#btnTempo').hide();
+                        $('#textoTempo').hide();
+                    }
+                    else
+                    {
+                        $('#btnTempo').show();
+                        $('#textoTempo').show();
+                    }   
+                }); 
 
                 // $("#modalLoginCadastro").hidden.bs.toast();
             <?php } ?>
@@ -113,31 +140,27 @@
                 }); 
             });
 
+            console.log(temp);
+    
+            var countDownDate = new Date(temp).getTime();
 
+            var x = setInterval(function() {
+
+            var now = new Date().getTime();
+
+            var distance = countDownDate - now;
+
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("timer").innerHTML = minutes + ":" + seconds;
+
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("timer").innerHTML = "EXPIRED";
+            }
+            }, 1000);
         });
-    </script>
-
-    <script>
-
-        var countDownDate = new Date("Jan 5, 2024 15:37:25").getTime();
-
-        var x = setInterval(function() {
-
-        var now = new Date().getTime();
-
-        var distance = countDownDate - now;
-
-        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-        document.getElementById("timer").innerHTML = minutes + ":" + seconds;
-
-        if (distance < 0) {
-            clearInterval(x);
-            document.getElementById("timer").innerHTML = "EXPIRED";
-        }
-        }, 1000);
-
     </script>
 
     <!-- Link script -->

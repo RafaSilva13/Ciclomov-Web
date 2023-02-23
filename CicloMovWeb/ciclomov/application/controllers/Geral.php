@@ -98,11 +98,32 @@ class Geral extends CI_Controller {
 		$this->session->unset_userdata('user');
 	}
 	
-	public function servico($id_ponto, $tempo, $tipo){		
+	public function servico($id_ponto, $tempo, $tipo){
+
+		$valorTempo = $tempo;
+		
+		date_default_timezone_set('America/Sao_Paulo');
+
+		$time = date("h:m:s");
+
+		$tempoAlt = date('Y-m-d h:i:s', strtotime($time.' + '. $tempo . ' minutes'));
+
 		$this->load->model('Model_servico');
-		$this->Model_servico->cadastrarServico($id_ponto, $tempo, $tipo);
+		$this->Model_servico->cadastrarServico($id_ponto, $tempoAlt, $tipo, $valorTempo);
 
 		header('Location:'.base_url('index.php/Geral/pontos'));
+		
+	}
+
+	public function verificarStatusServicos()
+	{
+		$usuario = $_SESSION['user'];
+
+		$this->load->model('Model_servico');
+		
+		$resultado = $this->Model_servico->verificarStatus($usuario);
+
+		echo $resultado;
 		
 	}
 
@@ -125,11 +146,14 @@ class Geral extends CI_Controller {
 				$tipoMsg = 'danger';
 			}
 
+			$tempo = date_create($row->tempo_permanencia);
+
             $servicoHistorico[$n] = [
                 'codServ' => $row->cod_servico,
                 'descricaoPonto' => $row->descricao,
                 'tipoServ' => $row->tipo,
-                'tempoPerma' => $row->tempo_permanencia,
+                'tempoPerma' => date_format($tempo, "h:m"),
+				'valorTempoPerma' => $row->valorTempo,
                 'statusServ' => $status,
 				'tipoMsg' => $tipoMsg
 			];

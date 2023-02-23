@@ -38,7 +38,7 @@
                                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                             
                                     <li>
-                                        <option class="dropdown-item" value="15:00" onclick="mudarValorTempo(this.value)">
+                                        <option class="dropdown-item" value="15" onclick="mudarValorTempo(this.value)">
                                             <button onclick="mudarValorTempo(this.value)">
                                                 15 minutos
                                             </button>
@@ -46,7 +46,7 @@
                                     </li>
                                     
                                     <li>
-                                        <option class="dropdown-item" value="30:00" onclick="mudarValorTempo(this.value)">
+                                        <option class="dropdown-item" value="30" onclick="mudarValorTempo(this.value)">
                                             <button onclick="mudarValorTempo(this.value)">
                                                 30 minutos
                                             </button>
@@ -54,7 +54,7 @@
                                     </li>
                                     
                                     <li>
-                                        <option class="dropdown-item" value="45:00" onclick="mudarValorTempo(this.value)">
+                                        <option class="dropdown-item" value="45" onclick="mudarValorTempo(this.value)">
                                             <button onclick="mudarValorTempo(this.value)">
                                                 45 minutos
                                             </button>    
@@ -62,7 +62,7 @@
                                     </li>
                                     
                                     <li>
-                                        <option class="dropdown-item" value="60:00" onclick="mudarValorTempo(this.value)">
+                                        <option class="dropdown-item" value="60" onclick="mudarValorTempo(this.value)">
                                             <button onclick="mudarValorTempo(this.value)">
                                                 60 minutos
                                             </button>
@@ -70,7 +70,7 @@
                                     </li>
 
                                     <li>
-                                        <option class="dropdown-item" value="80:00" onclick="mudarValorTempo(this.value)">
+                                        <option class="dropdown-item" value="80" onclick="mudarValorTempo(this.value)">
                                             <button onclick="mudarValorTempo(this.value)">
                                                 80 minutos
                                             </button>
@@ -118,7 +118,7 @@
                                     </li>
 
                                     <li>
-                                        <option class="dropdown-item" value="Manutenção" onclick="mudarTipoServico(this.value)">
+                                        <option class="dropdown-item" value="Manutencao" onclick="mudarTipoServico(this.value)">
                                             <button onclick="mudarTipoServico(this.value)">
                                                 Manutenção
                                             </button>
@@ -134,7 +134,7 @@
                                     </li>
                                     
                                     <li>
-                                        <option class="dropdown-item" value="Manutenção e Limpeza" onclick="mudarTipoServico(this.value)">
+                                        <option class="dropdown-item" value="Manutencao e Limpeza" onclick="mudarTipoServico(this.value)">
                                             <button onclick="mudarTipoServico(this.value)">
                                                 Manutenção e Limpeza
                                             </button>

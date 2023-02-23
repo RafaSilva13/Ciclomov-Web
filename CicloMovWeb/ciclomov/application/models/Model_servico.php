@@ -2,13 +2,14 @@
 
 class Model_servico extends CI_Model {
 
-    public function cadastrarServico($id_ponto, $tempo, $tipo)
+    public function cadastrarServico($id_ponto, $tempo, $tipo, $valorTempo)
     {
         $dados = array(
             "id_clientes" => $_SESSION['user'],
             "id_ponto" => $id_ponto,
             "tipo" => $tipo,
             "tempo_permanencia" => $tempo,
+            "valorTempo" => $valorTempo,
             "status" => 1
         );
 
@@ -28,14 +29,14 @@ class Model_servico extends CI_Model {
         } 
         else 
         {
-            return '#erro';
+            return 0;
         }
 
     }
 
     public function listarServicos($user)
     {
-        $query = $this->db->query('SELECT cod_servico, descricao, tipo, tempo_permanencia, status  FROM servicos A INNER JOIN clientes B INNER JOIN pontos C ON A.id_clientes = B.cod_clientes AND A.id_ponto = C.cod_ponto WHERE id_clientes = ?', array($user));
+        $query = $this->db->query('SELECT cod_servico, descricao, tipo, tempo_permanencia, valorTempo, status  FROM servicos A INNER JOIN clientes B INNER JOIN pontos C ON A.id_clientes = B.cod_clientes AND A.id_ponto = C.cod_ponto WHERE id_clientes = ?', array($user));
         
         return $query->result();
 
