@@ -175,8 +175,8 @@
 
                             <th>Ponto</th>
                             <th>Tipo</th>
-                            <th>Tempo</th>
                             <th>Status</th>
+                            <th>Tempo</th>
                             
                         </tr>
 
@@ -218,7 +218,7 @@
 
                     variavelphp.forEach(function(value, key) {
     
-                        $('#tabela').append("<tr><td><div class='d-flex align-items-center'><div class='ms-1'><p class='fw-bold mb-1'>"+value.descricaoPonto+"</p></div></div></td><td><p class='fw-normal mb-1' id='tipoServico"+value.codServ+"'>"+value.tipoServ+"</p></td><td><span class='badge badge-"+value.tipoMsg+" rounded-pill d-inline'"+value.codServ+"'>"+value.statusServ+"</span></td><td>"+value.tempoPerma+"</td></tr>");
+                        $('#tabela').append("<tr><td><div class='d-flex' style='text-align = center; padding: 2px;'><div class='ms-1'><p class='fw-bold mb-1'>"+value.descricaoPonto+"</p></div></div></td><td style='text-align = center; padding: 5px;'><p class='fw-normal mb-1' id='tipoServico"+value.codServ+"'>"+value.tipoServ+"</p></td><td style='text-align = center; padding: 5px;'><span class='badge badge-"+value.tipoMsg+" rounded-pill d-inline'"+value.codServ+"'>"+value.statusServ+"</span></td><td style='text-align = center; padding: 5px;'>"+value.valorTempoPerma+" minutos</td></tr>");
                         
                     });
                     

@@ -57,9 +57,6 @@ $(function() {
         $(".erroToast").toast('hide');
     });
 
-    $('#btnTempo').hide();
-    $('#textoTempo').hide();
-
     $('#scroll').animate({
         scrollTop: $(this).height() // aqui introduz o numero de px que quer no scroll, neste caso é a altura da propria div, o que faz com que venha para o fim
     }, 280);
@@ -80,8 +77,8 @@ function mudarValorTempo(tempo) {
     $("#inputValor").val(tempo);
 }
 
-function mudarTipoServico(tempo) {
-    $("#selectServico").val(tempo);
+function mudarTipoServico(servico) {
+    $("#selectServico").val(servico);
 }
 
 function get_id(id_p, id_c) {
