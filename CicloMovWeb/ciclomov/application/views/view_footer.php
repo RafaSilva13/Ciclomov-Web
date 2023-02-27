@@ -43,7 +43,7 @@
                                 processData: false
                             }); 
 
-                            location.reload(true);
+                            location.reload('hard');
 
                         }
                     },
@@ -68,22 +68,22 @@
                     data: formData,
                     success: function(data){
                         console.log(data);
+
+                        $.ajax({
+                            url: "<?php echo site_url("Geral/pegarImagem")?>",
+                            type: 'POST',
+                            success: function(data){
+                                location.reload(true);
+                            },
+                            cache: false,
+                            contentType: false,
+                            processData: false
+                        }); 
                     },
                     cache: false,
                     processData: false,
                     contentType: false,
                 });
-                
-                $.ajax({
-                    url: "<?php echo site_url("Geral/pegarImagem")?>",
-                    type: 'POST',
-                    cache: false,
-                    contentType: false,
-                    processData: false
-                }); 
-
-                location.reload(hard);
-
             });
 
             $("#formCadastro").submit(function(e){

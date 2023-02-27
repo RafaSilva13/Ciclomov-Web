@@ -123,7 +123,7 @@ class Geral extends CI_Controller {
 			'upload_path'   => 'assets/images',
 			'allowed_types' => 'jpg|png|jpeg', 
 			'file_name'     => $nomeImg.'.png',
-			'max_size'      => '500'
+			'max_size'      => '1000'
 		);
 		
 		$this->load->library('upload');
