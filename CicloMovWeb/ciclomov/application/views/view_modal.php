@@ -38,47 +38,36 @@
 
             </div>
 
-            <div class="modal-body">
+            <form id="formEnviarImg"  method="POST" enctype="multipart/form-data">
 
-                <center>
-
-                    <!-- <div class="bg-image">
-
-                        <img src="https://flowbite.com/docs/images/people/profile-picture-5.jpg" id="fotoPerfil" class="figure-img img-fluid" style="width: 280px; height: 280px; border-radius: 10px;">
-
-                    </div> -->
-
-                    <div class="image-upload-wrap">
-                        <img src="https://flowbite.com/docs/images/people/profile-picture-5.jpg" id="fotoPerfil" class="figure-img img-fluid" style="width: 280px; height: 280px; border-radius: 10px;">
-                        <!-- <input class="file-upload-input" type='file' name="file" onchange="readURL(this);" accept="image/*" /> -->
-                        <!-- <div class="drag-text">
-                            <h3>Arraste e solte um arquivo ou selecione adicionar imagem</h3>
-                        </div> -->
-                    </div>
-
-                    <div class="figure-img img-fluid file-upload-content">
-                        <img class="file-upload-image" src="#" alt="your image" />
-                        <div class="image-title-wrap">
-                            <button type="button" onclick="removeUpload()" class="btn btn-secondary remove-image">Remover <span class="image-title">Uploaded Image</span></button>
+                <div class="modal-body">
+                    
+                    <center>
+                    
+                        <div class="bg-image image-upload">
+                            
+                            <img src="<?= base_url('assets/images/'. $GLOBALS["imagem"])?>" id="fotoPerfil" class="figure-img img-fluid file-upload-image rounded-full" style="width: 280px; height: 280px; margin-bottom: 1rem;">
+                            
                         </div>
-                    </div>
+                        
+                        <div class="form-outline mb-4 btn btn-primary" style="border-radius: 20px; width: 300px; padding-top: 0; padding-bottom: 0; padding-left: 0; margin-top: 1rem;">
+                                
+                            <input type="file" onchange="readURL(this);" style="border-radius: 20px;" name="arquivo_para_upload" id="arquivo_para_upload"/>
+                            
+                        </div>
 
-                    <div class="form-outline mb-4 btn btn-primary" style="border-radius: 20px; width: 300px; padding-top: 0; padding-bottom: 0; padding-left: 0; margin-top: 1rem;">
+                    </center>
+                
+                </div>
+                
+                <div class="modal-footer">
+                    
+                    <button type="button" class="btn btn-secondary" id="removeUpload" data-mdb-dismiss="modal">Fechar</button>
+                    <button type="submit" class="btn btn-primary">Salvar imagem</button>
+                    
+                </div>
 
-                        <input type="file" onchange="readURL(this);" style="border-radius: 20px;" />
-
-                    </div>
-
-                </center>
-
-            </div>
-
-            <div class="modal-footer">
-
-                <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">Fechar</button>
-                <button type="button" class="btn btn-primary">Salvar imagem</button>
-
-            </div>
+            </form>
 
         </div>
 
@@ -146,11 +135,15 @@
 
                     <div class="card-footer text-muted d-flex justify-content-start align-items-center p-3" style="margin-top: 0.313rem; margin-bottom: -0.938rem;">
 
-                        <img src="https://flowbite.com/docs/images/people/profile-picture-5.jpg" class="rounded-full" alt="avatar 3" style="width: 2.5rem; height: 100%; margin-right: 0.625rem; margin-left: -0.938rem;">
+                        <img src="<?= base_url('assets/images/'.  $GLOBALS["imagem"])?>" class="rounded-full" alt="avatar 3" style="width: 2.5rem; height: 100%; margin-right: 0.625rem; margin-left: -0.938rem;">
 
                         <input type="text" class="form-control form-control-lg" id="exampleFormControlInput1" placeholder="Digite uma mensagem" style="border-radius: 10px; font-size: 14px;">
 
-                        <a class="ms-3" href="#"><i class="fas fa-paper-plane"></i></a>
+                        <a class="ms-3" href="#">
+                            
+                            <i class="fas fa-paper-plane text-info fa-lg"></i>
+                        
+                        </a>
 
                     </div>
 
@@ -190,8 +183,8 @@
 
                             <th>Ponto</th>
                             <th>Tipo</th>
-                            <th>Tempo</th>
                             <th>Status</th>
+                            <th>Tempo</th>
 
                         </tr>
 
@@ -296,11 +289,6 @@
         transition: 0.25s;
     }
 
-    .image-title-wrap {
-        padding: 0 15px 15px 15px;
-        color: #222;
-    }
-
     .drag-text {
         text-align: center;
     }
@@ -311,12 +299,4 @@
         color: #15824B;
         padding: 60px 0;
     }
-
-    .file-upload-image {
-        max-height: 200px;
-        max-width: 200px;
-        margin: auto;
-        padding: 20px;
-    }
-
 </style>

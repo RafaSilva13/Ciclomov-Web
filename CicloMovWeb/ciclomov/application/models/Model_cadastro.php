@@ -11,7 +11,8 @@ class Model_cadastro extends CI_Model {
             "usuario_clientes" => $cadUsuario,
             "senha_clientes" => $cadSenha,
             "nome_clientes" => $cadNome,
-            "telefone_clientes" => $cadTelefone
+            "telefone_clientes" => $cadTelefone,
+            "imagem_perfil" => "imagem_padrao.png"
         );
 
         return $this->db->insert('clientes', $dados);

@@ -76,6 +76,16 @@ class Geral extends CI_Controller {
 			echo $confirmacao;
 		}
 	}
+
+	public function pegarImagem()
+	{
+		$usuario = $_SESSION['user'];
+
+		$this->load->model('Model_clientes');
+		$resultado = $this->Model_clientes->verificarImagem($usuario);
+
+		$this->session->set_userdata('imgUser', $resultado[0]->imagem_perfil);
+	}
 	
 
 	public function cadastro() 
@@ -92,10 +102,52 @@ class Geral extends CI_Controller {
 		
 		echo $confirmacao2;
 	}
+
+	public function atualizarImagens()
+	{
+		$usuario = $_SESSION['user'];
+
+		$nomeAquivo = $this->input->post('nome');
+
+		$nomeAquivo = str_replace(".jpg", "", $nomeAquivo);
+
+		$nomeAquivo = str_replace(".jpeg", "", $nomeAquivo);
+		
+		$nomeAquivo = str_replace(".png", "", $nomeAquivo);
+		
+		$nomeImg = 'perfil'.$nomeAquivo.''.$usuario;
+
+		$foto = $_FILES['arquivo_para_upload'];
+		
+		$configuracao = array(
+			'upload_path'   => 'assets/images',
+			'allowed_types' => 'jpg|png|jpeg', 
+			'file_name'     => $nomeImg.'.png',
+			'max_size'      => '500'
+		);
+		
+		$this->load->library('upload');
+		$this->upload->initialize($configuracao);
+
+		if ($this->upload->do_upload('arquivo_para_upload'))
+		{
+			$nomeCompletoAquivo = $nomeImg.'.png';
+
+			$this->load->model('Model_clientes');
+			$info = $this->Model_clientes->atualizarImagem($nomeCompletoAquivo, $usuario);
+			
+			echo $info;
+		}
+		else
+		{
+			echo $this->upload->display_errors();
+		}
+	}
 	
 	public function sair() 
 	{
 		$this->session->unset_userdata('user');
+		$this->session->unset_userdata('imgUser');
 	}
 	
 	public function servico($id_ponto, $tempo, $tipo){
@@ -104,7 +156,7 @@ class Geral extends CI_Controller {
 		
 		date_default_timezone_set('America/Sao_Paulo');
 
-		$time = date("h:m:s");
+		$time = date("h:i:s");
 
 		$tempoAlt = date('Y-m-d h:i:s', strtotime($time.' + '. $tempo . ' minutes'));
 
@@ -125,6 +177,17 @@ class Geral extends CI_Controller {
 
 		echo $resultado;
 		
+	}
+
+	public function terminarServico()
+	{
+		$usuario = $_SESSION['user'];
+
+		$this->load->model('Model_servico');
+		
+		$this->Model_servico->terminarServico($usuario);
+
+		return "Tempo Esgotado";
 	}
 
 	public function listarServ()

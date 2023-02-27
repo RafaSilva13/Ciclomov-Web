@@ -89,14 +89,15 @@ function get_id(id_p, id_c) {
     id_cliente = id_c;
 }
 
+$('#removeUpload').click(function(){
+    location.reload(true);
+}); 
 
 function readURL(input) {
     if (input.files && input.files[0]) {
         var reader = new FileReader();
 
         reader.onload = function(e) {
-            $(".image-upload-wrap").hide();
-
             $(".file-upload-image").attr("src", e.target.result);
             $(".file-upload-content").show();
 
@@ -109,24 +110,9 @@ function readURL(input) {
     }
 }
 
-function removeUpload() {
-    $(".file-upload-input").replaceWith($(".file-upload-input").clone());
-    $(".file-upload-content").hide();
-    $(".image-upload-wrap").show();
-}
-$(".image-upload-wrap").bind("dragover", function() {
-    $(".image-upload-wrap").addClass("image-dropping");
-
-    // CLASSES JÁ CRIADAS DO NOSSO PROJETO 
-    // $(".image-upload-wrap").addClass("figure-img");
-    // $(".image-upload-wrap").addClass("img-fluid");
-    
+$(".image-upload").bind("dragover", function() {
+    $(".image-upload").addClass("image-dropping");
 });
-$(".image-upload-wrap").bind("dragleave", function() {
-    $(".image-upload-wrap").removeClass("image-dropping");
-
-    // CLASSES JÁ CRIADAS DO NOSSO PROJETO 
-    // $(".image-upload-wrap").removeClass("figure-img");
-    // $(".image-upload-wrap").removeClass("img-fluid");
-    
+$(".image-upload").bind("dragleave", function() {
+    $(".image-upload").removeClass("image-dropping");
 });

@@ -33,7 +33,7 @@
                         Tempo restante:
                     </b>
                     
-                    <button type="button" class="btn btn-secondary  btn-rounded text-black" style="font-size: 14px; margin-right: 0.5rem;" id="btnTempo">
+                    <button type="button" class="btn btn-rounded text-black btnTempoBarra" style="background-color: #F5F5F5; font-size: 14px; margin-right: 0.5rem;" id="btnTempo">
                     
                         <b>
                         
@@ -52,7 +52,7 @@
 
                     <button class="btn btn-secondary btn-lg btn-floating rounded-full" type="button" id="dropdownMenuButton" data-mdb-toggle="dropdown" aria-expanded="false" style="filter: drop-shadow(0px 0px 2px 3a3939);">
 
-                        <img src="https://flowbite.com/docs/images/people/profile-picture-5.jpg" class="w-100 rounded-full"/>
+                        <img src="<?= base_url('assets/images/'.  $GLOBALS["imagem"])?>" class="w-100 rounded-full"/>
                         
                     </button>
                     
@@ -64,7 +64,7 @@
 
                                 <button class="btn btn-secondary btn-lg btn-floating bg-image hover-overlay ripple shadow-1-strong rounded-full areaImgUser" type="button" style="width: 3.5rem; height: 3.5rem;" data-mdb-toggle="modal" data-mdb-target="#modalAreaImgUser">
                                                                             
-                                    <img src="https://flowbite.com/docs/images/people/profile-picture-5.jpg" class="w-100 rounded-full"/>
+                                    <img src="<?= base_url('assets/images/'.  $GLOBALS["imagem"])?>" class="w-100 rounded-full"/>
                                                                             
                                     <div class="mask" style="background-color: hsla(0, 0%, 0%, 0.6);">
                                         

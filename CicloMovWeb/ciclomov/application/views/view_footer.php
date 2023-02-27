@@ -1,12 +1,14 @@
-    <button type="button" id="btnSuporte" class="btn btn-info btn-lg btn-floating" data-mdb-toggle="modal" data-mdb-target="#exampleSideModal3" style="width: 4rem; height: 4rem; position: fixed; right: 1rem; bottom: 2rem;">
+    <!-- <button type="button" id="btnSuporte" class="btn btn-info btn-lg btn-floating" data-mdb-toggle="modal" data-mdb-target="#exampleSideModal3" style="width: 4rem; height: 4rem; position: fixed; right: 1rem; bottom: 2rem;">
+        <i class="fas fa-headset fa-2x"></i>
+    </button> -->
+
+    <button type="button" class="btn btn-info btn-lg btn-floating" style="width: 4rem; height: 4rem; position: fixed; right: 1rem; bottom: 2rem;" data-mdb-container="body" data-mdb-toggle="popover" data-mdb-placement="left" data-mdb-content="Função indisponível no momento">
         <i class="fas fa-headset fa-2x"></i>
     </button>
-
+    
     <script>
         $(function() {
 
-            var temp;
-            
             $("#formLogin").submit(function(e){
                 e.preventDefault();
                                     
@@ -32,6 +34,15 @@
                             $('#btnSegundHome').show();
                             $('#btnsaida').show();
                             $('#areaMenu').show();
+
+                            $.ajax({
+                                url: "<?php echo site_url("Geral/pegarImagem")?>",
+                                type: 'POST',
+                                cache: false,
+                                contentType: false,
+                                processData: false
+                            }); 
+
                             location.reload(true);
 
                         }
@@ -42,6 +53,39 @@
                 }); 
             });
             
+            $("#formEnviarImg").submit(function(e){
+                e.preventDefault();
+
+                var fileInput = document.getElementById('arquivo_para_upload');   
+                var filename = fileInput.files[0].name;
+
+                var formData = new FormData(this);
+                formData.append("nome", filename);
+
+                $.ajax({
+                    url: "<?php echo site_url("Geral/atualizarImagens")?>",
+                    type: 'POST',
+                    data: formData,
+                    success: function(data){
+                        console.log(data);
+                    },
+                    cache: false,
+                    processData: false,
+                    contentType: false,
+                });
+                
+                $.ajax({
+                    url: "<?php echo site_url("Geral/pegarImagem")?>",
+                    type: 'POST',
+                    cache: false,
+                    contentType: false,
+                    processData: false
+                }); 
+
+                location.reload(true);
+
+            });
+
             $("#formCadastro").submit(function(e){
                 e.preventDefault();
 
@@ -74,13 +118,10 @@
                     processData: false
                 }); 
             });
-            
-            function alterarValor(a)
-            {
-                temp = a;
 
-                return temp;
-            }
+            var temp;
+
+            var temporizador = 0;
 
             <?php if(isset($_SESSION['user'])) { ?>                
                 $('.btnlogin').hide();
@@ -93,23 +134,77 @@
                 $('#btnPrincHome').hide();
                 $('#btnSegundHome').show();
 
-                $.get("<?php echo site_url("Geral/verificarStatusServicos");?>", function(data){
-                        
-                    alterarValor('Oi');
+                $.ajax({
+                    url: "<?php echo site_url("Geral/verificarStatusServicos");?>",
+                    type: 'POST',
+                    success: function(data){    
 
-                    console.log(data);
+                        temp = data;
 
-                    if(data == '0')
-                    {
-                        $('#btnTempo').hide();
-                        $('#textoTempo').hide();
-                    }
-                    else
-                    {
-                        $('#btnTempo').show();
-                        $('#textoTempo').show();
-                    }   
-                }); 
+                        if(data == '0')
+                        {
+                            $('#btnTempo').hide();
+                            $('#textoTempo').hide();
+                        }
+                        else
+                        {
+                            $('#btnTempo').show();
+                            $('#textoTempo').show();
+                            $(".AreaSelecaoPonto").addClass("disabled");
+
+                            var countDownDate = new Date(temp).getTime();
+            
+                            var x = setInterval(function() {
+
+                                var now = new Date().getTime();
+
+                                var distance = countDownDate - now;
+
+                                var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                                var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                                if(minutes < 10) {
+                                    minutesMod = '0' + minutes;
+                                }
+                                else {
+                                    minutesMod = minutes;
+                                }
+
+                                if(seconds < 10) {
+                                    secundsMod = '0' + seconds;
+                                }
+                                else {
+                                    secundsMod = seconds;
+                                }
+
+                                document.getElementById("timer").innerHTML = minutesMod + ":" + secundsMod;
+
+                                if (distance < 0) {
+                                    clearInterval(x);
+                                    
+                                    document.getElementById("timer").innerHTML = "EXPIRADO";
+
+                                    $.ajax({
+                                        url: "<?php echo site_url("Geral/terminarServico")?>",
+                                        type: 'POST',
+                                        success: function(data){
+                                            location.reload(true);
+                                        },
+                                        cache: false,
+                                        contentType: false,
+                                        processData: false,
+                                        async: false 
+                                    });
+                                }
+
+                            }, 1000);
+                        }
+                    },
+                    cache: false,
+                    contentType: false,
+                    processData: false,
+                    async: false 
+                });     
 
                 // $("#modalLoginCadastro").hidden.bs.toast();
             <?php } ?>
@@ -124,12 +219,12 @@
                 $('#btnSegundHome').hide();
 
             <?php } ?>
-            
+
             $('#btnSair').click(function(){
 
                 $.ajax({
                     url: "<?php echo site_url("Geral/sair")?>",
-                    type: 'GET',
+                    type: 'POST',
                     success: function(){
                         console.log('Saida efetuada!');
                         location.reload(true);
@@ -140,26 +235,6 @@
                 }); 
             });
 
-            console.log(temp);
-    
-            var countDownDate = new Date(temp).getTime();
-
-            var x = setInterval(function() {
-
-            var now = new Date().getTime();
-
-            var distance = countDownDate - now;
-
-            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-            document.getElementById("timer").innerHTML = minutes + ":" + seconds;
-
-            if (distance < 0) {
-                clearInterval(x);
-                document.getElementById("timer").innerHTML = "EXPIRED";
-            }
-            }, 1000);
         });
     </script>
 

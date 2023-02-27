@@ -44,3 +44,11 @@
 
 </head>
 <body class="fundoTela">
+
+<?php if(isset($_SESSION['imgUser'])) {
+    $GLOBALS["imagem"] = $_SESSION['imgUser']; 
+} 
+else {
+    $GLOBALS["imagem"] = 'imagem_padrao.png';
+}
+?>
