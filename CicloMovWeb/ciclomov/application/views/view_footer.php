@@ -43,7 +43,7 @@
                                 processData: false
                             }); 
 
-                            location.reload('hard');
+                            location.reload(true);
 
                         }
                     },
