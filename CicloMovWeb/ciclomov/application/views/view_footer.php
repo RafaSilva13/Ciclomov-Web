@@ -43,7 +43,7 @@
                                 processData: false
                             }); 
 
-                            location.reload(true);
+                            location.reload('hard');
 
                         }
                     },
@@ -82,7 +82,7 @@
                     processData: false
                 }); 
 
-                location.reload(true);
+                location.reload(hard);
 
             });
 
