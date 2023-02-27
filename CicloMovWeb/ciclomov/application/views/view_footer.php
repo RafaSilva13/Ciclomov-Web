@@ -119,10 +119,6 @@
                 }); 
             });
 
-            var temp;
-
-            var temporizador = 0;
-
             <?php if(isset($_SESSION['user'])) { ?>                
                 $('.btnlogin').hide();
                 $(".AreaSelecaoPonto").removeClass("disabled");
@@ -139,8 +135,6 @@
                     type: 'POST',
                     success: function(data){    
 
-                        temp = data;
-
                         if(data == '0')
                         {
                             $('#btnTempo').hide();
@@ -152,7 +146,7 @@
                             $('#textoTempo').show();
                             $(".AreaSelecaoPonto").addClass("disabled");
 
-                            var countDownDate = new Date(temp).getTime();
+                            var countDownDate = new Date(data).getTime();
             
                             var x = setInterval(function() {
 
@@ -235,7 +229,43 @@
                 }); 
             });
 
+
+            $('#btnProximo').click(function() {
+                tipo = $('#selectServico').val();
+                tempo = $('#inputValor').val();
+
+                $('#time').html(tempo);
+                $('#service').html(tipo);
+                $('#point').html(id_ponto);
+
+            });
+
+            $('#confirmaServico').click(function() {
+                $.ajax({
+                    url: "<?php echo site_url("Geral/servico")?>",
+                    type: 'POST',
+                    data : { idPonto: id_ponto, tempo: tempo, tipo: tipo },
+                    success: function(){
+                        location.reload(true);
+                    },
+                    cache: false
+                }); 
+            });
+    
         });
+        
+        function mudarValorTempo(tempo) {
+            $("#inputValor").val(tempo);
+        }
+
+        function mudarTipoServico(tempo) {
+            $("#selectServico").val(tempo);
+        }
+
+        function get_id(id_p, id_c) {
+            id_ponto = id_p;
+            id_cliente = id_c;
+        }
     </script>
 
     <!-- Link script -->

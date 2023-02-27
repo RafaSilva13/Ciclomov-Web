@@ -150,7 +150,11 @@ class Geral extends CI_Controller {
 		$this->session->unset_userdata('imgUser');
 	}
 	
-	public function servico($id_ponto, $tempo, $tipo){
+	public function servico(){
+
+		$id_ponto = $this->input->post('idPonto');
+		$tempo = $this->input->post('tempo');
+		$tipo = $this->input->post('tipo');
 
 		$valorTempo = $tempo;
 		
@@ -162,9 +166,9 @@ class Geral extends CI_Controller {
 
 		$this->load->model('Model_servico');
 		$this->Model_servico->cadastrarServico($id_ponto, $tempoAlt, $tipo, $valorTempo);
-
-		header('Location:'.base_url('index.php/Geral/pontos'));
 		
+		$this->load->model('Model_pontos');
+		$this->Model_pontos->atualizarPonto($id_ponto);		
 	}
 
 	public function verificarStatusServicos()
@@ -182,9 +186,11 @@ class Geral extends CI_Controller {
 	public function terminarServico()
 	{
 		$usuario = $_SESSION['user'];
+		
+		$this->load->model('Model_pontos');
+		$this->Model_pontos->addPonto($usuario);
 
 		$this->load->model('Model_servico');
-		
 		$this->Model_servico->terminarServico($usuario);
 
 		return "Tempo Esgotado";

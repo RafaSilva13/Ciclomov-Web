@@ -39,21 +39,7 @@ $(function() {
         $('#areaMenu').hide();
     });
 
-    $('#btnProximo').click(function() {
-        tipo = $('#selectServico').val();
-        tempo = $('#inputValor').val();
-
-        $('#time').html(tempo);
-        $('#service').html(tipo);
-        $('#point').html(id_ponto);
-
-    });
-
-    $('#confirmaServico').click(function() {
-        window.location.href = "http://localhost/GitHub/CicloMov/CicloMovWeb/ciclomov/index.php/geral/servico/" + id_ponto + "/" + tempo + "/" + tipo;
-    })
-
-    $("#btnFecharModalLogin").click(function(){
+    $("#btnFecharModalLogin").click(function() {
         $(".erroToast").toast('hide');
     });
 
@@ -64,34 +50,21 @@ $(function() {
         scrollTop: $(this).height() // aqui introduz o numero de px que quer no scroll, neste caso é a altura da propria div, o que faz com que venha para o fim
     }, 280);
 
-    $("#btnSuporte").click(function(){
+    $("#btnSuporte").click(function() {
         $("#btnSuporte").fadeOut();
         $("#exampleSideModal3").fadeIn();
     });
-    
-    $("#btnFecharChat").click(function(){
+
+    $("#btnFecharChat").click(function() {
         $("#btnSuporte").fadeIn();
         $("#exampleSideModal3").fadeOut();
     });
 
 });
 
-function mudarValorTempo(tempo) {
-    $("#inputValor").val(tempo);
-}
-
-function mudarTipoServico(tempo) {
-    $("#selectServico").val(tempo);
-}
-
-function get_id(id_p, id_c) {
-    id_ponto = id_p;
-    id_cliente = id_c;
-}
-
-$('#removeUpload').click(function(){
+$('#removeUpload').click(function() {
     location.reload(true);
-}); 
+});
 
 function readURL(input) {
     if (input.files && input.files[0]) {
