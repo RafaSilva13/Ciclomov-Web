@@ -232,4 +232,12 @@ class Geral extends CI_Controller {
 
 		echo $jsonData;
 	}
+
+	public function addTempoCliente()
+	{
+		$usuario = $_SESSION['user'];
+		
+		$this->load->model('Model_clientes');
+		$this->Model_clientes->addTempoCliente($usuario);
+	}
 }
