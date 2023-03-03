@@ -1,10 +1,10 @@
-    <!-- <button type="button" id="btnSuporte" class="btn btn-info btn-lg btn-floating" data-mdb-toggle="modal" data-mdb-target="#exampleSideModal3" style="width: 4rem; height: 4rem; position: fixed; right: 1rem; bottom: 2rem;">
-        <i class="fas fa-headset fa-2x"></i>
-    </button> -->
-
-    <button type="button" class="btn btn-info btn-lg btn-floating" style="width: 4rem; height: 4rem; position: fixed; right: 1rem; bottom: 2rem;" data-mdb-container="body" data-mdb-toggle="popover" data-mdb-placement="left" data-mdb-content="Função indisponível no momento">
+    <button type="button" id="btnSuporte" class="btn btn-info btn-lg btn-floating" data-mdb-toggle="modal" data-mdb-target="#exampleSideModal3" style="width: 4rem; height: 4rem; position: fixed; right: 1rem; bottom: 2rem;">
         <i class="fas fa-headset fa-2x"></i>
     </button>
+
+    <!-- <button type="button" class="btn btn-info btn-lg btn-floating" style="width: 4rem; height: 4rem; position: fixed; right: 1rem; bottom: 2rem;" data-mdb-container="body" data-mdb-toggle="popover" data-mdb-placement="left" data-mdb-content="Função indisponível no momento">
+        <i class="fas fa-headset fa-2x"></i>
+    </button> -->
     
     <script>
         $(function() {
@@ -179,17 +179,6 @@
                                     document.getElementById("timer").innerHTML = "EXPIRADO";
 
                                     $.ajax({
-                                        url: "<?php echo site_url("Geral/addTempoCliente")?>",
-                                        type: 'POST',
-                                        success: function(data){
-                                        },
-                                        cache: false,
-                                        contentType: false,
-                                        processData: false,
-                                        async: false 
-                                    });
-
-                                    $.ajax({
                                         url: "<?php echo site_url("Geral/terminarServico")?>",
                                         type: 'POST',
                                         success: function(data){
@@ -262,6 +251,36 @@
                     cache: false
                 }); 
             });
+            
+            $('#btnAbrirChamado').click(function() {
+                $.ajax({
+                    url: "<?php echo site_url("Geral/abrirChamado")?>",
+                    type: 'POST',
+                    success: function(){
+                        $("#btnAbrirChamado").hide();
+                        $(".msgPadrao").css("display", "block");
+                    },
+                    cache: false
+                }); 
+            });
+
+            $("#btnSuporte").click(function(){
+                $.ajax({
+                    url: "<?php echo site_url("Geral/verificarChamados")?>",
+                    type: 'POST',
+                    success: function(data){
+                        if(data == 1) {
+                            $("#btnAbrirChamado").hide();
+                            $(".msgPadrao").css("display", "block");
+                        }
+                        else{
+                            $("#btnAbrirChamado").show();
+                            $(".msgPadrao").css("display", "none");
+                        }
+                    },
+                    cache: false
+                }); 
+            });
     
         });
         
@@ -285,9 +304,6 @@
     <!-- MDB -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.1.0/mdb.min.js"></script>
     
-    <!-- Flowbite -->
-    <script src="https://unpkg.com/flowbite@1.5.4/dist/flowbite.js"></script>
-
     <!-- Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>

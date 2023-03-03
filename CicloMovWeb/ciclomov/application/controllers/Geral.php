@@ -56,6 +56,25 @@ class Geral extends CI_Controller {
 		$this->load->view('view_footer');
 	}
 
+	public function abrirChamado()
+	{
+		$usuario = $_SESSION['user'];
+
+		$this->load->model('Model_suporte');
+		$this->Model_suporte->abrirChamado($usuario);
+
+	}
+
+	public function verificarChamados()
+	{
+		$usuario = $_SESSION['user'];
+
+		$this->load->model('Model_suporte');
+		$resultado = $this->Model_suporte->verificarChamados($usuario);
+
+		echo $resultado;
+	}
+
 	public function login() 
 	{
 
@@ -231,13 +250,5 @@ class Geral extends CI_Controller {
 		$jsonData = json_encode($servicoHistorico);
 
 		echo $jsonData;
-	}
-
-	public function addTempoCliente()
-	{
-		$usuario = $_SESSION['user'];
-		
-		$this->load->model('Model_clientes');
-		$this->Model_clientes->addTempoCliente($usuario);
 	}
 }
