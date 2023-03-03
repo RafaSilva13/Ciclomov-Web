@@ -50,9 +50,9 @@
 
                 <div class="dropdown areaMenu" style="margin: 0;" id="areaMenu">
 
-                    <button class="btn btn-secondary btn-lg btn-floating rounded-full" type="button" id="dropdownMenuButton" data-mdb-toggle="dropdown" aria-expanded="false" style="filter: drop-shadow(0px 0px 2px 3a3939);">
+                    <button class="btn btn-secondary btn-lg btn-floating rounded-circle" type="button" id="dropdownMenuButton" data-mdb-toggle="dropdown" aria-expanded="false" style="filter: drop-shadow(0px 0px 2px 3a3939);">
 
-                        <img src="<?= base_url('assets/images/'.  $GLOBALS["imagem"])?>" class="w-100 rounded-full"/>
+                        <img src="<?= base_url('assets/images/'.  $GLOBALS["imagem"])?>" class="w-100 rounded-circle"/>
                         
                     </button>
                     
@@ -62,9 +62,9 @@
 
                             <center>
 
-                                <button class="btn btn-secondary btn-lg btn-floating bg-image hover-overlay ripple shadow-1-strong rounded-full areaImgUser" type="button" style="width: 3.5rem; height: 3.5rem;" data-mdb-toggle="modal" data-mdb-target="#modalAreaImgUser">
+                                <button class="btn btn-secondary btn-lg btn-floating bg-image hover-overlay ripple shadow-1-strong rounded-circle areaImgUser" type="button" style="width: 3.5rem; height: 3.5rem;" data-mdb-toggle="modal" data-mdb-target="#modalAreaImgUser">
                                                                             
-                                    <img src="<?= base_url('assets/images/'.  $GLOBALS["imagem"])?>" class="w-100 rounded-full"/>
+                                    <img src="<?= base_url('assets/images/'.  $GLOBALS["imagem"])?>" class="w-100 rounded-circle"/>
                                                                             
                                     <div class="mask" style="background-color: hsla(0, 0%, 0%, 0.6);">
                                         
