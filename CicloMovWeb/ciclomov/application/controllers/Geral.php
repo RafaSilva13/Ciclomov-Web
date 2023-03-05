@@ -257,3 +257,4 @@ class Geral extends CI_Controller {
 		echo $jsonData;
 	}
 }
+?>
