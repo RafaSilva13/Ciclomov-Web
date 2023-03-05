@@ -253,15 +253,30 @@
             });
             
             $('#btnAbrirChamado').click(function() {
-                $.ajax({
-                    url: "<?php echo site_url("Geral/abrirChamado")?>",
-                    type: 'POST',
-                    success: function(){
-                        $("#btnAbrirChamado").hide();
-                        $(".msgPadrao").css("display", "block");
-                    },
-                    cache: false
-                }); 
+
+                <?php if(isset($_SESSION['user'])) {?>
+
+                    $.ajax({
+                        url: "<?php echo site_url("Geral/abrirChamado"); ?>",
+                        type: 'POST',
+                        success: function(){
+                            $("#btnAbrirChamado").hide();
+                            $(".msgPadrao").css("display", "block");
+                        },
+                        cache: false
+                    }); 
+
+                <?php } else {?>
+
+                    $("#btnAbrirChamado").hide();
+                    $(".msgPadrao2").css("display", "block");
+                    $("#txtChat").removeAttr('disabled');
+
+                    // $("#").click(function() {
+                        
+                    // });
+
+                <?php }?>
             });
 
             $("#btnSuporte").click(function(){
@@ -272,10 +287,13 @@
                         if(data == 1) {
                             $("#btnAbrirChamado").hide();
                             $(".msgPadrao").css("display", "block");
+                            $("#txtChat").removeAttr('disabled');
                         }
-                        else{
+                        else
+                        {
                             $("#btnAbrirChamado").show();
                             $(".msgPadrao").css("display", "none");
+                            $("#txtChat").attr('disabled', 'disabled');
                         }
                     },
                     cache: false

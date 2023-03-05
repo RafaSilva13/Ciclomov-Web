@@ -171,6 +171,10 @@ label {
     display: none;
 }
 
+.msgPadrao2 {
+    display: none;
+}
+
 #btnAbrirChamado {
     position: absolute;
     bottom: 0;

@@ -134,6 +134,37 @@
                                     
                                 </div>
 
+                                <div class="msgPadrao2">
+
+                                    <div class="d-flex flex-row justify-content-start mb-3">
+                                        
+                                        <img src="<?= base_url('assets/images/suporte.png'); ?>" class="rounded-circle" alt="avatar 1" class="rounded-circle" alt="avatar 1" style="margin-top: 0.313rem; width: 45px; height: 100%;">
+                                        
+                                        <div class="p-3 ms-2 border" style="border-radius: 15px; background-color: #fbfbfb; margin-right: 0.313rem;">
+                                            
+                                            <p class="small mb-0">Olá, eu sou o assistente de suporte da CicloMov.</p>
+                                            
+                                        </div>
+
+                                    </div>
+
+                                    <div class="d-flex flex-row justify-content-start mb-3">
+                                        
+                                        <img src="<?= base_url('assets/images/suporte.png'); ?>" class="rounded-circle" alt="avatar 1" class="rounded-circle" alt="avatar 1" style="margin-top: 0.313rem; width: 45px; height: 100%;">
+                                        
+                                        <div class="p-3 ms-2 border" style="border-radius: 15px; background-color: #fbfbfb; margin-right: 0.313rem;">
+                                        
+                                            <p class="small mb-0">
+                                                Digite seu email abaixo.
+                                            </p>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>  
+
+
                                 <!-- div class="d-flex flex-row justify-content-end mb-4">
                                     
                                     <div class="p-3 me-2" style="border-radius: 15px; background-color: rgba(57, 192, 237,.2); margin-left: 0.625rem;">
@@ -166,7 +197,7 @@
 
                                     </div>
 
-                                    <img src="<?= base_url('assets/images/'.  $GLOBALS["imagem"])?>" class="rounded-circle" alt="avatar 1"  style="width: 2.813rem; height: 100%;  margin-top: 0.313rem;">
+                                    <img src="<?= base_url('assets/images/'. $GLOBALS["imagem"])?>" class="rounded-circle" alt="avatar 1"  style="width: 2.813rem; height: 100%;  margin-top: 0.313rem;">
 
                                 </div> -->
 
@@ -184,9 +215,9 @@
 
                     <div class="card-footer text-muted d-flex justify-content-start align-items-center p-3">
 
-                        <img src="<?= base_url('assets/images/'.  $GLOBALS["imagem"])?>" class="rounded-circle" alt="avatar 3" style="width: 2.5rem; height: 100%; margin-right: 0.5rem;">
+                        <img src="<?= base_url('assets/images/'. $GLOBALS["imagem"])?>" class="rounded-circle" alt="avatar 3" style="width: 2.5rem; height: 100%; margin-right: 0.5rem;">
 
-                        <input type="text" class="form-control form-control-lg" id="exampleFormControlInput1" placeholder="Digite uma mensagem" style="border-radius: 10px; font-size: 14px;">
+                        <input type="text" class="form-control form-control-lg txtChat" id="txtChat" placeholder="Digite uma mensagem" style="border-radius: 10px; font-size: 14px;">
 
                         <a class="ms-3" href="#">
                             

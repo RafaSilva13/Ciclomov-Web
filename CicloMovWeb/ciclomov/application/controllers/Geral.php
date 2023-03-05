@@ -62,17 +62,23 @@ class Geral extends CI_Controller {
 
 		$this->load->model('Model_suporte');
 		$this->Model_suporte->abrirChamado($usuario);
-
 	}
 
 	public function verificarChamados()
 	{
-		$usuario = $_SESSION['user'];
+		if(isset($_SESSION['user']))
+		{
+			$usuario = $_SESSION['user'];
 
-		$this->load->model('Model_suporte');
-		$resultado = $this->Model_suporte->verificarChamados($usuario);
+			$this->load->model('Model_suporte');
+			$resultado = $this->Model_suporte->verificarChamados($usuario);
 
-		echo $resultado;
+			echo $resultado;
+		}
+		else 
+		{
+			echo 0;
+		}
 	}
 
 	public function login() 
@@ -199,7 +205,6 @@ class Geral extends CI_Controller {
 		$resultado = $this->Model_servico->verificarStatus($usuario);
 
 		echo $resultado;
-		
 	}
 
 	public function terminarServico()
