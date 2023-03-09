@@ -182,7 +182,7 @@
 
                                     <div class="form-outline mb-3">
 
-                                        <input type="text" id="cpf" name="cad_cpf" class="form-control" required>
+                                        <input type="text" id="cpf" name="cad_cpf" class="form-control cpf-mask" required>
                                         
                                         <label class="form-label" for="cpf" style="margin-left: 0px;">CPF</label>
                                         
@@ -204,7 +204,7 @@
 
                                     <div class="form-outline mb-3">
 
-                                        <input type="text" id="telefone" name="cad_telefone" class="form-control" required>
+                                        <input type="text" id="telefone" name="cad_telefone" class="form-control cel-sp-mask" required>
                                         
                                         <label class="form-label" for="telefone" style="margin-left: 0px;">Telefone</label>
                                     

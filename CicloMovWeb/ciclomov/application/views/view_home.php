@@ -72,7 +72,7 @@
     </div>
 
     <center>
-        <a style="margin-bottom: 250px; width: 500px; height: 70px; vertical-align: middle; padding-top: 1.5rem; font-weight: 800; font-size: medium;" type="button" class="btn btn-dark btn-lg" href="<?php echo site_url("geral/pontos") ?>">VEJA NOSSOS PONTOS</a>
+        <a type="button" class="btn btn-dark btn-lg btnHomeTerc" href="<?php echo site_url("geral/pontos") ?>">VEJA NOSSOS PONTOS</a>
     </center>
     
 </section>

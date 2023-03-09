@@ -75,7 +75,7 @@
 
 </div>
 
-<div class="modal fade" data-mdb-backdrop="false" id="exampleSideModal3" tabindex="-1" aria-labelledby="exampleSideModal2" data-gtm-vis-first-on-screen-2340190_1302="11717" data-gtm-vis-total-visible-time-2340190_1302="100" data-gtm-vis-has-fired-2340190_1302="1" aria-modal="true" role="dialog">
+<!-- <div class="modal fade" data-mdb-backdrop="false" id="exampleSideModal3" tabindex="-1" aria-labelledby="exampleSideModal2" data-gtm-vis-first-on-screen-2340190_1302="11717" data-gtm-vis-total-visible-time-2340190_1302="100" data-gtm-vis-has-fired-2340190_1302="1" aria-modal="true" role="dialog">
 
     <div class="modal-dialog" style="position: absolute; bottom: 0; right: 0; width: 18.75rem; padding: 0;">
 
@@ -105,7 +105,7 @@
 
                                 <div class="d-flex flex-row justify-content-start mb-4">
 
-                                    <img src="<?= base_url('assets/images/suporte.png'); ?>" class="rounded-full" alt="avatar 1" style="width: 2.813rem; height: 100%; margin-top: 0.313rem;"">
+                                    <img src="< // base_url('assets/images/suporte.png'); ?>" class="rounded-full" alt="avatar 1" style="width: 2.813rem; height: 100%; margin-top: 0.313rem;"">
                                     
                                     <div class=" p-3 ms-2 border" style="border-radius: 15px; background-color: #fbfbfb; margin-right: 0.313rem;">
 
@@ -135,7 +135,7 @@
 
                     <div class="card-footer text-muted d-flex justify-content-start align-items-center p-3" style="margin-top: 0.313rem; margin-bottom: -0.938rem;">
 
-                        <img src="<?= base_url('assets/images/'.  $GLOBALS["imagem"])?>" class="rounded-full" alt="avatar 3" style="width: 2.5rem; height: 100%; margin-right: 0.625rem; margin-left: -0.938rem;">
+                        <img src="<php // base_url('assets/images/'.  $GLOBALS["imagem"])?>" class="rounded-full" alt="avatar 3" style="width: 2.5rem; height: 100%; margin-right: 0.625rem; margin-left: -0.938rem;">
 
                         <input type="text" class="form-control form-control-lg" id="exampleFormControlInput1" placeholder="Digite uma mensagem" style="border-radius: 10px; font-size: 14px;">
 
@@ -157,7 +157,7 @@
 
 </div>
 
-</div>
+</div> -->
 
 <!-- Modal -->
 <div class="modal fade" id="modalHistorico" tabindex="-1" aria-labelledby="modalHistoricoLabel" aria-hidden="true">
