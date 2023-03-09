@@ -1,6 +1,6 @@
-    <!-- <button type="button" id="btnSuporte" class="btn btn-info btn-lg btn-floating" data-mdb-toggle="modal" data-mdb-target="#exampleSideModal3" style="width: 4rem; height: 4rem; position: fixed; right: 1rem; bottom: 2rem;">
+    <button type="button" id="btnSuporte" class="btn btn-info btn-lg btn-floating" data-mdb-toggle="modal" data-mdb-target="#exampleSideModal3" style="width: 4rem; height: 4rem; position: fixed; right: 1rem; bottom: 2rem;">
         <i class="fas fa-headset fa-2x"></i>
-    </button> -->
+    </button>
 
     <!-- <button type="button" class="btn btn-info btn-lg btn-floating" style="width: 4rem; height: 4rem; position: fixed; right: 1rem; bottom: 2rem;" data-mdb-container="body" data-mdb-toggle="popover" data-mdb-placement="left" data-mdb-content="Função indisponível no momento">
         <i class="fas fa-headset fa-2x"></i>
@@ -90,7 +90,7 @@
                 e.preventDefault();
 
                 var formData = new FormData(this);
-                console.log($('#telefone').val())
+
                 $.ajax({
                     url: "<?php echo site_url("Geral/cadastro")?>",
                     type: 'POST',
@@ -251,6 +251,54 @@
                     cache: false
                 }); 
             });
+            
+            $('#btnAbrirChamado').click(function() {
+
+                <?php if(isset($_SESSION['user'])) {?>
+
+                    $.ajax({
+                        url: "<?php echo site_url("Geral/abrirChamado"); ?>",
+                        type: 'POST',
+                        success: function(){
+                            $("#btnAbrirChamado").hide();
+                            $(".msgPadrao").css("display", "block");
+                        },
+                        cache: false
+                    }); 
+
+                <?php } else {?>
+
+                    $("#btnAbrirChamado").hide();
+                    $(".msgPadrao2").css("display", "block");
+                    $("#txtChat").removeAttr('disabled');
+
+                    // $("#").click(function() {
+                        
+                    // });
+
+                <?php }?>
+            });
+
+            $("#btnSuporte").click(function(){
+                $.ajax({
+                    url: "<?php echo site_url("Geral/verificarChamados")?>",
+                    type: 'POST',
+                    success: function(data){
+                        if(data == 1) {
+                            $("#btnAbrirChamado").hide();
+                            $(".msgPadrao").css("display", "block");
+                            $("#txtChat").removeAttr('disabled');
+                        }
+                        else
+                        {
+                            $("#btnAbrirChamado").show();
+                            $(".msgPadrao").css("display", "none");
+                            $("#txtChat").attr('disabled', 'disabled');
+                        }
+                    },
+                    cache: false
+                }); 
+            });
     
         });
         
@@ -278,10 +326,5 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
-
-    <script async="" src="//www.google-analytics.com/analytics.js"></script><script type="text/javascript" src="//code.jquery.com/jquery-2.0.3.min.js"></script>
-    <script type="text/javascript" src="//assets.locaweb.com.br/locastyle/2.0.6/javascripts/locastyle.js"></script>
-    <script type="text/javascript" src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
-
 </body>
 </html>
