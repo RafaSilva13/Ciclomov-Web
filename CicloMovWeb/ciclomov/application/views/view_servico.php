@@ -191,7 +191,7 @@
                 </li>
                 
                 <li class="list-group-item">
-                    <b>Tempo:</b> <span id="time"></span>
+                    <b>Tempo:</b> <span id="time"></span> minutos
                 </li>
 
                 <li class="list-group-item">

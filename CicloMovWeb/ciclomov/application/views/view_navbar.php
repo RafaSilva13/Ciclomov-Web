@@ -35,7 +35,7 @@
 
                     <form class="d-flex input-group w-auto">
 
-                        <b style="color: white; margin-top: 0.4rem; margin-right: -2.5rem;" id="textoTempo">
+                        <b id="textoTempo">
                             Tempo restante:
                         </b>
                         
@@ -97,14 +97,6 @@
                                 </button>
                         
                             </li>
-
-                            <li>
-
-                                <!-- <button class="dropdown-item">
-                                    Configurações da Conta
-                                </button> -->
-                                
-                            </li>    
                                             
                             <li class="botoesMenu">
 
