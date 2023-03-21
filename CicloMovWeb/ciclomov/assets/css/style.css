@@ -25,24 +25,19 @@
     height: 600px;
 }
 
-#textoTempo {
-    color: white; 
-    margin-top: 0.4rem; 
-    margin-right: -2.5rem;
-}
-
-/* Height for devices larger than 992px */
-@media (min-width: 992px) {
+#btnTempo {
+    margin-right: 0.8rem; 
+} 
 
 @media (max-width: 992px) {
     #intro-example {
         height: 600px;
     }
 
-    #textoTempo {
+    /* #textoTempo {
         margin-right: 1rem;
         margin-bottom: 1rem;
-    }
+    }  */
 }
 
 .segundacoluna {

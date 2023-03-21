@@ -31,28 +31,27 @@
 
                 </ul>
                 
-                <form class="d-flex input-group w-auto">
+                <form class="d-flex gap-5">
 
-                    <form class="d-flex input-group w-auto">
-
-                        <b id="textoTempo">
-                            Tempo restante:
-                        </b>
-                        
-                        <button type="button" class="btn btn-rounded text-black btnTempoBarra" style="background-color: #F5F5F5; font-size: 14px; margin-right: 0.5rem;" id="btnTempo">
-                        
-                            <b>
-                            
-                                <span id="timer">00:00</span>
-                                
-                            </b>
-                        
-                        </button>
-
-
-                    </form>
+                    <b style="color: white; margin-top: 0.4rem; margin-right: -2.5rem;" id="textoTempo">
+                        Tempo restante:
+                    </b>
                     
-                    <button type="button" class="btn btn-secondary btnlogin text-dark" data-mdb-toggle="modal" data-mdb-target="#modalLoginCadastro">Login</button>
+                    <button type="button" class="btn btn-secondary  btn-rounded text-black" style="font-size: 14px;" id="btnTempo">
+                    
+                        <b>
+                        
+                            <span id="timer">00:00</span>
+                            
+                        </b>
+                    
+                    </button>
+
+                    <form class="d-flex gap-5" id="btnlogin">
+
+                        <button type="button" class="btn btn-secondary btnlogin text-dark" data-mdb-toggle="modal" data-mdb-target="#modalLoginCadastro">Login</button>
+                    
+                    </form>
 
                     <div class="dropdown areaMenu" style="margin: 0;" id="areaMenu">
 
