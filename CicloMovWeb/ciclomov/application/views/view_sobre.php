@@ -3,7 +3,7 @@
 
     <div class="row linhaSobre">
 
-        <div class="col-lg-6 col-md-12 col-sm-12 bordaDiv" style="width: 40rem; margin-right: 2.5rem; padding-left: 20px; padding-right: 20px; padding-bottom: 20px;">
+        <div class="col-lg-6 col-md-12 col-sm-12 bordaDiv" style="width: 35rem; margin-right: 2.5rem; padding-left: 15px; padding-right: 20px; padding-bottom: 20px;">
 
             <h2 class="title"> Conheça um pouco mais sobre a CicloMov</h2>
             
@@ -16,7 +16,7 @@
             
         </div>
 
-        <div class="col-lg-6 col-md-12 col-sm-12 bordaDiv"  style="width: 40rem; padding-left: 20px; padding-right: 20px; padding-bottom: 20px;">
+        <div class="col-lg-6 col-md-12 col-sm-12 bordaDiv"  style="width: 35rem; margin-right: -2.5rem; padding-left: 15px; padding-right: 20px; padding-bottom: 20px;">
 
             <h2 class="title titulo_valor" >Nossos Valores</h2>
             

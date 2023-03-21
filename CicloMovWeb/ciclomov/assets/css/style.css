@@ -40,6 +40,18 @@
     }  */
 }
 
+#formLogin {
+    padding-right: 3rem;
+    padding-left: 3rem;
+    padding-bottom: -1rem;
+}
+
+#formCadastro {
+    padding-right: 3rem;
+    padding-left: 3rem;
+    padding-bottom: 1rem;
+}
+
 .segundacoluna {
     margin-left: auto;
     margin-right: auto;
@@ -130,6 +142,14 @@
     overflow: auto;
 }
 
+.labelImg {
+    height: 3rem;
+    width: 350px;
+    border-radius: 20px;
+    vertical-align: middle;
+    padding-top: 1rem;
+}
+
 .scrollHistorico {
     position: relative;
     height: 20px;
@@ -165,14 +185,6 @@
 
 input[type='file'] {
     display: none
-}
-
-label {
-    height: 3rem;
-    width: 350px;
-    border-radius: 20px;
-    vertical-align: middle;
-    padding-top: 1rem;
 }
 
 .msgPadrao {
