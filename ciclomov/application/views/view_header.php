@@ -10,7 +10,7 @@
     <link rel="icon" href="<?=base_url('assets/images/logo2.png');?>" type="image/png">
 
     <!-- JQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>    
     
     <!-- CSS -->
     <link href="<?=base_url('assets/css/style.css');?>" rel="stylesheet">
@@ -35,13 +35,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Patua+One&display=swap" rel="stylesheet">
 
     <!-- MDB --> 
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.1.0/mdb.min.css" rel="stylesheet"/>
-    
-    <!-- Imagens -->
-    <link href="<?=base_url('assets/images');?>" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.2.0/mdb.min.css" rel="stylesheet"/> 
 
 </head>
-<body class="fundoTela" >
+<body class="fundoTela">
 
 <?php if(isset($_SESSION['imgUser'])) {
     $GLOBALS["imagem"] = $_SESSION['imgUser']; 

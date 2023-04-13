@@ -1,6 +1,6 @@
 
     <!-- Background image -->
-    <div id="intro-example" class="p-5 text-center bg-image" style="background-image: url('<?=base_url('assets/images/fundo_pagina_n.jpg');?>'); box-shadow: 31px 31px 62px #c7c7c7,-31px -31px 62px #ffffff;">
+    <div id="intro-example" class="p-5 text-center bg-image" style="background-image: url('<?= base_url('assets/images/fundo_pagina_n.jpg')?>'); box-shadow: 31px 31px 62px #c7c7c7,-31px -31px 62px #ffffff;">
         
         <div class="mask" style="background-color: rgba(0, 0, 0, 0.7); ">
 

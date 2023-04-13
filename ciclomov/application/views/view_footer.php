@@ -1,11 +1,3 @@
-    <button type="button" id="btnSuporte" class="btn btn-info btn-lg btn-floating" data-mdb-toggle="modal" data-mdb-target="#exampleSideModal3" style="width: 4rem; height: 4rem; position: fixed; right: 1rem; bottom: 2rem;">
-        <i class="fas fa-headset fa-2x"></i>
-    </button>
-
-    <!-- <button type="button" class="btn btn-info btn-lg btn-floating" style="width: 4rem; height: 4rem; position: fixed; right: 1rem; bottom: 2rem;" data-mdb-container="body" data-mdb-toggle="popover" data-mdb-placement="left" data-mdb-content="Função indisponível no momento">
-        <i class="fas fa-headset fa-2x"></i>
-    </button> -->
-    
     <script>
         $(function() {
 
@@ -15,7 +7,7 @@
                 var formData = new FormData(this);
                 
                 $.ajax({
-                    url: "<?php echo site_url("Geral/login")?>",
+                    url: "<?= site_url("Geral/login")?>",
                     type: 'POST',
                     data: formData,
                     success:  function(data){
@@ -36,7 +28,7 @@
                             $('#areaMenu').show();
 
                             $.ajax({
-                                url: "<?php echo site_url("Geral/pegarImagem")?>",
+                                url: "<?= site_url("Geral/pegarImagem")?>",
                                 type: 'POST',
                                 cache: false,
                                 contentType: false,
@@ -63,14 +55,14 @@
                 formData.append("nome", filename);
 
                 $.ajax({
-                    url: "<?php echo site_url("Geral/atualizarImagens")?>",
+                    url: "<?= site_url("Geral/atualizarImagens")?>",
                     type: 'POST',
                     data: formData,
                     success: function(data){
                         console.log(data);
 
                         $.ajax({
-                            url: "<?php echo site_url("Geral/pegarImagem")?>",
+                            url: "<?= site_url("Geral/pegarImagem")?>",
                             type: 'POST',
                             success: function(data){
                                 location.reload(true);
@@ -92,7 +84,7 @@
                 var formData = new FormData(this);
 
                 $.ajax({
-                    url: "<?php echo site_url("Geral/cadastro")?>",
+                    url: "<?= site_url("Geral/cadastro")?>",
                     type: 'POST',
                     data: formData,
                     success: function(data){
@@ -131,7 +123,7 @@
                 $('#btnSegundHome').show();
 
                 $.ajax({
-                    url: "<?php echo site_url("Geral/verificarStatusServicos");?>",
+                    url: "<?= site_url("Geral/verificarStatusServicos");?>",
                     type: 'POST',
                     success: function(data){    
 
@@ -217,7 +209,7 @@
             $('#btnSair').click(function(){
 
                 $.ajax({
-                    url: "<?php echo site_url("Geral/sair")?>",
+                    url: "<?= site_url("Geral/sair")?>",
                     type: 'POST',
                     success: function(){
                         console.log('Saida efetuada!');
@@ -242,7 +234,7 @@
 
             $('#confirmaServico').click(function() {
                 $.ajax({
-                    url: "<?php echo site_url("Geral/servico")?>",
+                    url: "<?= site_url("Geral/servico")?>",
                     type: 'POST',
                     data : { idPonto: id_ponto, tempo: tempo, tipo: tipo },
                     success: function(){
@@ -251,54 +243,6 @@
                     cache: false
                 }); 
             });
-            
-            // $('#btnAbrirChamado').click(function() {
-
-            //     <?php// if(isset($_SESSION['user'])) {?>
-
-            //         $.ajax({
-            //             url: "<?php// echo site_url("Geral/abrirChamado"); ?>",
-            //             type: 'POST',
-            //             success: function(){
-            //                 $("#btnAbrirChamado").hide();
-            //                 $(".msgPadrao").css("display", "block");
-            //             },
-            //             cache: false
-            //         }); 
-
-            //     <?php// } else// {?>
-
-            //         $("#btnAbrirChamado").hide();
-            //         $(".msgPadrao2").css("display", "block");
-            //         $("#txtChat").removeAttr('disabled');
-
-            //         // $("#").click(function() {
-                        
-            //         // });
-
-            //     <?php// }?>
-            // });
-
-            // $("#btnSuporte").click(function(){
-            //     $.ajax({
-            //         url: "<?php// echo site_url("Geral/verificarChamados")?>",
-            //         type: 'POST',
-            //         success: function(data){
-            //             if(data == 1) {
-            //                 $("#btnAbrirChamado").hide();
-            //                 $(".msgPadrao").css("display", "block");
-            //                 $("#txtChat").removeAttr('disabled');
-            //             }
-            //             else
-            //             {
-            //                 $("#btnAbrirChamado").show();
-            //                 $(".msgPadrao").css("display", "none");
-            //                 $("#txtChat").attr('disabled', 'disabled');
-            //             }
-            //         },
-            //         cache: false
-            //     }); 
-            // });
     
         });
         
@@ -319,16 +263,16 @@
     <!-- LocalWeb -->
     <script type="text/javascript" src="//assets.locaweb.com.br/locastyle/2.0.6/javascripts/locastyle.js"></script>
 
-    <!-- Link script -->
-    <script src="<?= base_url('assets/js/script.js');?>"></script>
-
     <!-- Bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
+    
     <!-- MDB -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.2.0/mdb.min.js"></script>    
+    
+    <!-- Link script -->
+    <script src="<?= base_url('assets/js/script.js');?>"></script>
     
 </body>
 </html>
